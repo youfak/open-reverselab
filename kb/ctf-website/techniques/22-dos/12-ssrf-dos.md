@@ -1,3 +1,50 @@
+---
+id: "ctf-website/22-dos/12-ssrf-dos"
+title: "SSRF 驱动的拒绝服务"
+title_en: "SSRF-Driven Denial of Service"
+summary: >
+  SSRF不仅是数据泄露漏洞，更是强大的DoS武器。攻击者通过目标服务器向内部服务发起请求，利用内部网络信任关系和低延迟特性进行放大攻击。涵盖内部服务洪泛、Gopher协议Redis命令注入、递归SSRF自我攻击、云元数据凭证获取后破坏，以及file://协议阻塞。
+summary_en: >
+  SSRF is not just a data exfiltration vector but a powerful DoS weapon. Attackers use the target server to make requests to internal services, exploiting internal network trust and low latency for amplification. Covers internal service flooding, Gopher protocol Redis command injection, recursive SSRF self-attack, cloud metadata credential acquisition, and file:// protocol blocking.
+board: "ctf-website"
+category: "22-dos"
+signals:
+  - "SSRF 内网 IP 10.x 172.16.x"
+  - "Gopher 协议 Redis 命令"
+  - "递归 SSRF self-call"
+  - "云元数据 169.254.169.254"
+  - "file:///dev/random 阻塞"
+  - "FLUSHALL DEBUG SLEEP"
+  - "内部服务洪泛"
+  - "dict:// gopher:// 协议走私"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "SSRF DoS"
+  - "Gopher 协议"
+  - "Redis 命令注入"
+  - "内部服务洪泛"
+  - "递归 SSRF"
+  - "云元数据攻击"
+  - "file 协议阻塞"
+  - "SSRF to DoS"
+  - "internal network flood"
+  - "SSRF amplification"
+difficulty: "advanced"
+tags:
+  - "dos"
+  - "denial-of-service"
+  - "ssrf"
+  - "internal-network"
+  - "redis"
+  - "gopher"
+  - "cloud-metadata"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # SSRF 驱动的拒绝服务
 
 ## 场景

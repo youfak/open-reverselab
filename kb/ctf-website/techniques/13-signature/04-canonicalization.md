@@ -1,3 +1,25 @@
+---
+id: "ctf-website/13-signature/04-canonicalization"
+title: "Canonicalization Attacks — 签名规范化绕过"
+title_en: "Canonicalization Attacks — Signature Canonicalization Bypass"
+summary: >
+  系统覆盖签名规范化全攻击面：参数排序差异（跨语言 ksort/sorted/Object.keys）、URL 编码差异（space=+/%20）、
+  JSON 规范化（key 顺序/空白/数字表示/重复 key）、XML C14N 命名空间注入、多部分拼接注入和 HPP 参数污染。
+summary_en: >
+  Systematic coverage of signature canonicalization attacks: parameter ordering discrepancies (across languages),
+  URL encoding differences (space = +/%20), JSON normalization (key order, whitespace, number representation,
+  duplicate keys), XML C14N namespace injection, multi-part concatenation injection, and HPP parameter pollution.
+board: "ctf-website"
+category: "13-signature"
+signals: ["canonicalization", "规范化绕过", "参数排序", "JSON规范化", "URL编码", "HPP", "XML C14N", "签名差异"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["canonicalization攻击", "规范化绕过", "参数排序差异", "JSON签名", "HTTP参数污染", "XML签名绕过", "URL编码绕过"]
+difficulty: "advanced"
+tags: ["signature", "canonicalization", "encoding", "parsing", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/13-signature/00-overview", "ctf-website/13-signature/01-algorithm"]
+---
 # Canonicalization Attacks — 签名规范化绕过
 
 > 规范化 (Canonicalization) 是签名系统的"盲点放大器"。签名方和验签方对同一数据的不同解析，直接导致同一个逻辑 payload 产生不同的签名值。攻击者不需要破解密钥，只需要**找到两边对数据理解不一致的地方**。

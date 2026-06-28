@@ -1,3 +1,22 @@
+---
+id: "apk-reverse/03-manifest/01-entry-point-tracing"
+title: "入口点追踪与组件分析"
+title_en: "Entry Point Tracing and Component Analysis"
+summary: >
+  追踪未知 APK 从 Application.attachBaseContext 到 Activity 到 native JNI_OnLoad 的完整启动链，分析 AndroidManifest 组件导出风险（exported Provider/Service/Receiver），以 Cocos/Unity 游戏为例演示真实启动路径。
+summary_en: >
+  Tracing the complete startup chain of an unknown APK from Application.attachBaseContext through Activity to native JNI_OnLoad, analyzing AndroidManifest component export risks (exported Provider/Service/Receiver), with Cocos/Unity game examples demonstrating real startup paths.
+board: "apk-reverse"
+category: "03-manifest"
+signals: ["AndroidManifest", "entry point", "Application", "attachBaseContext", "JNI_OnLoad", "exported components", "native loading", "loadLibrary"]
+mcp_tools: ["android_app_baseline", "android_package_info", "android_frida_run_script"]
+keywords: ["AndroidManifest", "entry point", "Application", "JNI_OnLoad", "入口点", "组件分析", "loadLibrary", "启动链", "exported"]
+difficulty: "beginner"
+tags: ["manifest", "entry-point", "startup-chain", "component-analysis", "android-reverse", "jadx"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 入口点追踪与组件分析
 
 ## 场景

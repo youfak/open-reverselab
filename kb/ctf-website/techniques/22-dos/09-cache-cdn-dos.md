@@ -1,3 +1,49 @@
+---
+id: "ctf-website/22-dos/09-cache-cdn-dos"
+title: "缓存 / CDN 拒绝服务"
+title_en: "Cache / CDN Denial of Service"
+summary: >
+  利用CDN和缓存层的特性进行拒绝服务攻击，包括Cache Busting随机参数穿透缓存直达源站、源站真实IP暴露绕过CDN保护、Range Header缓存穿透、Cache Poison投毒注入恶意缓存内容，以及CDN边缘节点资源耗尽。
+summary_en: >
+  Exploits CDN and cache layer characteristics for DoS, including Cache Busting with randomized parameters to bypass cache to origin, origin IP exposure to circumvent CDN protection, Range Header cache bypass, Cache Poison injection of malicious cached content, and CDN edge node resource exhaustion.
+board: "ctf-website"
+category: "22-dos"
+signals:
+  - "Cache Busting 随机查询参数"
+  - "X-Cache: MISS 命中率骤降"
+  - "源站 IP 暴露 DNS 历史"
+  - "Range Header 缓存穿透"
+  - "Cache Poison 投毒"
+  - "CDN 边缘节点 CPU 异常"
+  - "crt.sh 证书透明度"
+  - "X-Forwarded-Host 缓存分片"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "Cache Busting"
+  - "缓存穿透"
+  - "CDN 绕过"
+  - "源站暴露"
+  - "Cache Poison"
+  - "Range Header 滥用"
+  - "CDN DoS"
+  - "origin IP discovery"
+  - "CPDoS"
+  - "缓存投毒"
+difficulty: "intermediate"
+tags:
+  - "dos"
+  - "denial-of-service"
+  - "cache"
+  - "cdn"
+  - "cache-poisoning"
+  - "origin-exposure"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 缓存 / CDN 拒绝服务
 
 ## 场景

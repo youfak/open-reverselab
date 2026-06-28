@@ -1,3 +1,22 @@
+---
+id: "apk-reverse/04-crypto/01-game-encryption-patterns"
+title: "游戏数据加解密识别与绕过"
+title_en: "Game Data Encryption Identification and Bypass"
+summary: >
+  识别游戏三层加密体系（TLS/SSL Pinning、应用层 AES/DES/RSA/Cipher、内存层 XOR/混淆），提供 Frida Hook 模板抓取 Cipher.init 的 Key/IV/算法，Python 离线解密验证方法，以及常见算法特征速查表。
+summary_en: >
+  Identifying game encryption across three layers (TLS/SSL Pinning, application-layer AES/DES/RSA/Cipher, memory-layer XOR/obfuscation), with Frida hook templates for extracting Cipher.init Key/IV/algorithm, Python offline decryption verification, and a common algorithm feature reference table.
+board: "apk-reverse"
+category: "04-crypto"
+signals: ["SSL Pinning", "AES-CBC", "Cipher.init", "SecretKeySpec", "XOR obfuscation", "IvParameterSpec", "key extraction", "crypto bypass"]
+mcp_tools: ["android_crypto_unpack_recipe", "solve_crypto_from_evidence", "make_crypto_replay_scaffold", "postprocess_frida_crypto_result"]
+keywords: ["encryption", "AES", "SSL Pinning", "XOR", "Cipher", "Frida", "加密", "解密", "key extraction", "crypto"]
+difficulty: "intermediate"
+tags: ["crypto", "encryption", "ssl-pinning", "frida", "aes", "xor", "key-extraction"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 游戏数据加解密识别与绕过
 
 ## 场景

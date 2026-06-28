@@ -1,3 +1,22 @@
+---
+id: "ctf-website/07-client/admin-bot-xss"
+title: "Admin Bot / XSS 实战"
+title_en: "Admin Bot / XSS Practical Guide"
+summary: >
+  CTF admin bot场景下XSS攻击完整指南，涵盖六种外带通道（fetch、Image beacon、Form submit、window.location、DNS、WebSocket）、CSP绕过速查、DOM Clobbering变量劫持、SVG/MathML沙箱逃逸、Sanitizer绕过探测，以及通过admin bot扫描内网和2024+浏览器解析器差异攻击。
+summary_en: >
+  Complete XSS attack guide for CTF admin bot scenarios, covering six exfiltration channels (fetch, Image beacon, Form submit, window.location, DNS, WebSocket), CSP bypass reference, DOM Clobbering variable hijacking, SVG/MathML sandbox escape, sanitizer bypass probes, internal network scanning via admin bot, and 2024+ browser parser differential attacks.
+board: "ctf-website"
+category: "07-client"
+signals: ["XSS", "admin bot", "CSP bypass", "DOM clobbering", "跨站脚本", "exfiltration", "sanitizer bypass"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["XSS", "admin bot", "CSP绕过", "DOM Clobbering", "Sanitizer绕过", "Cookie窃取", "外带通道", "SVG XSS", "parser differential"]
+difficulty: "intermediate"
+tags: ["xss", "client-side", "csp", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Admin Bot / XSS 实战
 
 ## 核心模型

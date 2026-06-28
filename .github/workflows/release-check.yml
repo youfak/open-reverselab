@@ -23,6 +23,10 @@ jobs:
         run: python scripts/misc/ai_toolcheck.py --board misc
       - name: KB documentation audit
         run: python scripts/misc/kb_doc_audit.py
+      - name: KB frontmatter check
+        run: python scripts/misc/add_frontmatter.py --verify
+      - name: SEO audit
+        run: python scripts/misc/seo_audit.py
       - name: Python unit tests
         run: |
           python -m pip install pytest

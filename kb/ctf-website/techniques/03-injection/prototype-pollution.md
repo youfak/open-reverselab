@@ -1,3 +1,23 @@
+---
+id: "ctf-website/03-injection/prototype-pollution"
+title: "Prototype Pollution (原型链污染)"
+title_en: "Prototype Pollution"
+summary: >
+  深入讲解 Node.js 环境中原型链污染的完整攻击链，从不安全深拷贝/对象合并的污染源头探测，到 EJS/Pug/Handlebars 模板引擎 RCE、子进程污染、Morgan 日志注入等高价值 Sink 利用，涵盖 CVE-2025-55182 和 CVE-2025-57820 等最新漏洞。
+summary_en: >
+  A deep dive into prototype pollution in Node.js, from source detection via unsafe deep copy/object merge, to high-value sink exploitation including EJS/Pug/Handlebars template engine RCE, child_process pollution, and Morgan logger injection. Covers latest CVEs including CVE-2025-55182 and CVE-2025-57820.
+board: "ctf-website"
+category: "03-injection"
+signals: ["prototype pollution", "原型链污染", "__proto__", "constructor.prototype", "EJS", "Pug", "child_process", "Node.js"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["prototype pollution", "原型链污染", "__proto__", "EJS RCE", "Pug RCE", "Node.js安全", "CVE-2025-55182", "devalue"]
+difficulty: "advanced"
+tags: ["injection", "prototype-pollution", "nodejs", "rce", "web-security", "cve", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # Prototype Pollution (原型链污染)
 
 在 Node.js (JavaScript) 环境中，`Object.prototype` 是所有普通对象的基类。当程序不安全地将不可信的 JSON 键值对递归合并到现有对象中时，可能会导致**原型链污染**。这能修改所有新建对象的默认属性，从而绕过鉴权，甚至通过污染特定的模板引擎或子进程选项达成 **RCE**。

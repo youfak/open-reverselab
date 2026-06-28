@@ -1,3 +1,23 @@
+---
+id: "ctf-website/03-injection/ssti"
+title: "SSTI (Server-Side Template Injection)"
+title_en: "Server-Side Template Injection (SSTI)"
+summary: >
+  服务器端模板注入完整指南，覆盖模板引擎指纹识别决策树、Jinja2/Twig/Thymeleaf/Velocity/FreeMarker/Tornado/Smarty/ERB 等多引擎 RCE 利用链，以及点号/下划线/引号过滤绕过、无回显 OOB 外带和 WAF 绕过等高级技巧。
+summary_en: >
+  A complete guide to Server-Side Template Injection covering a template engine fingerprinting decision tree, RCE exploit chains for Jinja2, Twig, Thymeleaf, Velocity, FreeMarker, Tornado, Smarty, ERB, and more, plus advanced bypasses for dot, underscore, and quote filters, blind OOB exfiltration, and WAF evasion.
+board: "ctf-website"
+category: "03-injection"
+signals: ["SSTI", "模板注入", "Jinja2", "Thymeleaf", "FreeMarker", "RCE", "沙盒逃逸", "__class__"]
+mcp_tools: ["http_probe", "run_ctf_tool", "kb_router"]
+keywords: ["SSTI", "模板注入", "Jinja2", "Thymeleaf", "FreeMarker", "沙盒逃逸", "RCE", "tplmap", "sstimap"]
+difficulty: "advanced"
+tags: ["injection", "ssti", "template-engine", "rce", "web-security", "sandbox-escape", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # SSTI (Server-Side Template Injection)
 
 服务器端模板注入（SSTI）发生在模板引擎不安全地将用户输入直接拼接进模板字符串中解析并执行时。这能允许攻击者在模板渲染引擎的上下文中执行任意代码，引发严重的 RCE。

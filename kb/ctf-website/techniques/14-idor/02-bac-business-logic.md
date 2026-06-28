@@ -1,3 +1,25 @@
+---
+id: "ctf-website/14-idor/02-bac-business-logic"
+title: "功能级访问控制缺失 (BAC) — 垂直越权与业务逻辑绕过"
+title_en: "Broken Access Control (BAC) — Vertical Privilege Escalation & Business Logic Bypass"
+summary: >
+  BAC 深度实战方法论，覆盖隐藏端点发现矩阵（JS Source Map/字典枚举/robots）、HTTP 方法覆写绕过、
+  API 版本鉴权差异、多步流程步骤跳过、角色矩阵测试和 Spring Boot Actuator 端点利用。
+summary_en: >
+  Deep BAC methodology covering hidden endpoint discovery (JS Source Map, dictionary, robots.txt),
+  HTTP method override bypass, API version pivoting, multi-step flow skipping, role matrix testing,
+  and Spring Boot Actuator exploitation — with real CVEs including CVE-2026-32270 and CVE-2024-23897.
+board: "ctf-website"
+category: "14-idor"
+signals: ["BAC", "broken access control", "访问控制缺失", "垂直越权", "隐藏端点", "方法覆写", "actuator", "步骤跳过", "CWE-862"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file", "run_ctf_tool"]
+keywords: ["BAC", "访问控制", "垂直越权", "隐藏端点发现", "Spring Actuator", "方法覆写绕过", "CWE-862", "权限提升"]
+difficulty: "intermediate"
+tags: ["bac", "authorization", "privilege-escalation", "spring-boot", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/14-idor/01-idor-enumeration"]
+---
 # 功能级访问控制缺失 (BAC) — 垂直越权与业务逻辑绕过
 
 ## 场景

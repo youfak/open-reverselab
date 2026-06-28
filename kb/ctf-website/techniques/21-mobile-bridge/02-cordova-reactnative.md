@@ -1,3 +1,23 @@
+---
+id: "ctf-website/21-mobile-bridge/02-cordova-reactnative"
+title: "跨平台框架攻击面 — Cordova / React Native / Flutter / Electron"
+title_en: "Cross-Platform Framework Attack Surface — Cordova / React Native / Flutter / Electron"
+summary: >
+  覆盖 Cordova 插件漏洞与 InAppBrowser 滥用、React Native NativeModules 攻击与 Metro Bundler 泄露、Flutter FFI/MethodChannel 漏洞、Electron nodeIntegration 绕过与 preload 脚本滥用等跨平台混合应用框架的攻击面全技术。
+summary_en: >
+  Covers Cordova plugin vulnerabilities and InAppBrowser abuse, React Native NativeModules attacks and Metro Bundler exposure, Flutter FFI/MethodChannel exploits, Electron nodeIntegration bypass and preload script abuse across cross-platform hybrid app frameworks.
+board: "ctf-website"
+category: "21-mobile-bridge"
+signals: ["Cordova", "React Native", "Flutter", "Electron", "Ionic", "Capacitor", "nodeIntegration", "Metro Bundler", "NativeModules", "跨平台框架"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file", "run_ctf_tool"]
+keywords: ["Cordova攻击", "React Native NativeModules", "Flutter逆向", "Electron RCE", "Metro Bundler泄露", "nodeIntegration绕过", "capacitor", "cross-platform framework", "hybrid app"]
+difficulty: "advanced"
+tags: ["mobile", "cordova", "react-native", "flutter", "electron", "cross-platform", "capacitor"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # 跨平台框架攻击面 — Cordova / React Native / Flutter / Electron
 
 ## 场景

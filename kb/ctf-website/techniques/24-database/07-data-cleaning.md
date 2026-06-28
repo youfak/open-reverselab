@@ -1,3 +1,47 @@
+---
+id: "ctf-website/24-database/07-data-cleaning"
+title: "Database Dump Cleaning — 泄露数据清洗方法论"
+title_en: "Database Dump Cleaning — Leaked Data Cleaning Methodology"
+summary: >
+  从非结构化泄露数据中提取有效信息的系统方法：源数据结构识别（HTML/JSON/纯文本/混合格式）、特征维度提取（长度分布/字符集/前缀聚类/计数器归一化）、锚点映射从可信样本扩展到全量数据、品牌名称关联（拼音/缩写），以及置信度分级和去噪验证。
+summary_en: >
+  Systematic methodology for extracting actionable information from unstructured leaked data: source structure identification (HTML/JSON/plaintext/hybrid), feature extraction (length distribution, charset, prefix clustering, counter normalization), anchor mapping from ground-truth samples to full datasets, brand/name association (pinyin/abbreviations), and confidence grading with noise removal.
+board: "ctf-website"
+category: "24-database"
+signals:
+  - "HTML 堆叠 多段 body"
+  - "JSON 响应 泄露数据"
+  - "前缀聚类 2-3 字符"
+  - "计数器归一化 十六进制"
+  - "锚点映射 ground truth"
+  - "置信度分级 确认 高 中 低"
+  - "假数据 占位符 asd123"
+  - "数据行 分隔符行 标记行"
+mcp_tools:
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "数据清洗"
+  - "泄露数据"
+  - "格式分类"
+  - "前缀聚类"
+  - "特征提取"
+  - "锚点映射"
+  - "置信度分级"
+  - "data dump cleaning"
+  - "data classification"
+  - "泄露数据库"
+difficulty: "beginner"
+tags:
+  - "database"
+  - "data-cleaning"
+  - "forensics"
+  - "methodology"
+  - "data-analysis"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Database Dump Cleaning — 泄露数据清洗方法论
 
 > 从非结构化或半结构化泄露数据中提取、分类、关联有效信息，建立源数据到业务实体的映射。

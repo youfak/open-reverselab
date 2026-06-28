@@ -1,3 +1,22 @@
+---
+id: "ctf-website/09-cve/01-browser-sandbox-escape"
+title: "Blink UAF：CSSFontFeatureValuesMap 迭代器悬空指针（CVE-2026-2441）"
+title_en: "Blink UAF: CSSFontFeatureValuesMap Iterator Dangling Pointer (CVE-2026-2441)"
+summary: >
+  Chromium Blink渲染引擎UAF漏洞分析，CSSFontFeatureValuesMap迭代器持有HashMap原始指针，迭代过程中delete()+set()触发rehash导致悬空指针。涵盖受影响版本范围、根因分析（迭代器持有原始指针vs修复后的值拷贝）、PoC触发流程与堆布局整理，以及UAF到完整RCE所需的条件链。
+summary_en: >
+  Analysis of a Chromium Blink UAF vulnerability where CSSFontFeatureValuesMap iterator holds a raw HashMap pointer, and delete()+set() during iteration triggers rehash causing a dangling pointer. Covers affected version ranges, root cause analysis (raw pointer in iterator vs value copy fix), PoC trigger flow with heap grooming, and the condition chain from UAF to full RCE.
+board: "ctf-website"
+category: "09-cve"
+signals: ["Blink UAF", "Chrome sandbox escape", "CSSFontFeatureValuesMap", "HashMap rehash", "浏览器沙箱逃逸", "CVE-2026-2441", "Chromium"]
+mcp_tools: ["kb_router", "http_probe", "workspace_write_text"]
+keywords: ["CVE-2026-2441", "Chrome UAF", "Blink渲染引擎", "HashMap悬空指针", "浏览器漏洞利用", "Chromium沙箱", "heap grooming", "V8对象混淆"]
+difficulty: "advanced"
+tags: ["cve", "browser-exploitation", "uaf", "sandbox-escape", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Blink UAF：CSSFontFeatureValuesMap 迭代器悬空指针（CVE-2026-2441）
 
 ## 1. 受影响版本

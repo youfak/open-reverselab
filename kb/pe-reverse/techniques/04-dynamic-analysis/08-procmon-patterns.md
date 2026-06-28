@@ -1,3 +1,50 @@
+---
+id: "pe-reverse/04-dynamic-analysis/08-procmon-patterns"
+title: "Procmon 行为监控与过滤"
+title_en: "Procmon Behavior Monitoring and Filtering"
+summary: >
+  介绍使用 Procmon 对目标进程进行非侵入式行为监控的方法，涵盖四大实战场景过滤集（文件落盘、注册表持久化、进程注入、网络连接）、时间线分析技巧及 Python 聚合统计导出。
+summary_en: >
+  Non-intrusive behavior monitoring with Procmon, covering four practical filter sets (file drops, registry persistence, process injection, network connections), timeline analysis techniques, and Python-based aggregation and export.
+board: "pe-reverse"
+category: "04-dynamic-analysis"
+signals:
+  - "Procmon"
+  - "filter rules"
+  - "file monitoring"
+  - "registry monitoring"
+  - "network capture"
+  - "行为监控"
+  - "过滤规则"
+  - "时间线"
+mcp_tools:
+  - procmon_start_capture
+  - procmon_stop_capture
+  - procmon_export_csv
+  - make_procmon_filters
+keywords:
+  - "Procmon"
+  - "process monitor"
+  - "filter"
+  - "WriteFile"
+  - "RegSetValue"
+  - "TCP Connect"
+  - "behavior monitoring"
+  - "CSV export"
+  - "IOC"
+  - "timeline"
+difficulty: "beginner"
+tags:
+  - "Procmon"
+  - "monitoring"
+  - "IOC"
+  - "behavior-analysis"
+  - "filtering"
+  - "dynamic-analysis"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Procmon 行为监控与过滤
 
 ## 场景

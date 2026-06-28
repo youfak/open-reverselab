@@ -1,3 +1,22 @@
+---
+id: "apk-reverse/07-packer/02-self-extracting-payload"
+title: "自解压 Payload 与脚本嵌入"
+title_en: "Self-Extracting Payload and Script Embedding"
+summary: >
+  分析三种自解压 payload 嵌入模式：Shell 脚本尾部嵌入 gzip 压缩二进制（利用 $LINENO 精确定位边界）、C Header 字节数组嵌入 .ko 驱动、编译产物自动加密包装，以及手动提取和解密方法。
+summary_en: >
+  Analyzing three self-extracting payload embedding patterns: Shell script tail gzip binary embedding (using $LINENO for precise boundary), C Header byte array .ko driver embedding, and compiled artifact auto-encryption wrapping, with manual extraction and decryption methods.
+board: "apk-reverse"
+category: "07-packer"
+signals: ["self-extracting", "shell embedding", "gzip", "LINENO", "sed boundary", "C header", "finit_module", "payload extraction"]
+mcp_tools: ["die_scan", "carve_payloads_from_dump"]
+keywords: ["self-extracting", "payload", "shell", "gzip", "自解压", "脚本嵌入", "LINENO", "ELF", "提取"]
+difficulty: "intermediate"
+tags: ["self-extracting", "payload", "shell-script", "embedding", "gzip", "extraction"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 自解压 Payload 与脚本嵌入
 
 ## 场景

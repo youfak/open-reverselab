@@ -1,3 +1,25 @@
+---
+id: "ctf-website/12-payment/platform-fingerprints"
+title: "PHP 发卡/电商平台指纹库"
+title_en: "PHP Card-Issuing / E-Commerce Platform Fingerprint Library"
+summary: >
+  从实战案例中积累的 PHP 发卡及电商平台识别指纹库，覆盖 acg-faka、dujiaoka、Annie Mall、XYCMS、Emlog
+  等主流平台的特征路径、JS 标记、API 端点和已知漏洞模式，用于快速 CMS 识别与定向攻击。
+summary_en: >
+  Fingerprint library for PHP card-issuing and e-commerce platforms, covering acg-faka, dujiaoka,
+  Annie Mall, XYCMS, and Emlog — with signature paths, JS markers, API endpoints, and known vulnerability
+  patterns for rapid CMS identification and targeted attacks.
+board: "ctf-website"
+category: "12-payment"
+signals: ["platform fingerprint", "平台指纹", "发卡系统", "acg-faka", "dujiaoka", "XYCMS", "CMS识别", "ready.js"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["发卡平台指纹", "acg-faka", "dujiaoka", "XYCMS", "Emlog", "CMS识别", "平台特征", "电商指纹"]
+difficulty: "beginner"
+tags: ["fingerprint", "platform", "cms", "php", "e-commerce", "recon"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # PHP 发卡/电商平台指纹库
 
 > 从实战案例中积累的平台识别指纹。用于快速判断目标CMS，定向查找已知漏洞。

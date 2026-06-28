@@ -1,3 +1,22 @@
+---
+id: "ctf-website/08-infra/http2-attacks"
+title: "HTTP/2 攻击"
+title_en: "HTTP/2 Attacks — HPACK Bomb & Stream Multiplexing Abuse"
+summary: >
+  HTTP/2 协议层攻击技术手册。HPACK 压缩表填充导致内存耗尽（HPACK Bomb），Stream 多路复用拒绝服务。适用于发现目标支持 HTTP/2 后的进一步利用。
+summary_en: >
+  HTTP/2 protocol-layer attack techniques. Exploits HPACK compression table stuffing for memory exhaustion (HPACK Bomb) and stream multiplexing for denial of service. Apply when target supports HTTP/2.
+board: "ctf-website"
+category: "08-infra"
+signals: ["HTTP/2", "h2", "HPACK", "stream multiplexing", "memory exhaustion", "DoS", "CVE-2025-53020", "协议攻击"]
+mcp_tools: ["http_probe", "run_ctf_tool", "kb_router"]
+keywords: ["HTTP/2 attack", "HPACK bomb", "HTTP/2 DoS", "stream multiplexing", "CVE-2025-53020", "HTTP/2 攻击", "协议层 DoS"]
+difficulty: "advanced"
+tags: ["http2", "dos", "infrastructure", "protocol", "CVE", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # HTTP/2 攻击
 
 ## HPACK Bomb (CVE-2025-53020)

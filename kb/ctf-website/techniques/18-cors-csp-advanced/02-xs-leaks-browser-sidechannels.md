@@ -1,3 +1,23 @@
+---
+id: "ctf-website/18-cors-csp-advanced/02-xs-leaks-browser-sidechannels"
+title: "XS-Leaks 浏览器侧信道攻击"
+title_en: "XS-Leaks Browser Side-Channel Attacks"
+summary: >
+  利用浏览器侧信道机制在不破坏同源策略的前提下检测跨域资源内部状态。涵盖 Frame Counting、Cache Probing 定时攻击、CORP/CORB 绕过、Performance API 泄露、XS-Search 推断、Web Locks API 等多种信息窃取技术。
+summary_en: >
+  Exploit browser side-channel mechanisms to detect internal state of cross-origin resources without breaking the same-origin policy. Covers Frame Counting, Cache Probing timing attacks, CORP/CORB bypass, Performance API leaks, XS-Search inference, and Web Locks API exploitation.
+board: "ctf-website"
+category: "18-cors-csp-advanced"
+signals: ["XS-Leaks", "side-channel", "frame counting", "cache probing", "CORP bypass", "timing attack", "侧信道", "浏览器"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file", "run_ctf_tool"]
+keywords: ["XS-Leaks", "侧信道攻击", "跨域信息泄露", "Frame Counting", "Cache Probing", "CORP绕过", "浏览器安全", "timing attack", "performance API"]
+difficulty: "advanced"
+tags: ["xs-leaks", "browser", "side-channel", "cors", "timing-attack", "cache-probing", "corp"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # XS-Leaks 浏览器侧信道攻击
 
 ## 场景

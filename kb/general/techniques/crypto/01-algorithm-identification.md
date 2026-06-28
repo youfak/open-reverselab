@@ -1,3 +1,49 @@
+---
+id: "general/crypto/01-algorithm-identification"
+title: "算法盲识别：从字节特征反推加密/哈希/压缩算法"
+title_en: "Blind Algorithm Identification: Inferring Encryption/Hash/Compression from Byte Features"
+summary: >
+  系统性的算法盲识别方法论，覆盖 S-box 指纹数据库匹配、魔数识别、滑动窗口熵分析、ECB/CBC/CTR 操作模式检测、Kasiski 检验与重合指数分析，实现从原始字节反推密码学实现。
+summary_en: >
+  Systematic blind algorithm identification methodology covering S-box fingerprint DB matching, magic detection, sliding-window entropy analysis, ECB/CBC/CTR mode detection, Kasiski examination, and index of coincidence for reverse-engineering cryptographic implementations.
+board: "general"
+category: "crypto"
+signals:
+  - "S-box fingerprinting"
+  - "entropy analysis"
+  - "magic byte detection"
+  - "ECB detection"
+  - "hash IV constants"
+  - "PKCS padding"
+  - "Kasiski examination"
+mcp_tools:
+  - "kb_router"
+  - "kb_read_file"
+  - "die_scan"
+  - "triage_pe"
+  - "ghidra_headless_analyze"
+  - "python_re_tool_install"
+keywords:
+  - "algorithm identification"
+  - "S-box"
+  - "entropy analysis"
+  - "crypto constants"
+  - "ECB detection"
+  - "hash IV"
+  - "magic bytes"
+  - "block cipher mode"
+  - "Kasiski"
+difficulty: "intermediate"
+tags:
+  - "cryptography"
+  - "reverse-engineering"
+  - "entropy-analysis"
+  - "algorithm-identification"
+  - "crypto-constants"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 算法盲识别：从字节特征反推加密/哈希/压缩算法
 
 > 面对一段未知的二进制 blob，如何在不运行代码的情况下确定它使用了什么加密/哈希/压缩算法？本文给出系统性的特征工程方法论，覆盖 S-box 指纹、魔数识别、熵分析、块检测和操作模式诊断。

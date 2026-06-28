@@ -1,3 +1,43 @@
+---
+id: "general/01-kernel/04-cifswitch-nss-privesc"
+title: "CIFSwitch：cifs.spnego 身份混淆 → root 权限 NSS 加载"
+title_en: "CIFSwitch: cifs.spnego Identity Confusion to Root NSS Loading"
+summary: >
+  利用 cifs.spnego 缺少 vet_description 钩子，伪造 request-key description 诱导 cifs.upcall 以 root 权限进入攻击者 namespace，通过恶意 NSS 模块注入 sudoers 实现提权。
+summary_en: >
+  Exploits missing vet_description hook in cifs.spnego to forge request-key descriptions, luring cifs.upcall with root privilege into attacker's namespace, then injecting sudoers via malicious NSS module for privilege escalation.
+board: "general"
+category: "01-kernel"
+signals:
+  - "cifs.spnego"
+  - "request-key"
+  - "NSS module injection"
+  - "vet_description missing"
+  - "namespace abuse"
+  - "cifs.upcall"
+mcp_tools:
+  - "kb_router"
+  - "workspace_write_text"
+keywords:
+  - "QVD-2026-29453"
+  - "cifs.upcall"
+  - "NSS"
+  - "request_key"
+  - "user namespace"
+  - "privilege escalation"
+  - "sudoers injection"
+  - "CIFSwitch"
+difficulty: "intermediate"
+tags:
+  - "kernel-exploitation"
+  - "NSS"
+  - "namespace"
+  - "LPE"
+  - "cifs"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # CIFSwitch：cifs.spnego 身份混淆 → root 权限 NSS 加载（QVD-2026-29453）
 
 ## 1. 前置条件

@@ -1,3 +1,25 @@
+---
+id: "ctf-website/13-signature/03-key-attacks"
+title: "Key Attacks — 签名密钥攻击深度技术手册"
+title_en: "Key Attacks — Signature Key Attack Deep Technical Manual"
+summary: >
+  覆盖签名密钥全生命周期攻击：弱密钥字典爆破、框架默认密钥、JS Bundle 密钥扫描、Source Map 泄露提取、
+  .env 暴露、Redis 密钥枚举、HMAC 多进程/GPU 爆破、密钥预测（PRNG 种子/时间基/顺序模式）及环境间重用。
+summary_en: >
+  Covers full lifecycle key attacks: weak key dictionary bruteforce, framework default keys, JS bundle
+  scanning, source map extraction, .env exposure, Redis key enumeration, multi-process/GPU HMAC cracking,
+  key prediction (PRNG seed, time-based, sequential), and cross-environment reuse detection.
+board: "ctf-website"
+category: "13-signature"
+signals: ["key attack", "密钥攻击", "弱密钥", "硬编码密钥", "HMAC爆破", "source map", ".env泄露", "PRNG预测", "密钥重用"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["密钥攻击", "弱密钥爆破", "HMAC破解", "source map泄露", ".env扫描", "PRNG种子恢复", "密钥预测", "key recovery"]
+difficulty: "advanced"
+tags: ["signature", "key-management", "crypto", "brute-force", "information-disclosure", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/13-signature/00-overview", "ctf-website/13-signature/01-algorithm"]
+---
 # Key Attacks — 签名密钥攻击深度技术手册
 
 > 签名安全 = 密钥机密性。密钥一旦泄露或可预测，所有签名保护归零。本手册覆盖密钥从生成、存储、传递到销毁全生命周期的攻击技术。

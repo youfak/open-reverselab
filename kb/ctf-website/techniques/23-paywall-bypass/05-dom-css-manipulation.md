@@ -1,3 +1,49 @@
+---
+id: "ctf-website/23-paywall-bypass/05-dom-css-manipulation"
+title: "DOM / CSS / Storage 操作"
+title_en: "DOM / CSS / Storage Manipulation"
+summary: >
+  当正文已在DOM中仅被CSS隐藏或JS截断时，通过注入CSS规则隐藏overlay恢复正文、MutationObserver实时监听并删除动态注入的paywall节点、localStorage/sessionStorage清除重置阅读计数器，以及通过injectImmediately抢占时序在paywall脚本执行前完成操作。
+summary_en: >
+  When article text exists in DOM but is hidden by CSS or truncated by JS: inject CSS rules to hide overlays and restore text, use MutationObserver to listen and remove dynamically injected paywall nodes, clear localStorage/sessionStorage to reset reading counters, and exploit injectImmediately timing to act before paywall scripts execute.
+board: "ctf-website"
+category: "23-paywall-bypass"
+signals:
+  - "paywall overlay position:fixed z-index:9999"
+  - "overflow: hidden body 截断"
+  - "max-height: 200px 正文容器"
+  - "MutationObserver 动态注入"
+  - "localStorage.clear()"
+  - "injectImmediately document_start"
+  - "cs_code 规则引擎"
+  - "no-scroll paywall-active class"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "CSS 注入 隐藏 paywall"
+  - "DOM 操作 移除 overlay"
+  - "MutationObserver"
+  - "localStorage 清除"
+  - "injectImmediately"
+  - "DOM manipulation bypass"
+  - "css paywall bypass"
+  - "content script"
+  - "浏览阅读计数重置"
+  - "动态 DOM 删除"
+difficulty: "beginner"
+tags:
+  - "paywall"
+  - "bypass"
+  - "dom-manipulation"
+  - "css"
+  - "localstorage"
+  - "browser-extension"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # DOM / CSS / Storage 操作
 
 ## 场景

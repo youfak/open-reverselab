@@ -1,3 +1,25 @@
+---
+id: "ctf-website/12-payment/payment-bypass"
+title: "Payment Bypass — 支付绕过深度技术手册"
+title_en: "Payment Bypass — Advanced Payment Evasion Techniques"
+summary: >
+  涵盖参数篡改、类型混淆、精度攻击、状态机绕过、Mass Assignment、优惠券利用、并发竞态等全方位支付绕过技术，
+  针对不同后端语言的类型系统差异进行深度利用，实现零元购、低价支付和权益绕过。
+summary_en: >
+  Comprehensive payment bypass techniques covering parameter tampering, type confusion, precision attacks,
+  state machine bypass, mass assignment, coupon exploitation, and race conditions — exploiting cross-language
+  type system differences to achieve zero-price purchases and entitlement bypass.
+board: "ctf-website"
+category: "12-payment"
+signals: ["Payment Bypass", "支付绕过", "零元购", "type confusion", "参数篡改", "amount manipulation", "state machine", "mass assignment"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["支付绕过", "payment bypass", "type juggling", "零元购", "参数篡改", "amount fuzzing", "race condition", "payment security"]
+difficulty: "advanced"
+tags: ["payment", "bypass", "type-confusion", "race-condition", "web-security", "ctf", "mass-assignment"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/12-payment/payment-logic", "ctf-website/12-payment/payment-callback-async"]
+---
 # Payment Bypass — 支付绕过深度技术手册
 
 > 目标：不付钱、付低价、付假钱、重复用权益、绕过购买流程直接拿货。每个绕过必须有 server-side 状态变更证据。

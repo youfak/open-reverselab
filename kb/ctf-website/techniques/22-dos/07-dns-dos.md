@@ -1,3 +1,49 @@
+---
+id: "ctf-website/22-dos/07-dns-dos"
+title: "DNS 拒绝服务攻击"
+title_en: "DNS Denial of Service Attacks"
+summary: >
+  以DNS服务器本身为攻击目标，包括Water Torture随机子域攻击耗尽权威DNS、NXDOMAIN Flood查询不存在域名、Phantom Domain攻击利用静默权威DNS卡住递归器，以及DNS Cache Poisoning和DNSSEC放大等向量。
+summary_en: >
+  Targets DNS servers themselves, including Water Torture random subdomain attacks exhausting authoritative DNS, NXDOMAIN Flood querying non-existent domains, Phantom Domain attacks using silent authoritative DNS to stall resolvers, plus DNS Cache Poisoning and DNSSEC amplification vectors.
+board: "ctf-website"
+category: "22-dos"
+signals:
+  - "随机子域 Water Torture"
+  - "NXDOMAIN 响应占比 >90%"
+  - "Phantom domain 静默丢弃"
+  - "DNS cache poisoning"
+  - "递归器 cache miss rate 100%"
+  - "DNSSEC ANY 查询放大"
+  - "DNS 权威服务器 QPS 异常"
+  - "cache hit rate 接近 0%"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "DNS Water Torture"
+  - "水刑攻击"
+  - "Phantom Domain"
+  - "NXDOMAIN Flood"
+  - "DNS Cache Poisoning"
+  - "CVE-2008-1447"
+  - "DNSSEC 放大"
+  - "DNS 拒绝服务"
+  - "递归解析器耗尽"
+  - "Kaminsky attack"
+difficulty: "advanced"
+tags:
+  - "dos"
+  - "denial-of-service"
+  - "dns"
+  - "water-torture"
+  - "cache-poisoning"
+  - "dnssec"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # DNS 拒绝服务攻击
 
 ## 场景

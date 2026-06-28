@@ -1,3 +1,25 @@
+---
+id: "ctf-website/14-idor/01-idor-enumeration"
+title: "IDOR 深度枚举与利用 — 水平/垂直越权实战方法论"
+title_en: "IDOR Deep Enumeration & Exploitation — Horizontal/Vertical Privilege Escalation Methodology"
+summary: >
+  IDOR 深度实战方法论，覆盖 ID 类型识别与预测（自增/UUID v1/Hashids）、多步 IDOR 链利用、
+  跨租户 IDOR（SaaS Multi-Tenant）、GraphQL 别名批量越权、REST 批量端点越权及真实 CVE 深度分析。
+summary_en: >
+  Deep IDOR methodology covering ID type recognition and prediction (auto-increment, UUID v1, Hashids),
+  multi-step IDOR chains, cross-tenant IDOR (SaaS), GraphQL alias batching, REST batch endpoint abuse,
+  and real CVEs including EverShop CVE-2025-12919 and Spree Commerce CVE-2026-25757.
+board: "ctf-website"
+category: "14-idor"
+signals: ["IDOR", "越权", "枚举", "UUID预测", "GraphQL别名", "批量端点", "跨租户", "CWE-639", "多步链"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file", "run_ctf_tool"]
+keywords: ["IDOR", "越权漏洞", "水平越权", "GraphQL IDOR", "UUID预测", "批量枚举", "CWE-639", "访问控制"]
+difficulty: "intermediate"
+tags: ["idor", "authorization", "enumeration", "graphql", "multi-tenant", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/14-idor/02-bac-business-logic", "ctf-website/12-payment/payment-email-bounce-idor"]
+---
 # IDOR 深度枚举与利用 — 水平/垂直越权实战方法论
 
 ## 场景

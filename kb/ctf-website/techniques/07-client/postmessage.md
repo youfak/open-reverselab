@@ -1,3 +1,22 @@
+---
+id: "ctf-website/07-client/postmessage"
+title: "PostMessage / 跨域通信攻击"
+title_en: "PostMessage / Cross-Origin Communication Attacks"
+summary: >
+  PostMessage跨域通信攻击完整指南，涵盖null origin沙箱绕过、Origin Fuzzer自动化探测、event.source劫持手法、通过postMessage窃取OAuth token、Structured Clone算法副作用利用（带毒RegExp lastIndex），以及prototype pollution通过postMessage数据对象的提权链路。
+summary_en: >
+  Complete guide to PostMessage cross-origin communication attacks, covering null origin sandbox bypass, automated Origin Fuzzer probing, event.source hijacking techniques, OAuth token theft via postMessage, Structured Clone algorithm side-effect exploitation (poisoned RegExp lastIndex), and prototype pollution privilege escalation through postMessage data objects.
+board: "ctf-website"
+category: "07-client"
+signals: ["postMessage", "跨域通信", "null origin", "OAuth token", "prototype pollution", "event.source", "structured clone"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["postMessage", "跨域通信", "null origin绕过", "OAuth token窃取", "prototype pollution", "structured clone", "event.source劫持"]
+difficulty: "intermediate"
+tags: ["client-side", "web-security", "oauth", "xss", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # PostMessage / 跨域通信攻击
 
 ## Null Origin 沙箱绕过

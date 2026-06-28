@@ -1,3 +1,23 @@
+---
+id: "ctf-website/03-injection/graphql"
+title: "GraphQL 攻击实战"
+title_en: "GraphQL Attack Techniques"
+summary: >
+  全面覆盖 GraphQL API 的 12 种攻击方法，包括 Introspection 拖 Schema、字段级授权绕过、Batch Query 绕过速率限制、Alias 滥用、Fragment 越权、深度递归 DoS、底层注入、WebSocket Subscription 攻击、Persisted Queries 滥用及 Field Suggestions 信息泄露。
+summary_en: >
+  A comprehensive guide to 12 GraphQL attack techniques including introspection schema dumping, field-level authorization bypass, batch query rate-limit bypass, alias abuse, fragment privilege escalation, deep recursion DoS, underlying injection, WebSocket subscription attacks, persisted query abuse, and field suggestion information disclosure.
+board: "ctf-website"
+category: "03-injection"
+signals: ["GraphQL", "introspection", "schema", "batch query", "alias", "fragment", "subscription", "field suggestion"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["GraphQL攻击", "introspection", "GraphQL注入", "batch query", "alias绕过", "DoS", "subscription", "clairvoyance"]
+difficulty: "intermediate"
+tags: ["injection", "graphql", "api", "web-security", "dos", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # GraphQL 攻击实战
 
 ## 环境判断

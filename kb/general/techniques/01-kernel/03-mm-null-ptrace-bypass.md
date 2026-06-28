@@ -1,3 +1,43 @@
+---
+id: "general/01-kernel/03-mm-null-ptrace-bypass"
+title: "内核 FD Theft：mm-NULL ptrace check bypass"
+title_en: "Kernel FD Theft: mm-NULL ptrace Check Bypass"
+summary: >
+  分析 do_exit() 中 exit_mm 与 exit_files 之间的 mm-NULL 窗口，利用 pidfd_getfd 在 ptrace 检查被绕过时复制已退出进程的敏感 fd，实现 /etc/shadow 和 SSH host key 的窃取。
+summary_en: >
+  Exploits the mm-NULL window between exit_mm and exit_files in do_exit() to bypass pidfd_getfd ptrace checks, copying sensitive file descriptors from exiting SUID processes to steal /etc/shadow and SSH host keys.
+board: "general"
+category: "01-kernel"
+signals:
+  - "fd theft"
+  - "ptrace bypass"
+  - "pidfd_getfd"
+  - "mm-NULL window"
+  - "dumpable check"
+  - "SUID"
+  - "file descriptor stealing"
+mcp_tools:
+  - "kb_router"
+  - "workspace_write_text"
+keywords:
+  - "CVE-2026-46333"
+  - "pidfd_getfd"
+  - "mm-NULL"
+  - "file descriptor theft"
+  - "ptrace"
+  - "do_exit race"
+  - "privilege escalation"
+  - "ssh-keysign"
+difficulty: "intermediate"
+tags:
+  - "kernel-exploitation"
+  - "fd-theft"
+  - "ptrace-bypass"
+  - "race-window"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 内核 FD Theft：mm-NULL ptrace check bypass（CVE-2026-46333）
 
 ## 1. 受影响版本

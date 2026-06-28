@@ -1,3 +1,51 @@
+---
+id: "general/cheating/01-memory-hacking"
+title: "内存搜索与修改"
+title_en: "Memory Searching and Modification"
+summary: >
+  覆盖 External/Internal/Kernel/DMA 四层内存攻击面，含指针链解析、SIMD 特征码扫描、多态数据反混淆、ObRegisterCallbacks 绕过与 PCILeech DMA 物理内存读写，面向 BattlEye/EAC/Vanguard 环境。
+summary_en: >
+  Four-layer memory attack surface (External/Internal/Kernel/DMA): pointer chain resolution, SIMD pattern scanning, polymorphic data deobfuscation, ObRegisterCallbacks bypass, and PCILeech DMA physical memory R/W for BattlEye/EAC/Vanguard environments.
+board: "general"
+category: "cheating"
+signals:
+  - "RPM/WPM"
+  - "pointer scanning"
+  - "DMA attack"
+  - "ObRegisterCallbacks"
+  - "data obfuscation"
+  - "kernel driver R/W"
+  - "SIMD pattern scan"
+mcp_tools:
+  - "triage_pe"
+  - "rizin_imports"
+  - "search_pattern"
+  - "rizin_assemble_bytes"
+  - "patch_bytes"
+  - "ghidra_summary_call_focus"
+  - "ghidra_summary_function_detail"
+  - "python_re_tool_install"
+keywords:
+  - "memory hacking"
+  - "ReadProcessMemory"
+  - "pointer chain"
+  - "DMA"
+  - "kernel driver"
+  - "anti-cheat bypass"
+  - "PCILeech"
+  - "pattern scan"
+  - "XOR obfuscation"
+difficulty: "intermediate"
+tags:
+  - "game-hacking"
+  - "memory-modification"
+  - "anti-cheat"
+  - "DMA"
+  - "kernel-driver"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 内存搜索与修改
 
 ## 场景

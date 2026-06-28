@@ -1,3 +1,23 @@
+---
+id: "ctf-website/01-recon/cloudflare-bypass"
+title: "Cloudflare 绕过：寻找真实源服务器 IP"
+title_en: "Cloudflare Bypass: Finding the Real Origin Server IP"
+summary: >
+  介绍七种绕过 Cloudflare CDN/WAF 保护的方法，包括 DNS 历史记录查询、SSL 证书搜索、子域名爆破、邮件头分析、Cloudflare 配置缺陷利用、互联网存档检索及 CDN IP 段排除，帮助定位真实源服务器进行直连攻击。
+summary_en: >
+  Seven methods to bypass Cloudflare CDN/WAF protection by discovering the origin server IP: DNS history lookup, SSL certificate search, subdomain enumeration, email header analysis, Cloudflare misconfiguration exploitation, internet archive retrieval, and CDN IP range exclusion.
+board: "ctf-website"
+category: "01-recon"
+signals: ["Cloudflare", "CF-Ray", "CDN", "源站IP", "origin IP", "DNS history", "SecurityTrails", "Censys"]
+mcp_tools: ["http_probe", "kb_router", "run_ctf_tool"]
+keywords: ["cloudflare bypass", "源站IP", "CDN绕过", "DNS历史", "SSL证书", "子域名爆破", "crt.sh", "dnsdumpster"]
+difficulty: "intermediate"
+tags: ["cloudflare", "recon", "cdn-bypass", "web-security", "dns", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # Cloudflare 绕过：寻找真实源服务器 IP
 
 ## 场景

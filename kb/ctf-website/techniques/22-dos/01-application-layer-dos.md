@@ -1,3 +1,52 @@
+---
+id: "ctf-website/22-dos/01-application-layer-dos"
+title: "Application-Layer DoS"
+title_en: "Application-Layer DoS"
+summary: >
+  攻击者利用HTTP/1.1、HTTP/2、WebSocket、GraphQL等应用层协议的语义缺陷，以极低带宽消耗耗尽服务器连接池、线程池或Worker进程。核心方法包括Slowloris不完全请求、RUDY慢速POST、HTTP/2 Rapid Reset、WebSocket连接洪泛和GraphQL别名轰炸。
+summary_en: >
+  Exploits semantic flaws in application-layer protocols (HTTP/1.1, HTTP/2, WebSocket, GraphQL) to exhaust server connection pools, thread pools, or worker processes with minimal bandwidth. Covers Slowloris, RUDY, HTTP/2 Rapid Reset (CVE-2023-44487), WebSocket flooding, and GraphQL alias amplification.
+board: "ctf-website"
+category: "22-dos"
+signals:
+  - "半开连接 SYN_RCVD CLOSE_WAIT"
+  - "HTTP Header 逐字节发送"
+  - "HTTP/2 RST_STREAM 帧"
+  - "WebSocket 连接数飙升"
+  - "GraphQL 别名轰炸"
+  - "Slowloris incomplete request"
+  - "Rapid Reset CVE-2023-44487"
+  - "application-layer denial of service"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+  - "run_ctf_tool"
+keywords:
+  - "Slowloris"
+  - "RUDY"
+  - "HTTP/2 Rapid Reset"
+  - "CVE-2023-44487"
+  - "WebSocket DoS"
+  - "GraphQL 别名放大"
+  - "应用层拒绝服务"
+  - "连接池耗尽"
+  - "R-U-Dead-Yet"
+  - "application layer DoS"
+difficulty: "intermediate"
+tags:
+  - "dos"
+  - "denial-of-service"
+  - "http"
+  - "http2"
+  - "websocket"
+  - "graphql"
+  - "slowloris"
+  - "application-layer"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Application-Layer DoS
 
 ## 场景

@@ -1,3 +1,26 @@
+---
+id: "ctf-website/13-signature/02-implementation"
+title: "Signature Implementation Bugs — 签名实现缺陷深度手册"
+title_en: "Signature Implementation Bugs — Implementation-Level Signature Bypass Manual"
+summary: >
+  覆盖 PHP（strcmp 数组绕过、magic hash、extract 变量覆盖）、Python（hmac.compare_digest 误用、
+  异常默认 allow）、Node.js（== vs ===、Buffer 比较）、Java（String.equals 时序）等各语言
+  签名验证实现缺陷，含完整时序攻击脚本恢复 HMAC 签名。
+summary_en: >
+  Covers language-specific signature verification bugs: PHP (strcmp array bypass, magic hash, extract),
+  Python (hmac.compare_digest misuse, exception-based allow), Node.js (== vs ===, Buffer comparison),
+  Java (String.equals timing) — including full timing attack scripts for HMAC recovery.
+board: "ctf-website"
+category: "13-signature"
+signals: ["implementation bugs", "实现缺陷", "strcmp绕过", "== vs ===", "timing attack", "异常绕过", "类型强制", "extract覆盖"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["签名实现缺陷", "strcmp绕过", "timing attack", "PHP type juggling", "HMAC时序攻击", "异常绕过", "实现漏洞"]
+difficulty: "advanced"
+tags: ["signature", "implementation", "php", "python", "timing-attack", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/13-signature/00-overview", "ctf-website/13-signature/01-algorithm"]
+---
 # Signature Implementation Bugs — 签名实现缺陷深度手册
 
 > 签名算法选对了，但实现写错了 = 签名不存在。本章覆盖各语言实现层面的经典漏洞，每类配有可复现的攻击脚本。

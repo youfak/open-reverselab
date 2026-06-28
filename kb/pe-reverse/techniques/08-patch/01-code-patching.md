@@ -1,3 +1,51 @@
+---
+id: "pe-reverse/08-patch/01-code-patching"
+title: "代码 Patch 与字节修改"
+title_en: "Code Patching and Byte Modification"
+summary: >
+  介绍五种代码 Patch 模式（NOP 填充、强制条件分支、立即数修改、函数返回值劫持、Xbyak 生成复杂 Patch），涵盖 VirtualProtect 改页保护、Patch 安装/卸载模板、防御性验证及完整攻击链。
+summary_en: >
+  Five code patching patterns (NOP filling, forced conditional branch, immediate value modification, function return hijacking, Xbyak-generated complex patch), covering VirtualProtect page protection changes, install/uninstall templates, defensive verification, and the complete patching attack chain.
+board: "pe-reverse"
+category: "08-patch"
+signals:
+  - "VirtualProtect"
+  - "NOP patch"
+  - "JMP modification"
+  - "immediate value"
+  - "Xbyak"
+  - "代码修改"
+  - "函数劫持"
+  - "字节替换"
+mcp_tools:
+  - pe_address_to_offset
+  - patch_pe_bytes
+  - patch_bytes
+  - rizin_assemble_patch
+  - sample_full_workup
+keywords:
+  - "code patch"
+  - "VirtualProtect"
+  - "NOP"
+  - "JMP"
+  - "byte modification"
+  - "Xbyak"
+  - "PE patch"
+  - "function hijack"
+  - "immediate value"
+  - "memcpy"
+difficulty: "intermediate"
+tags:
+  - "code-patching"
+  - "PE-modification"
+  - "NOP"
+  - "VirtualProtect"
+  - "byte-patch"
+  - "Xbyak"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 代码 Patch 与字节修改
 
 ## 场景

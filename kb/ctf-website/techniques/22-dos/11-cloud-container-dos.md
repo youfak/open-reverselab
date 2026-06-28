@@ -1,3 +1,50 @@
+---
+id: "ctf-website/22-dos/11-cloud-container-dos"
+title: "云原生 / 容器拒绝服务"
+title_en: "Cloud-Native / Container Denial of Service"
+summary: >
+  利用云原生基础设施的资源抽象层特性进行攻击：Kubernetes ResourceQuota配额耗尽使Pod无法调度、HPA自动扩缩容无限扩容至集群资源枯竭、Serverless计费爆炸通过冷启动和大量调用制造巨额账单，以及云元数据服务IMDS限频和容器逃逸资源压力。
+summary_en: >
+  Exploits cloud-native infrastructure abstraction layers: Kubernetes ResourceQuota exhaustion preventing Pod scheduling, HPA infinite autoscaling to cluster resource depletion, Serverless billing explosions via cold starts and massive invocations, cloud metadata service (IMDS) rate-limiting attacks, and container escape resource pressure.
+board: "ctf-website"
+category: "22-dos"
+signals:
+  - "Kubernetes ResourceQuota 耗尽"
+  - "HPA 扩容至 maxReplicas"
+  - "Pod OOMKilled exit 137"
+  - "Serverless 计费爆炸"
+  - "冷启动 cold_start_count"
+  - "IMDS 169.254.169.254"
+  - "容器 PID namespace 耗尽"
+  - "CrashLoopBackOff"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "Kubernetes DoS"
+  - "ResourceQuota 攻击"
+  - "HPA 无限扩容"
+  - "Serverless 计费攻击"
+  - "冷启动放大"
+  - "云元数据攻击"
+  - "容器逃逸"
+  - "cloud-native denial of service"
+  - "IMDS 限频"
+  - "denial of wallet"
+difficulty: "advanced"
+tags:
+  - "dos"
+  - "denial-of-service"
+  - "kubernetes"
+  - "cloud-native"
+  - "serverless"
+  - "containers"
+  - "auto-scaling"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 云原生 / 容器拒绝服务
 
 ## 场景

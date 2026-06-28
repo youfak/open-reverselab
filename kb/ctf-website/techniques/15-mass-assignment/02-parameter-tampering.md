@@ -1,3 +1,25 @@
+---
+id: "ctf-website/15-mass-assignment/02-parameter-tampering"
+title: "参数篡改全链 — 价格/数量/优惠券/竞态深度攻击"
+title_en: "Parameter Tampering Full Chain — Price/Quantity/Coupon/Race Condition Deep Attacks"
+summary: >
+  覆盖价格操纵全类型向量（零值/负值/NaN/科学计数法）、数量库存操爆、优惠券全生命周期攻击（批量领取/预测码/叠加/竞态）、
+  货币汇率混淆及 TOCTOU 竞态利用（GrandNode CVE-2025-10216 实战），含完整可运行攻击脚本。
+summary_en: >
+  Covers full price manipulation vectors (zero, negative, NaN, scientific notation), quantity/stock exploits,
+  coupon lifecycle attacks (batch steal, code prediction, stacking, race conditions), currency confusion,
+  and TOCTOU race exploitation with GrandNode CVE-2025-10216 practical demo — all with runnable scripts.
+board: "ctf-website"
+category: "15-mass-assignment"
+signals: ["parameter tampering", "参数篡改", "价格操纵", "零元购", "优惠券竞态", "TOCTOU", "currency bypass", "CWE-20"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file", "run_ctf_tool"]
+keywords: ["参数篡改", "价格绕过", "优惠券攻击", "TOCTOU", "竞态条件", "零元购", "货币混淆", "CWE-20"]
+difficulty: "advanced"
+tags: ["parameter-tampering", "race-condition", "coupon", "payment", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/15-mass-assignment/01-mass-assignment", "ctf-website/12-payment/payment-bypass"]
+---
 # 参数篡改全链 — 价格/数量/优惠券/竞态深度攻击
 
 ## 场景

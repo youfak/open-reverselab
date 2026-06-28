@@ -1,3 +1,23 @@
+---
+id: "ctf-website/01-recon/fofa-hunting"
+title: "FOFA 资产测绘与漏洞狩猎"
+title_en: "FOFA Asset Mapping and Vulnerability Hunting"
+summary: >
+  介绍 FOFA 网络空间测绘搜索引擎的核心语法与四大实战模式：批量弱口令狩猎、漏洞版本快速定位、配置错误发现及同类资产关联拓展。覆盖从资产测绘到批量漏洞验证的完整攻击链，用于渗透测试中的大规模目标发现。
+summary_en: >
+  A practical guide to FOFA, China's leading cyberspace search engine, covering core query syntax and four attack patterns: bulk weak-password hunting, vulnerable version discovery, misconfiguration detection, and asset correlation expansion. Enables large-scale target discovery for penetration testing.
+board: "ctf-website"
+category: "01-recon"
+signals: ["FOFA", "资产测绘", "网络空间测绘", "org", "app", "弱口令", "漏洞狩猎", "Shodan"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["FOFA", "资产测绘", "网络空间测绘", "漏洞狩猎", "弱口令", "批量扫描", "fofa语法", "org字段", "CVE批量"]
+difficulty: "beginner"
+tags: ["recon", "asset-discovery", "vulnerability-hunting", "web-security", "fofa", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # FOFA 资产测绘与漏洞狩猎
 
 ## 场景

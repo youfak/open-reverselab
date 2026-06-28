@@ -1,3 +1,50 @@
+---
+id: "ctf-website/24-database/01-sqli-fundamentals"
+title: "SQL Injection Core — SQL 注入基础与全类型覆盖"
+title_en: "SQL Injection Core — Fundamentals & Full Type Coverage"
+summary: >
+  SQL注入经典技术体系：注入点探测与数据库指纹识别、联合查询UNION SELECT数据提取、报错注入（extractvalue/updatexml）、布尔盲注逐字符提取、时间盲注（SLEEP/BENCHMARK/pg_sleep）、文件读写（LOAD_FILE/INTO OUTFILE）以及WAF绕过速查表。
+summary_en: >
+  Classic SQL injection techniques: injection point detection and database fingerprinting, UNION SELECT data extraction, error-based injection (extractvalue/updatexml), boolean-based blind extraction character by character, time-based blind (SLEEP/BENCHMARK/pg_sleep), file read/write (LOAD_FILE/INTO OUTFILE), and a WAF bypass cheat sheet.
+board: "ctf-website"
+category: "24-database"
+signals:
+  - "ORDER BY 列数探测"
+  - "UNION SELECT 回显位"
+  - "information_schema tables"
+  - "extractvalue updatexml 报错"
+  - "SLEEP BENCHMARK 时间盲注"
+  - "LOAD_FILE 文件读取"
+  - "WAF 大小写双写注释绕过"
+  - "宽字节 %bf%27 GBK"
+mcp_tools:
+  - "http_probe"
+  - "run_ctf_tool"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "SQL 注入"
+  - "UNION SELECT"
+  - "报错注入"
+  - "布尔盲注"
+  - "时间盲注"
+  - "information_schema"
+  - "WAF 绕过"
+  - "LOAD_FILE"
+  - "宽字节注入"
+  - "extractvalue"
+difficulty: "beginner"
+tags:
+  - "database"
+  - "sql-injection"
+  - "sqli"
+  - "mysql"
+  - "waf-bypass"
+  - "blind-injection"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # SQL Injection Core — SQL 注入基础与全类型覆盖
 
 > 联合查询、报错注入、布尔盲注、时间盲注、文件读写——SQL 注入经典技术体系，附带 WAF 绕过速查表。

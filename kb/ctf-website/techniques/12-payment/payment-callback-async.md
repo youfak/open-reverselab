@@ -1,3 +1,24 @@
+---
+id: "ctf-website/12-payment/payment-callback-async"
+title: "Payment Callback & Async Attack — 支付回调与异步攻击深度手册"
+title_en: "Payment Callback & Async Attack — Deep Dive into Payment Callback and Async Attacks"
+summary: >
+  系统覆盖支付回调签名绕过、回调伪造、幂等性绕过、时序竞态（TOCTOU）、消息队列攻击、Webhook SSRF、DNS Rebinding
+  等异步支付场景的全攻击面，每条技术链路均配有自动化审计脚本。
+summary_en: >
+  Systematic coverage of payment callback signature bypass, callback forgery, idempotency bypass, TOCTOU races,
+  message queue attacks, webhook SSRF, and DNS rebinding — each attack vector with automated audit scripts.
+board: "ctf-website"
+category: "12-payment"
+signals: ["payment callback", "支付回调", "签名绕过", "notify_url", "webhook", "SSRF", "幂等绕过", "MQ注入", "异步竞态"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["支付回调", "callback bypass", "webhook攻击", "SSRF", "幂等绕过", "TOCTOU", "消息队列安全", "签名伪造"]
+difficulty: "advanced"
+tags: ["payment", "callback", "webhook", "async", "race-condition", "ssrf", "web-security"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/12-payment/payment-bypass", "ctf-website/13-signature/00-overview"]
+---
 # Payment Callback & Async Attack — 支付回调与异步攻击深度手册
 
 > 支付系统的异步特性是最大的攻击面：回调签名、幂等、时序窗口、消息队列、延迟结算、webhook 隧道。本手册覆盖从回调伪造到分布式异步攻击链的全部技术。

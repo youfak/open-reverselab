@@ -1,3 +1,49 @@
+---
+id: "ctf-website/23-paywall-bypass/02-http-header-manipulation"
+title: "HTTP 请求头伪装"
+title_en: "HTTP Header Spoofing"
+summary: >
+  利用搜索引擎爬虫的SEO特权绕过paywall：通过declarativeNetRequest修改User-Agent为Googlebot/Bingbot、设置Referer为google.com、轮换X-Forwarded-For IP，使服务器返回完整无付费墙内容。包含Chrome Extension Manifest V3实现和Python/curl外部脚本两种方案。
+summary_en: >
+  Exploits search engine crawler SEO privileges for paywall bypass: uses declarativeNetRequest to spoof User-Agent as Googlebot/Bingbot, set Referer to google.com, and rotate X-Forwarded-For IPs to make servers return full un-paywalled content. Covers Chrome Extension Manifest V3 and Python/curl external script implementations.
+board: "ctf-website"
+category: "23-paywall-bypass"
+signals:
+  - "User-Agent: Googlebot/2.1"
+  - "Referer: https://www.google.com/"
+  - "declarativeNetRequest modifyHeaders"
+  - "vary: User-Agent 响应头"
+  - "Google Web Cache 完整内容"
+  - "Cookie articleReads meterCount"
+  - "X-Forwarded-For 伪装"
+  - "响应体大小 Googlebot > Chrome"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "Googlebot UA"
+  - "User-Agent 伪装"
+  - "declarativeNetRequest"
+  - "HTTP header spoofing"
+  - "Referer 绕过"
+  - "X-Forwarded-For"
+  - "Manifest V3"
+  - "Cookie 清除"
+  - "paywall header bypass"
+  - "爬虫伪装"
+difficulty: "beginner"
+tags:
+  - "paywall"
+  - "bypass"
+  - "http-headers"
+  - "user-agent"
+  - "browser-extension"
+  - "chromium"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # HTTP 请求头伪装
 
 ## 场景

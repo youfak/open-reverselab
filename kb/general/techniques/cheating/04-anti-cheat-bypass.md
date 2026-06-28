@@ -1,3 +1,50 @@
+---
+id: "general/cheating/04-anti-cheat-bypass"
+title: "反作弊系统绕过"
+title_en: "Anti-Cheat System Bypass"
+summary: >
+  系统分析 EAC/BattlEye/Vanguard/Ricochet 四套商业反作弊架构：ObRegisterCallbacks 绕过、Thread Hiding、Manual Map 注入、Direct Syscall、ETW Patching 及 VGK.sys VTL1 保护绕过思路，覆盖用户态到硬件级对抗。
+summary_en: >
+  Systematic analysis of EAC, BattlEye, Vanguard, and Ricochet architectures: ObRegisterCallbacks bypass, thread hiding, manual map injection, direct syscall, ETW patching, and VGK.sys VTL1 bypass strategies from usermode to hardware level.
+board: "general"
+category: "cheating"
+signals:
+  - "EAC"
+  - "BattlEye"
+  - "Vanguard VGK.sys"
+  - "ETW patching"
+  - "manual mapping"
+  - "direct syscall"
+  - "handle stripping"
+mcp_tools:
+  - "triage_pe"
+  - "ghidra_headless_analyze"
+  - "ghidra_summary_call_focus"
+  - "search_pattern"
+  - "rizin_assemble_bytes"
+  - "pe_address_to_offset"
+  - "project_skills_status"
+keywords:
+  - "EasyAntiCheat"
+  - "BattlEye"
+  - "Vanguard"
+  - "Ricochet"
+  - "ObRegisterCallbacks"
+  - "direct syscall"
+  - "kernel driver"
+  - "ETW bypass"
+  - "manual map inject"
+difficulty: "advanced"
+tags:
+  - "anti-cheat"
+  - "kernel"
+  - "game-hacking"
+  - "bypass"
+  - "Vanguard"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 反作弊系统绕过
 
 ## 场景

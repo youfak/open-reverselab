@@ -1,3 +1,49 @@
+---
+id: "ctf-website/23-paywall-bypass/01-paywall-detection-bypass"
+title: "Paywall 检测与绕过总览"
+title_en: "Paywall Detection & Bypass Overview"
+summary: >
+  Paywall绕过全貌：通过DOM指纹识别（Piano/Poool/Sophi/Zephr等50+平台）、Cookie域探测、分层绕过策略（UA伪装→脚本拦截→JSON-LD提取→archive.is代理→DOM操作），覆盖400+全球新闻网站，从metered到hard paywall的完整攻击面。
+summary_en: >
+  Complete paywall bypass overview: DOM fingerprinting of 50+ paywall platforms (Piano, Poool, Sophi, Zephr, etc.), cookie domain probing, and layered bypass strategies (UA spoofing → script blocking → JSON-LD extraction → archive.is proxy → DOM manipulation). Covers 400+ global news sites across metered to hard paywalls.
+board: "ctf-website"
+category: "23-paywall-bypass"
+signals:
+  - "Piano Tinypass script[src*=\"tinypass.com\"]"
+  - "Poool script[src*=\".poool.fr/\"]"
+  - "Sophi script[src*=\".sophi.io/\"]"
+  - "paywall overlay div.paywall"
+  - "metered paywall article_limit cookie"
+  - "JSON-LD articleBody"
+  - "Googlebot UA 差异化"
+  - "AMP amp-access"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "paywall 绕过"
+  - "paywall bypass"
+  - "Piano"
+  - "metered paywall"
+  - "Googlebot UA"
+  - "JSON-LD 提取"
+  - "DOM fingerprinting"
+  - "浏览器扩展绕过"
+  - "SEO 后门"
+  - "declarativeNetRequest"
+difficulty: "intermediate"
+tags:
+  - "paywall"
+  - "bypass"
+  - "seo"
+  - "browser-extension"
+  - "content-extraction"
+  - "fingerprinting"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Paywall 检测与绕过总览
 
 ## 场景

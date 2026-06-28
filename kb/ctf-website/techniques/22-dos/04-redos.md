@@ -1,3 +1,49 @@
+---
+id: "ctf-website/22-dos/04-redos"
+title: "ReDoS — 正则表达式拒绝服务"
+title_en: "ReDoS — Regular Expression Denial of Service"
+summary: >
+  攻击者构造特定输入字符串触发正则引擎进入指数级回溯，单次请求仅几十字节即可消耗数秒乃至数分钟CPU。核心漏洞在于嵌套量词、重叠交替和可选段重叠三种危险模式，影响Python re、Java NFA、PHP PCRE等主流引擎。
+summary_en: >
+  Crafted input strings trigger exponential backtracking in regex engines, consuming seconds to minutes of CPU with requests of only tens of bytes. The core vulnerability lies in three dangerous patterns: nested quantifiers, overlapping alternation, and overlapping optional groups, affecting Python re, Java NFA, PHP PCRE, and other mainstream engines.
+board: "ctf-website"
+category: "22-dos"
+signals:
+  - "正则回溯爆炸 backtracking"
+  - "嵌套量词 (a+)+"
+  - "重叠交替 a|aa"
+  - "单请求响应时间异常增长 50ms→30s"
+  - "ReDoS CVE-2020-5243"
+  - "preg_match CPU 100%"
+  - "Event Loop 延迟 >1s"
+  - "正则表达式拒绝服务"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "ReDoS"
+  - "正则表达式拒绝服务"
+  - "backtracking explosion"
+  - "指数回溯"
+  - "CVE-2020-5243"
+  - "正则引擎 NFA"
+  - "regex catastrophic backtracking"
+  - "uap-core"
+  - "算法复杂度攻击"
+  - "redos payload"
+difficulty: "advanced"
+tags:
+  - "dos"
+  - "denial-of-service"
+  - "redos"
+  - "regex"
+  - "algorithm-complexity"
+  - "backtracking"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # ReDoS — 正则表达式拒绝服务
 
 ## 场景

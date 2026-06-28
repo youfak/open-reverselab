@@ -1,3 +1,23 @@
+---
+id: "ctf-website/03-injection/redos-timing"
+title: "ReDoS & 时序攻击"
+title_en: "ReDoS and Timing Attacks"
+summary: >
+  介绍正则表达式拒绝服务 (ReDoS) 和时序侧信道攻击两大技术。ReDoS 利用灾难性回溯实现 Node.js 事件循环阻塞导致认证绕过和 WAF 超时穿透；时序攻击通过非恒定时间比较的统计测量实现 Token/密钥逐字节恢复。
+summary_en: >
+  Two techniques: Regular Expression Denial of Service (ReDoS) exploiting catastrophic backtracking for Node.js event loop blocking, auth bypass, and WAF timeout penetration; and timing side-channel attacks recovering tokens/keys byte-by-byte via statistical measurement of non-constant-time comparisons.
+board: "ctf-website"
+category: "03-injection"
+signals: ["ReDoS", "正则回溯", "catastrophic backtracking", "时序攻击", "timing attack", "WAF超时", "event loop"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["ReDoS", "正则攻击", "时序攻击", "timing attack", "WAF绕过", "正则回溯", "侧信道"]
+difficulty: "advanced"
+tags: ["injection", "redos", "timing-attack", "dos", "web-security", "side-channel", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # ReDoS & 时序攻击
 
 ## Catastrophic Backtracking (ReDoS)

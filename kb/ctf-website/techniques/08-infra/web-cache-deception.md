@@ -1,3 +1,22 @@
+---
+id: "ctf-website/08-infra/web-cache-deception"
+title: "Web Cache Deception"
+title_en: "Web Cache Deception"
+summary: >
+  Web缓存欺骗攻击完整指南，利用CDN将动态页面以静态扩展名（.css/.js/.json）缓存，泄露认证后的敏感数据。涵盖基础Payload、分隔符变体绕过路径规范化（Spring ;分号、NUL字节截断）、Stored XSS via Cache Deception，以及与Cache Poisoning的核心区别对比。
+summary_en: >
+  Complete guide to Web Cache Deception attacks, exploiting CDN caching of dynamic pages with static extensions (.css/.js/.json) to leak authenticated sensitive data. Covers basic payloads, delimiter variants to bypass path normalization (Spring semicolon, NUL byte truncation), Stored XSS via Cache Deception, and key differences from Cache Poisoning.
+board: "ctf-website"
+category: "08-infra"
+signals: ["web cache deception", "缓存欺骗", "CDN", "静态文件缓存", "path delimiter", "X-Cache"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["Web Cache Deception", "CDN缓存欺骗", "缓存投毒区别", "动态页面缓存", "路径分隔符绕过", "敏感数据泄露", "cache deception vs poisoning"]
+difficulty: "intermediate"
+tags: ["caching", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Web Cache Deception
 
 ## 原理

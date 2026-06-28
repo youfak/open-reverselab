@@ -1,3 +1,44 @@
+---
+id: "general/01-kernel/02-slab-cross-cache"
+title: "Slab 跨缓存释放：KFENCE 精确大小报告导致 SKB head 释放到错误缓存"
+title_en: "Slab Cross-Cache Free: KFENCE Exact Size Report Frees SKB Head into Wrong Cache"
+summary: >
+  分析 KFENCE 的 kfence_ksize 返回精确大小如何破坏 skb_kfree_head 启发式路由，触发 kmalloc-1k 对象被释放到 skb_small_head_cache，通过 BPF_PROG_TEST_RUN 稳定复现 SLUB 损坏。
+summary_en: >
+  Examines how KFENCE kfence_ksize returning exact size breaks skb_kfree_head heuristic routing, causing kmalloc-1k objects to be freed into skb_small_head_cache via BPF_PROG_TEST_RUN, producing repeatable SLUB corruption.
+board: "general"
+category: "01-kernel"
+signals:
+  - "slab cross-cache"
+  - "KFENCE"
+  - "skb_small_head_cache"
+  - "SLUB corruption"
+  - "BPF_PROG_TEST_RUN"
+  - "kfence_ksize"
+  - "kmem_cache_free mismatch"
+mcp_tools:
+  - "kb_router"
+  - "workspace_write_text"
+keywords:
+  - "slab allocator"
+  - "KFENCE"
+  - "CVE-2026-31429"
+  - "skb_small_head_cache"
+  - "SLUB"
+  - "BPF"
+  - "kernel memory corruption"
+  - "cross-cache free"
+difficulty: "advanced"
+tags:
+  - "kernel-exploitation"
+  - "slab"
+  - "memory-corruption"
+  - "KFENCE"
+  - "BPF"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Slab 跨缓存释放：KFENCE 精确大小报告导致 SKB head 释放到错误缓存（CVE-2026-31429）
 
 ## 1. 受影响版本

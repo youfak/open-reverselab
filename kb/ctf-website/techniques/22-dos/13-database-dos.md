@@ -1,3 +1,51 @@
+---
+id: "ctf-website/22-dos/13-database-dos"
+title: "数据库层拒绝服务"
+title_en: "Database Layer Denial of Service"
+summary: >
+  直接在数据库层面瘫痪服务的攻击技术：慢查询注入（笛卡尔积、递归CTE、正则ReDoS）、行锁/死锁构造使正常事务阻塞、连接池耗尽（pg_sleep/SLEEP占满连接）、WAL/Binlog日志膨胀写满磁盘，以及索引退化使查询从O(log n)退化为O(n)。
+summary_en: >
+  Attack techniques that paralyze services directly at the database layer: slow query injection (Cartesian products, recursive CTEs, regex ReDoS), row lock/deadlock construction blocking legitimate transactions, connection pool exhaustion (pg_sleep/SLEEP), WAL/Binlog log explosion filling disks, and index degradation turning O(log n) queries into O(n).
+board: "ctf-website"
+category: "22-dos"
+signals:
+  - "慢查询 pg_stat_activity"
+  - "idle in transaction 连接"
+  - "行锁等待 pg_locks"
+  - "死锁 deadlock 回滚"
+  - "WAL 日志膨胀"
+  - "ORDER BY random()"
+  - "SELECT SLEEP(30)"
+  - "递归 CTE 炸弹"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+  - "run_ctf_tool"
+keywords:
+  - "数据库 DoS"
+  - "慢查询注入"
+  - "连接池耗尽"
+  - "死锁攻击"
+  - "WAL 膨胀"
+  - "database denial of service"
+  - "pg_sleep"
+  - "FOR UPDATE 行锁"
+  - "笛卡尔积"
+  - "BENCHMARK 注入"
+difficulty: "advanced"
+tags:
+  - "dos"
+  - "denial-of-service"
+  - "database"
+  - "sql"
+  - "postgresql"
+  - "mysql"
+  - "connection-pool"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 数据库层拒绝服务
 
 ## 场景

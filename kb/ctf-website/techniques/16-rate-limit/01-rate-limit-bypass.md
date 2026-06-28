@@ -1,3 +1,25 @@
+---
+id: "ctf-website/16-rate-limit/01-rate-limit-bypass"
+title: "速率限制绕过 — IP 轮换、Header 操纵与应用层绕过"
+title_en: "Rate Limit Bypass — IP Rotation, Header Manipulation & Application-Layer Bypass"
+summary: >
+  全面覆盖速率限制绕过技术：IP Header 注入（X-Forwarded-For 等）、IPv6 /64 子网轮换、CDN 源站发现、
+  参数轮换（用户名 padding/密码后缀）、并发竞态绕过、API Key 轮换及验证码绕过（Token 重放/OCR/逻辑降级）。
+summary_en: >
+  Comprehensive rate limit bypass techniques: IP header injection (X-Forwarded-For, etc.), IPv6 /64 subnet
+  rotation, CDN origin discovery, parameter rotation (username padding, password suffix), concurrent race
+  bypass, API key rotation, and CAPTCHA bypass (token replay, OCR, logic downgrade).
+board: "ctf-website"
+category: "16-rate-limit"
+signals: ["rate limit bypass", "速率限制绕过", "X-Forwarded-For", "IP轮换", "IPv6旋转", "并发绕过", "验证码绕过", "CDN bypass"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file", "run_ctf_tool"]
+keywords: ["速率限制绕过", "rate limit bypass", "X-Forwarded-For", "IP轮换", "429绕过", "并发限流", "验证码绕过", "CDN源站"]
+difficulty: "intermediate"
+tags: ["rate-limit", "bypass", "ip-spoofing", "concurrency", "captcha", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/16-rate-limit/02-brute-force-tactics"]
+---
 # 速率限制绕过 — IP 轮换、Header 操纵与应用层绕过
 
 ## 场景

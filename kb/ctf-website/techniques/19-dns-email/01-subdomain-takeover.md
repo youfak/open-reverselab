@@ -1,3 +1,23 @@
+---
+id: "ctf-website/19-dns-email/01-subdomain-takeover"
+title: "子域名接管深度"
+title_en: "Subdomain Takeover Deep Dive"
+summary: >
+  当目标组织 DNS 记录指向已删除或未认领的第三方云服务时，攻击者可注册该服务资源来完全控制子域名。覆盖 30+ 云服务指纹库、Dangling DNS 检测、CNAME/NS/MX 记录接管、CloudFront/Azure CDN 特定接管及邮件拦截等全面技术。
+summary_en: >
+  When an organization's DNS records point to deleted or unclaimed third-party cloud services, attackers can register those resources to gain full control of the subdomain. Covers 30+ cloud service fingerprints, dangling DNS detection, CNAME/NS/MX record takeover, CloudFront/Azure CDN-specific takeover, and email interception.
+board: "ctf-website"
+category: "19-dns-email"
+signals: ["subdomain takeover", "CNAME", "dangling DNS", "cloud service", "S3 bucket", "CloudFront", "子域名接管", "DNS"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file", "run_ctf_tool"]
+keywords: ["子域名接管", "DNS劫持", "CNAME接管", "dangling DNS", "S3 bucket", "CloudFront", "NS接管", "subdomain takeover", "cloud security"]
+difficulty: "intermediate"
+tags: ["dns", "subdomain", "takeover", "cloud", "cname", "aws", "azure", "dangling-dns"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # 子域名接管深度
 
 ## 场景

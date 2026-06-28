@@ -1,3 +1,22 @@
+---
+id: "ctf-website/07-client/cors-csrf"
+title: "CORS / CSRF 高级攻击"
+title_en: "Advanced CORS / CSRF Attacks"
+summary: >
+  CORS与CSRF高级攻击指南，涵盖CORS四种漏洞利用等级（ACAO反射+ACAC、null origin沙箱iframe、前缀后缀匹配绕过）、CSRF Token八种绕过手法、JSON CSRF跨域请求、SameSite Cookie绕过策略，以及CORS配合CSRF token读取的完整攻击链路。
+summary_en: >
+  Advanced CORS and CSRF attack guide covering four CORS exploitation levels (ACAO reflection with ACAC, null origin sandbox iframe, prefix/suffix match bypass), eight CSRF token bypass techniques, JSON CSRF cross-origin requests, SameSite cookie bypass strategies, and complete attack chains combining CORS with CSRF token reading.
+board: "ctf-website"
+category: "07-client"
+signals: ["CORS", "CSRF", "SameSite", "跨域请求", "跨站请求伪造", "ACAO", "csrf token bypass"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["CORS配置", "CSRF绕过", "SameSite Cookie", "跨域读取", "CSRF token绕过", "null origin", "JSON CSRF"]
+difficulty: "intermediate"
+tags: ["cors", "csrf", "web-security", "authentication", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # CORS / CSRF 高级攻击
 
 ## 1. CORS 配置速查

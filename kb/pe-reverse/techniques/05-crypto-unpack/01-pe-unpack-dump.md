@@ -1,3 +1,49 @@
+---
+id: "pe-reverse/05-crypto-unpack/01-pe-unpack-dump"
+title: "PE 脱壳与内存 Dump"
+title_en: "PE Unpacking and Memory Dumping"
+summary: >
+  针对 UPX/ASPack/VMProtect/Themida 等加壳 PE，介绍壳行为模型、脱壳时机选择及四种 dump 方法（x64dbg+Scylla、Frida 运行时 dump、ProcDump 全进程 dump、API Hook 自动 dump），附 IAT 修复和 DiE 壳检测指南。
+summary_en: >
+  For packed PEs (UPX/ASPack/VMProtect/Themida), covering packer behavior models, unpacking timing, and four dump methods (x64dbg+Scylla, Frida runtime dump, ProcDump full dump, API Hook auto-dump), with IAT repair and DiE packer detection guidance.
+board: "pe-reverse"
+category: "05-crypto-unpack"
+signals:
+  - "packer detection"
+  - "OEP"
+  - "Scylla"
+  - "memory dump"
+  - "IAT rebuild"
+  - "脱壳"
+  - "dump"
+  - "壳行为"
+mcp_tools:
+  - die_scan
+  - make_pe_crypto_unpack_plan
+  - carve_payloads_from_dump
+keywords:
+  - "unpack"
+  - "dump"
+  - "UPX"
+  - "ASPack"
+  - "VMProtect"
+  - "Scylla"
+  - "OEP"
+  - "IAT rebuild"
+  - "Frida"
+  - "ProcDump"
+difficulty: "intermediate"
+tags:
+  - "unpacking"
+  - "dump"
+  - "packer"
+  - "OEP"
+  - "Scylla"
+  - "Frida"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # PE 脱壳与内存 Dump
 
 ## 场景

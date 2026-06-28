@@ -1,3 +1,22 @@
+---
+id: "apk-reverse/06-dynamic/01-memory-rw-hook"
+title: "进程内存读写检测与 Hook"
+title_en: "Process Memory Read/Write Detection and Hook"
+summary: >
+  检测并 Hook 跨进程内存读写的三种路径：syscall process_vm_readv/writev、/proc/pid/mem 文件读取、ioctl 内核驱动自定义命令，使用 strace 追踪和 Frida Interceptor 拦截，分析内存访问模式与被调试进程防护。
+summary_en: >
+  Detecting and hooking cross-process memory read/write across three paths: syscall process_vm_readv/writev, /proc/pid/mem file reading, and ioctl kernel driver custom commands, using strace tracing and Frida Interceptor for interception to analyze memory access patterns and debugged process protection.
+board: "apk-reverse"
+category: "06-dynamic"
+signals: ["process_vm_readv", "process_vm_writev", "/proc/pid/mem", "ioctl driver", "strace", "memory detection", "Frida interceptor"]
+mcp_tools: ["android_frida_run_script", "android_frida_render_template"]
+keywords: ["process_vm_readv", "memory read", "ioctl", "内存检测", "strace", "Frida", "跨进程", "Hook"]
+difficulty: "advanced"
+tags: ["memory-read", "detection", "process_vm_readv", "strace", "frida", "kernel-driver"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 进程内存读写检测与 Hook
 
 ## 场景

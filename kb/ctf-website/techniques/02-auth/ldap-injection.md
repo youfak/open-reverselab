@@ -1,3 +1,23 @@
+---
+id: "ctf-website/02-auth/ldap-injection"
+title: "LDAP Injection"
+title_en: "LDAP Injection"
+summary: >
+  介绍 LDAP 过滤器注入的攻击原理，包括认证绕过、盲注逐字符提取属性值、LDAP-to-JNDI 反序列化链及 OpenLDAP 匿名绑定攻击。覆盖完整的 LDAP filter 注入 payload 字典和盲注脚本。
+summary_en: >
+  A guide to LDAP filter injection attacks covering authentication bypass, blind character-by-character attribute extraction, LDAP-to-JNDI deserialization chains, and OpenLDAP anonymous bind exploitation. Includes complete LDAP filter injection payloads and blind extraction scripts.
+board: "ctf-website"
+category: "02-auth"
+signals: ["LDAP", "过滤器注入", "LDAP injection", "JNDI", "盲注", "anonymous bind", "OpenLDAP"]
+mcp_tools: ["http_probe"]
+keywords: ["LDAP injection", "LDAP注入", "JNDI", "filter bypass", "盲注", "anonymous bind", "认证绕过"]
+difficulty: "intermediate"
+tags: ["authentication", "ldap", "injection", "web-security", "jndi", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # LDAP Injection
 
 ## LDAP 过滤器注入

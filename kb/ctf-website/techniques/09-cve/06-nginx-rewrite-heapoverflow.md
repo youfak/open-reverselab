@@ -1,3 +1,22 @@
+---
+id: "ctf-website/09-cve/06-nginx-rewrite-heapoverflow"
+title: "NGINX rewrite 模块：set 缓冲区长度错配堆溢出（CVE-2026-42945）"
+title_en: "NGINX rewrite Module: set Buffer Length Mismatch Heap Overflow (CVE-2026-42945)"
+summary: >
+  NGINX rewrite模块漏洞分析，rewrite将URI改写到带?的内部路径触发转义状态，set指令按原始捕获内容长度申请堆缓冲区但复制时展开URI转义（+→%2B），导致堆溢出。涵盖受影响版本、长度计算与复制语义不一致的核心矛盾、Docker复现环境、PoC堆喷射与伪结构体构造。注意此PoC非通用一键打（依赖ASLR关闭和地址硬编码）。
+summary_en: >
+  NGINX rewrite module vulnerability analysis where rewrite changes URI to an internal path with ? triggering escape state, and set directive allocates heap buffer by original capture length but copies with URI escape expansion (+→%2B), causing heap overflow. Covers affected versions, core contradiction of length calculation vs copy semantics, Docker reproduction environment, and PoC heap spray with fake struct construction. Note this PoC is not universal (relies on ASLR disabled and hardcoded addresses).
+board: "ctf-website"
+category: "09-cve"
+signals: ["NGINX", "rewrite", "heap overflow", "set directive", "堆溢出", "缓冲区长度错配", "CVE-2026-42945", "URI escape"]
+mcp_tools: ["kb_router", "http_probe", "workspace_write_text"]
+keywords: ["CVE-2026-42945", "NGINX堆溢出", "rewrite模块", "set指令", "缓冲区溢出", "URI转义", "heap spray", "system()劫持"]
+difficulty: "advanced"
+tags: ["cve", "nginx", "heap-overflow", "rce", "ctf", "exploit-development"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # NGINX rewrite 模块：set 缓冲区长度错配堆溢出（CVE-2026-42945）
 
 ## 1. 受影响版本

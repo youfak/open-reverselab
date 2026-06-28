@@ -1,3 +1,22 @@
+---
+id: "ctf-website/10-cloud/ci-cd-pipeline"
+title: "CI/CD Pipeline 攻击"
+title_en: "CI/CD Pipeline Attacks"
+summary: >
+  CI/CD流水线攻击完整指南，涵盖Jenkins Script Console无认证RCE（Groovy执行系统命令）、GitHub Actions Workflow注入（PR title/body未净化导致shell注入）、GitLab CI YAML注入、Self-hosted Runner滥用（Fork PR触发读取CI/CD secrets），以及环境变量渗出与Docker镜像供应链污染攻击链。
+summary_en: >
+  Complete CI/CD pipeline attack guide covering Jenkins Script Console unauthenticated RCE (Groovy system command execution), GitHub Actions Workflow injection (PR title/body unsanitized leading to shell injection), GitLab CI YAML injection, self-hosted runner abuse (fork PR triggering CI/CD secrets read), environment variable exfiltration, and Docker image supply chain poisoning attack chains.
+board: "ctf-website"
+category: "10-cloud"
+signals: ["CI/CD", "Jenkins", "GitHub Actions", "GitLab CI", "self-hosted runner", "pipeline injection", "Groovy RCE"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["CI/CD攻击", "Jenkins Script Console", "GitHub Actions注入", "GitLab CI YAML", "Self-hosted runner", "pipeline安全", "供应链攻击", "secrets渗出"]
+difficulty: "intermediate"
+tags: ["cloud", "ci-cd", "devsecops", "supply-chain", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # CI/CD Pipeline 攻击
 
 ## Jenkins Groovy Script Console

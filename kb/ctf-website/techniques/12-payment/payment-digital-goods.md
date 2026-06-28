@@ -1,3 +1,24 @@
+---
+id: "ctf-website/12-payment/payment-digital-goods"
+title: "Payment Digital Goods & IAP — 虚拟商品/内购攻击手册"
+title_en: "Digital Goods & IAP Attack Manual — iOS/Android Receipt Bypass and Virtual Currency Exploits"
+summary: >
+  覆盖 iOS App Store 收据验证绕过、Google Play 内购攻击、Steam 微交易、License Key 算法逆向、
+  卡密系统漏洞、虚拟货币铸币及发货幂等绕过等数字商品全攻击面。
+summary_en: >
+  Covers iOS receipt validation bypass, Google Play IAP attacks, Steam micro-transactions, license key
+  algorithm reversing, CDKey system vulnerabilities, virtual currency minting, and delivery idempotency bypass.
+board: "ctf-website"
+category: "12-payment"
+signals: ["IAP", "内购", "receipt验证", "purchaseToken", "卡密", "虚拟货币", "license key", "数字商品", "铸币攻击"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["IAP攻击", "receipt绕过", "卡密系统", "虚拟货币", "license key逆向", "内购安全", "digital goods", "Google Play"]
+difficulty: "advanced"
+tags: ["payment", "iap", "digital-goods", "virtual-currency", "license-key", "mobile-security"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/12-payment/payment-bypass", "ctf-website/12-payment/payment-subscription"]
+---
 # Payment Digital Goods & IAP — 虚拟商品/内购攻击手册
 
 > 数字商品 (卡密/积分/代币/license key) 和 IAP (iOS/Android 内购) 的支付验证有独特攻击面。核心：服务端 receipt 验证、凭证生成、库存管理、发货逻辑。

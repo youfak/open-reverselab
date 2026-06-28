@@ -1,3 +1,22 @@
+---
+id: "apk-reverse/04-crypto/02-rc4-custom-crypto"
+title: "自定义对称加密：RC4 与组合模式"
+title_en: "Custom Symmetric Encryption: RC4 and Combination Patterns"
+summary: >
+  识别和逆推自定义 RC4 流加密算法，包括 KSA（256 字节 S-Box 初始化）和 PRGA（XOR 流）静态特征识别、Ghidra 扫描脚本、Frida 动态 Hook dump key/data、Python 复现及常见加密组合模式（RC4+Base64/RC4+md5）分析。
+summary_en: >
+  Identifying and reversing custom RC4 stream ciphers, including KSA (256-byte S-Box initialization) and PRGA (XOR stream) static pattern recognition, Ghidra scanning scripts, Frida dynamic hook key/data dumping, Python reproduction, and analysis of common combination patterns (RC4+Base64/RC4+md5).
+board: "apk-reverse"
+category: "04-crypto"
+signals: ["RC4", "KSA", "PRGA", "S-Box", "256-byte loop", "XOR swap", "stream cipher", "md5 signature"]
+mcp_tools: ["android_crypto_unpack_recipe", "ghidra_headless_analyze", "solve_crypto_from_evidence"]
+keywords: ["RC4", "stream cipher", "KSA", "PRGA", "S-Box", "流加密", "自定义加密", "md5", "签名"]
+difficulty: "intermediate"
+tags: ["rc4", "stream-cipher", "custom-crypto", "frida", "ghidra", "key-recovery"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 自定义对称加密：RC4 与组合模式
 
 ## 场景

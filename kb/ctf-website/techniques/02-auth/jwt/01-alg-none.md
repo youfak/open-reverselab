@@ -1,3 +1,23 @@
+---
+id: "ctf-website/02-auth/jwt/01-alg-none"
+title: "JWT `alg: none` 无签名绕过"
+title_en: "JWT alg:none Signature Bypass"
+summary: >
+  介绍利用 JWT 规范中 alg:none 算法实现签名绕过的攻击方法。当服务端未显式禁用 none 算法时，攻击者可将 Header 的 alg 改为 none，Payload 任意伪造，Signature 留空，服务端跳过签名验证直接接受 Token。
+summary_en: >
+  Exploiting the JWT spec's alg:none to bypass signature verification. When the server does not explicitly disable the none algorithm, attackers can set alg to none, forge any payload, leave the signature empty, and the server will skip verification and accept the token.
+board: "ctf-website"
+category: "02-auth"
+signals: ["alg:none", "none算法", "无签名", "签名绕过", "JWT", "jwt_tool"]
+mcp_tools: ["run_ctf_tool", "http_probe"]
+keywords: ["JWT alg:none", "无签名绕过", "none攻击", "JWT签名绕过", "jwt_tool", "alg none"]
+difficulty: "beginner"
+tags: ["authentication", "jwt", "signature-bypass", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # JWT `alg: none` 无签名绕过
 
 ## 原理

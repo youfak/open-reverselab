@@ -1,3 +1,25 @@
+---
+id: "ctf-website/12-payment/payment-php"
+title: "PHP Payment Attacks — PHP 支付专项攻击手册"
+title_en: "PHP Payment Attacks — PHP-Specific Payment Exploitation Handbook"
+summary: >
+  针对 PHP 支付系统的专项攻击手册，覆盖 PHP Type Juggling（magic hash、strcmp数组绕过、in_array 越权）、
+  反序列化 Gadget Chain、Session 攻击、Laravel Cashier、ThinkPHP、WooCommerce 等框架特定漏洞。
+summary_en: >
+  PHP-specific payment attack handbook covering type juggling (magic hash, strcmp array bypass, in_array),
+  deserialization gadget chains, session attacks, and framework-specific exploits for Laravel Cashier,
+  ThinkPHP, and WooCommerce.
+board: "ctf-website"
+category: "12-payment"
+signals: ["PHP", "Type Juggling", "magic hash", "strcmp绕过", "反序列化", "Laravel", "WooCommerce", "支付"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["PHP支付攻击", "type juggling", "magic hash", "strcmp bypass", "反序列化", "Laravel Cashier", "WooCommerce安全"]
+difficulty: "advanced"
+tags: ["php", "payment", "type-juggling", "deserialization", "laravel", "framework", "web-security"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/12-payment/payment-bypass", "ctf-website/13-signature/02-implementation"]
+---
 # PHP Payment Attacks — PHP 支付专项攻击手册
 
 > PHP 是全球支付类 Web 应用最广泛的后端语言，也是 CTF 支付题的绝对主力。其独特的类型系统、框架生态、历史遗留问题构成了丰富的攻击面。

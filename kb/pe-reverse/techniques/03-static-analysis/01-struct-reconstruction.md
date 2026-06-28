@@ -1,3 +1,48 @@
+---
+id: "pe-reverse/03-static-analysis/01-struct-reconstruction"
+title: "内存结构体逆向重建"
+title_en: "Memory Structure Reverse Reconstruction"
+summary: >
+  从汇编模式反推 C/C++ 结构体定义的方法论，涵盖字段类型推断（汇编指令到类型映射）、指针链与内嵌对象区分、已知值反推、链表遍历及 Frida 辅助验证，附游戏 Entity 实战重建示例。
+summary_en: >
+  Methodology for reversing C/C++ struct definitions from assembly patterns, covering field type inference (asm-to-type mapping), pointer chain vs embedded object differentiation, value-based deduction, linked list traversal, and Frida-assisted verification with a real game Entity reconstruction example.
+board: "pe-reverse"
+category: "03-static-analysis"
+signals:
+  - "struct reconstruction"
+  - "field offset"
+  - "pointer chain"
+  - "vtable"
+  - "sizeof deduction"
+  - "结构体重建"
+  - "偏移推断"
+  - "Frida dump"
+mcp_tools:
+  - ghidra_headless_analyze
+  - ghidra_summary_function_detail
+keywords:
+  - "struct reconstruction"
+  - "reverse engineering"
+  - "offset"
+  - "pointer chain"
+  - "vtable"
+  - "ReClass"
+  - "Frida"
+  - "Ghidra"
+  - "memory layout"
+  - "field inference"
+difficulty: "intermediate"
+tags:
+  - "struct-reconstruction"
+  - "memory-analysis"
+  - "Ghidra"
+  - "Frida"
+  - "game-hacking"
+  - "static-analysis"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 内存结构体逆向重建
 
 ## 场景

@@ -1,3 +1,23 @@
+---
+id: "ctf-website/01-recon/recon-routing"
+title: "Recon & 路由绕过"
+title_en: "Recon and Routing Bypass"
+summary: >
+  系统介绍 HTTP Header Fuzzing、路径绕过字典、HTTP Method 矩阵、代理/CDN 差异检测和技术栈指纹识别等侦察技术。包含参数发现、API Schema 提取和强制浏览常见隐藏路径的完整工具链，用于 Web 应用的信息收集与路由绕过。
+summary_en: >
+  A systematic guide to web reconnaissance including HTTP header fuzzing, path traversal dictionaries, HTTP method testing, proxy/CDN differential detection, and technology stack fingerprinting. Covers parameter discovery, API schema extraction, and forced browsing for hidden endpoints.
+board: "ctf-website"
+category: "01-recon"
+signals: ["Header Fuzzing", "路径绕过", "HTTP Method", "代理差异", "指纹识别", "参数发现", "dirsearch", "API Schema"]
+mcp_tools: ["http_probe", "run_ctf_tool", "kb_router"]
+keywords: ["recon", "路由绕过", "header fuzzing", "路径穿越", "HTTP方法", "指纹识别", "参数爆破", "dirsearch", "ffuf"]
+difficulty: "intermediate"
+tags: ["recon", "routing", "fuzzing", "web-security", "fingerprinting", "api", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # Recon & 路由绕过
 
 ## Header Fuzzing 套件

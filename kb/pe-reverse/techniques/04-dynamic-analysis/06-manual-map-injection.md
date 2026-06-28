@@ -1,3 +1,46 @@
+---
+id: "pe-reverse/04-dynamic-analysis/06-manual-map-injection"
+title: "手动映射 DLL 注入"
+title_en: "Manual Map DLL Injection"
+summary: >
+  介绍绕过 LoadLibrary 检测的手动映射 DLL 注入技术，完整实现 PE header 解析、节区复制、重定位处理、导入表手动填充及 Shellcode 调用 DllMain，模拟 Windows Loader 实现无痕注入。
+summary_en: >
+  Manual map DLL injection technique that bypasses LoadLibrary detection, with complete implementation of PE header parsing, section copying, relocation processing, manual IAT filling, and shellcode-based DllMain execution that emulates the Windows Loader for stealth injection.
+board: "pe-reverse"
+category: "04-dynamic-analysis"
+signals:
+  - "manual map"
+  - "PE loader"
+  - "relocation"
+  - "IAT filling"
+  - "shellcode"
+  - "手动映射"
+  - "无痕注入"
+  - "重定位"
+mcp_tools: []
+keywords:
+  - "manual map"
+  - "DLL injection"
+  - "relocation"
+  - "IAT"
+  - "PE loader"
+  - "shellcode"
+  - "DllMain"
+  - "VirtualAllocEx"
+  - "stealth injection"
+  - "module hiding"
+difficulty: "advanced"
+tags:
+  - "manual-map"
+  - "DLL-injection"
+  - "PE-loader"
+  - "stealth"
+  - "shellcode"
+  - "dynamic-analysis"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 手动映射 DLL 注入
 
 ## 场景

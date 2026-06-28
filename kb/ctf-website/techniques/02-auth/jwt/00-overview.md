@@ -1,3 +1,23 @@
+---
+id: "ctf-website/02-auth/jwt/00-overview"
+title: "JWT 攻击全景"
+title_en: "JWT Attack Overview"
+summary: >
+  JWT 攻击全景导航，涵盖签名绕过、密钥攻击、逻辑缺陷和 Token 窃取四大攻击面的结构速览、攻击面地图、手法索引表和快速决策树。帮助渗透测试者快速定位 JWT 实现中的薄弱环节并选择对应攻击手法。
+summary_en: >
+  A comprehensive JWT attack navigation covering four attack surfaces: signature bypass, key attacks, logic flaws, and token theft. Includes structure overview, attack surface map, technique index, and a quick decision tree for rapidly identifying JWT implementation weaknesses.
+board: "ctf-website"
+category: "02-auth"
+signals: ["JWT", "签名绕过", "算法混淆", "kid注入", "jku", "x5u", "弱密钥", "token窃取"]
+mcp_tools: ["run_ctf_tool", "http_probe", "kb_router"]
+keywords: ["JWT攻击", "JSON Web Token", "JWT安全", "签名绕过", "算法混淆", "jwt_tool", "jwt攻击面", "Bearer Token"]
+difficulty: "intermediate"
+tags: ["authentication", "jwt", "token", "web-security", "signature-bypass", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # JWT 攻击全景
 
 JWT 攻击**不是破解加密算法**，而是利用签名验证、密钥管理、权限判断、Token 存储等环节的设计与实现缺陷。

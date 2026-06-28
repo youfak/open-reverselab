@@ -1,3 +1,49 @@
+---
+id: "pe-reverse/07-yara-sigma/01-yara-rule-writing"
+title: "YARA 规则编写（逆向视角）"
+title_en: "YARA Rule Writing (Reverse Engineering Perspective)"
+summary: >
+  从逆向分析视角介绍 YARA 规则编写，涵盖规则结构、四类优质特征提取（PE 结构、导入表、字符串、AOB 代码特征）、实战 DLL 注入器规则示例、规则测试命令及从 v1.0 到 v2.0 的规则演化策略。
+summary_en: >
+  YARA rule writing from a reverse engineering perspective, covering rule structure, four quality feature extraction types (PE structure, imports, strings, AOB code patterns), a practical DLL injector rule example, testing commands, and rule evolution strategy from v1.0 to v2.0.
+board: "pe-reverse"
+category: "07-yara-sigma"
+signals:
+  - "YARA rule"
+  - "PE signature"
+  - "string matching"
+  - "AOB pattern"
+  - "import table"
+  - "特征提取"
+  - "样本分类"
+  - "变种检测"
+mcp_tools:
+  - extract_iocs_from_summary
+  - make_yara_stub
+  - make_sigma_stub
+keywords:
+  - "YARA"
+  - "rule writing"
+  - "signature"
+  - "malware detection"
+  - "PE analysis"
+  - "string matching"
+  - "AOB"
+  - "import table"
+  - "false positive"
+  - "variant detection"
+difficulty: "intermediate"
+tags:
+  - "YARA"
+  - "signature"
+  - "detection"
+  - "malware"
+  - "rule-engineering"
+  - "IOC"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # YARA 规则编写（逆向视角）
 
 ## 场景

@@ -1,3 +1,22 @@
+---
+id: "apk-reverse/02-native/04-kernel-procfs-driver"
+title: "Kernel Driver 注入：proc 节点读写"
+title_en: "Kernel Driver Injection via proc Node Read/Write"
+summary: >
+  分析 Linux 内核驱动通过 /proc 文件系统节点实现跨进程内存读写的完整技术链，包括自解压 shell 注入脚本、proc 节点创建（proc_read/proc_write）、用户态 ioctl 通信协议、驱动隐藏方法及多内核版本适配策略。
+summary_en: >
+  Analysis of the complete Linux kernel driver technique for cross-process memory read/write via /proc filesystem nodes, covering self-extracting shell injection scripts, proc node creation (proc_read/proc_write), user-mode ioctl communication protocol, driver hiding methods, and multi-kernel version adaptation.
+board: "apk-reverse"
+category: "02-native"
+signals: ["kernel driver", "/proc node", "insmod", "ioctl", "proc_read", "proc_write", "dmesg clear", "multi-kernel adaptation"]
+mcp_tools: ["android_adb_connect", "android_device_info", "android_push_file"]
+keywords: ["kernel driver", "proc", "insmod", "ioctl", "内核驱动", "内存读写", "ko injection", "root", "procfs"]
+difficulty: "advanced"
+tags: ["kernel-driver", "procfs", "memory-read", "root", "linux-kernel", "cross-process"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Kernel Driver 注入：proc 节点读写
 
 ## 场景

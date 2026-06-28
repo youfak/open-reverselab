@@ -1,3 +1,49 @@
+---
+id: "general/cheating/03-esp-wallhack-rendering"
+title: "透视/ESP 渲染技术"
+title_en: "ESP / Wallhack Rendering Techniques"
+summary: >
+  深入 D3D11/DX12 渲染管线劫持全链路：Present VMT Hook、视投影矩阵定位与 World-to-Screen、DrawIndexed 对象过滤着色器替换、Chams 深度禁用穿透、External Overlay 透明覆盖窗口与 ImGui 集成菜单。
+summary_en: >
+  Full D3D11/DX12 rendering pipeline hijack chain: Present VMT hooking, view-projection matrix location and world-to-screen, DrawIndexed object filtering for shader replacement, Chams depth-disable wallhack, external transparent overlay, and ImGui menu integration.
+board: "general"
+category: "cheating"
+signals:
+  - "DirectX hook"
+  - "Present hook"
+  - "world-to-screen"
+  - "shader modification"
+  - "overlay rendering"
+  - "depth buffer manipulation"
+  - "ImGui ESP"
+mcp_tools:
+  - "ghidra_summary_call_focus"
+  - "search_pattern"
+  - "ghidra_summary_function_detail"
+  - "kb_router"
+  - "rizin_assemble_bytes"
+  - "rizin_imports"
+keywords:
+  - "ESP"
+  - "wallhack"
+  - "DirectX hook"
+  - "world-to-screen"
+  - "ImGui overlay"
+  - "depth buffer"
+  - "VMT hook"
+  - "IDXGISwapChain"
+  - "chams"
+difficulty: "advanced"
+tags:
+  - "game-hacking"
+  - "rendering-hook"
+  - "ESP"
+  - "DirectX"
+  - "shader-hijack"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 透视/ESP 渲染技术
 
 ## 场景

@@ -1,3 +1,23 @@
+---
+id: "ctf-website/03-injection/sqli-nosqli"
+title: "SQLi & NoSQLi (数据库注入高阶实战)"
+title_en: "Advanced SQLi and NoSQLi Injection"
+summary: >
+  高阶数据库注入实战指南，涵盖 SQLi WAF 绕过技巧（双写、宽字节、注释替代）、无回显盲注并发爆破、NoSQL 注入（MongoDB $regex/$ne 利用）、OOB 数据外带、二次注入、堆叠查询及多数据库专属技巧。包含 Cloud WAF 专项绕过策略。
+summary_en: >
+  An advanced guide to database injection covering SQLi WAF bypass techniques (double-writing, wide-byte, comment substitution), blind injection with concurrent brute-forcing, NoSQL injection (MongoDB $regex/$ne exploitation), OOB data exfiltration, second-order injection, stacked queries, and database-specific techniques. Includes Cloud WAF bypass strategies.
+board: "ctf-website"
+category: "03-injection"
+signals: ["SQLi", "NoSQLi", "WAF bypass", "盲注", "MongoDB", "$regex", "OOB", "宽字节"]
+mcp_tools: ["http_probe", "run_ctf_tool", "kb_router"]
+keywords: ["SQL注入", "NoSQL注入", "MongoDB注入", "WAF绕过", "盲注", "OOB", "sqlmap", "$regex"]
+difficulty: "advanced"
+tags: ["injection", "sqli", "nosqli", "waf-bypass", "database", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # SQLi & NoSQLi (数据库注入高阶实战)
 
 数据库注入是 Web 安全中的经典问题，但在 CTF 和现代 Web 对抗中，我们通常需要面对**防注入过滤 (WAF)**、**无回显盲注**以及 **NoSQL（如 MongoDB）** 架构。本指南侧重于高阶利用与 Bypass 策略。

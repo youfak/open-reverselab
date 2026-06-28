@@ -1,3 +1,48 @@
+---
+id: "ctf-website/24-database/00-overview"
+title: "Database Attack Surface — 数据库攻击全景与决策树"
+title_en: "Database Attack Surface — Overview & Decision Tree"
+summary: >
+  数据库攻击全景导航：覆盖应用层SQL/NoSQL注入与ORM注入、配置层默认凭证与连接字符串泄露、运维层备份文件暴露与日志泄露、数据层SSRF内网数据库可达等四大攻击面。提供快速决策树路线：SQL错误→注入基础、WAF拦截→绕过技术、NoSQL端点→NoSQL注入等。
+summary_en: >
+  Database attack surface navigation covering four layers: application (SQL/NoSQL/ORM injection), configuration (default credentials, connection string leaks), operations (backup file exposure, log leaks), and data (SSRF to internal databases). Includes quick decision tree routing from signals to specific technique documents.
+board: "ctf-website"
+category: "24-database"
+signals:
+  - "SQL 注入 injection"
+  - "NoSQL 注入 MongoDB Redis"
+  - "默认密码 default credentials"
+  - "备份文件 .sql .dump"
+  - "phpMyAdmin Adminer 未授权"
+  - "连接字符串泄露 .env"
+  - "SSRF 内网数据库"
+  - "ORM 注入 HQL JPQL"
+mcp_tools:
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "数据库攻击"
+  - "SQL 注入"
+  - "NoSQL 注入"
+  - "数据库配置泄露"
+  - "备份文件暴露"
+  - "database attack surface"
+  - "default credentials"
+  - "connection string leak"
+  - "MySQL PostgreSQL MongoDB"
+  - "phpMyAdmin"
+difficulty: "beginner"
+tags:
+  - "database"
+  - "sql-injection"
+  - "nosql"
+  - "configuration"
+  - "backup"
+  - "overview"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Database Attack Surface — 数据库攻击全景与决策树
 
 > 数据库是 Web 应用的核心资产——SQL 注入、NoSQL 滥用、配置泄露、备份暴露、发卡平台 CDK 泄露。本指南提供系统化的攻击面导航与决策路径。

@@ -1,3 +1,51 @@
+---
+id: "pe-reverse/02-pe-structure/01-pe-header-parsing"
+title: "PE 头解析与节区定位"
+title_en: "PE Header Parsing and Section Location"
+summary: >
+  介绍手动解析 PE 文件 DOS/NT 头、节区表、导入导出表的完整实现，涵盖按名称定位节区、导入表遍历（IAT/INT）、导出表函数查找及 PE 结构速查图。
+summary_en: >
+  A complete guide to manually parsing PE DOS/NT headers, section tables, import/export directories, including section lookup by name, IAT/INT traversal, export function resolution, and a PE layout quick-reference diagram.
+board: "pe-reverse"
+category: "02-pe-structure"
+signals:
+  - "IMAGE_DOS_HEADER"
+  - "IMAGE_NT_HEADERS"
+  - "section table"
+  - "import directory"
+  - "export directory"
+  - "PE signature"
+  - "节区遍历"
+  - "导入表"
+mcp_tools:
+  - triage_pe
+  - rizin_sections
+  - rizin_bin_info
+  - rizin_imports
+  - pe_address_to_offset
+keywords:
+  - "PE header"
+  - "DOS header"
+  - "NT headers"
+  - "section table"
+  - "import table"
+  - "export table"
+  - "IAT"
+  - "IMAGE_DOS_HEADER"
+  - "e_lfanew"
+  - "RVA"
+difficulty: "beginner"
+tags:
+  - "PE-format"
+  - "parsing"
+  - "sections"
+  - "imports"
+  - "exports"
+  - "memory-layout"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # PE 头解析与节区定位
 
 ## 场景

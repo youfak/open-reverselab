@@ -1,3 +1,50 @@
+---
+id: "ctf-website/24-database/02-sqli-advanced"
+title: "Advanced SQLi & WAF Bypass — 高级注入与绕过技术"
+title_en: "Advanced SQLi & WAF Bypass"
+summary: >
+  WAF深度绕过、二阶SQL注入、OOB带外注入（DNS/HTTP/SMB）、INSERT/UPDATE/DELETE注入、ORDER BY/LIMIT注入等当基础手法的进阶武器库。涵盖HTTP层绕过（HPP分块传输multipart）、编码绕过（Hex/CHAR/宽字节）和函数等价替换技术。
+summary_en: >
+  Advanced SQLi arsenal for when basic techniques are blocked: deep WAF bypass, second-order SQL injection, OOB out-of-band injection (DNS/HTTP/SMB), INSERT/UPDATE/DELETE injection, ORDER BY/LIMIT injection. Covers HTTP-layer bypass (HPP, chunked, multipart), encoding bypass (Hex/CHAR/wide-byte), and function equivalence substitution.
+board: "ctf-website"
+category: "24-database"
+signals:
+  - "二阶注入 second-order SQLi"
+  - "OOB DNS 带外 DNSLog"
+  - "HPP HTTP 参数污染"
+  - "分块传输 Transfer-Encoding chunked"
+  - "multipart 绕过 WAF"
+  - "INSERT UPDATE DELETE 注入"
+  - "ORDER BY 注入 CASE WHEN"
+  - "内联注释 /*!50000SELECT*/"
+mcp_tools:
+  - "http_probe"
+  - "run_ctf_tool"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "高级 SQL 注入"
+  - "二阶注入"
+  - "OOB 带外"
+  - "DNSLog"
+  - "WAF 深度绕过"
+  - "HPP 参数污染"
+  - "分块传输"
+  - "INSERT 注入"
+  - "ORDER BY 注入"
+  - "宽字节绕过"
+difficulty: "advanced"
+tags:
+  - "database"
+  - "sql-injection"
+  - "waf-bypass"
+  - "oob"
+  - "second-order"
+  - "advanced"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Advanced SQLi & WAF Bypass — 高级注入与绕过技术
 
 > WAF 绕过、二阶注入、OOB 带外、ORDER BY/INSERT/UPDATE 注入——当基础手法被拦截时的进阶武器库。

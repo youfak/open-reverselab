@@ -1,3 +1,22 @@
+---
+id: "apk-reverse/02-native/03-ue4-offset-hunting"
+title: "UE4 引擎游戏偏移发现"
+title_en: "UE4 Engine Game Offset Discovery"
+summary: >
+  针对 Unreal Engine 4 手游的关键属性偏移发现方法，涵盖 UE4 类继承链速查（Actor→Pawn→Character→Weapon）、GWorld/GNames/FName 池静态分析、运行时特征扫描、指针链定位及 Frida 动态验证 Actor 列表遍历。
+summary_en: >
+  Key attribute offset discovery methods for Unreal Engine 4 mobile games, covering UE4 class inheritance chains (Actor→Pawn→Character→Weapon), GWorld/GNames/FName pool static analysis, runtime feature scanning, pointer chain location, and Frida dynamic Actor list traversal verification.
+board: "apk-reverse"
+category: "02-native"
+signals: ["UE4", "GWorld", "GNames", "Actor chain", "FName pool", "RootComponent", "RelativeLocation", "Frida FVector"]
+mcp_tools: ["android_frida_run_script", "ghidra_headless_analyze"]
+keywords: ["UE4", "Unreal Engine", "GWorld", "GNames", "Actor", "offset", "FName", "虚幻引擎", "偏移", "类继承"]
+difficulty: "advanced"
+tags: ["ue4", "unreal-engine", "offset-discovery", "game-hacking", "frida", "actor-chain"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # UE4 引擎游戏偏移发现
 
 ## 场景

@@ -1,3 +1,22 @@
+---
+id: "ctf-website/09-cve/04-nezha-path-traversal-jwt"
+title: "Nezha Monitoring：路径遍历 + JWT 伪造管理员接管（CVE-2026-53519）"
+title_en: "Nezha Monitoring: Path Traversal + JWT Forgery Admin Takeover (CVE-2026-53519)"
+summary: >
+  哪吒监控Nezha Monitoring漏洞链分析：Go语言前缀匹配（HasPrefix）非路径段匹配导致路径遍历绕过，TrimPrefix制造真正的../穿越读取config.yaml和sqlite.db，泄露HS256 JWT密钥后伪造管理员token实现完整接管。涵盖三层绕过原理、完整攻击链和路径变体。
+summary_en: >
+  Nezha Monitoring vulnerability chain analysis: Go string prefix matching (HasPrefix) instead of path segment matching enables path traversal bypass, TrimPrefix creates genuine ../ to read config.yaml and sqlite.db, leaking HS256 JWT secret for forging admin tokens to achieve full takeover. Covers three-layer bypass mechanism, complete attack chain, and path variants.
+board: "ctf-website"
+category: "09-cve"
+signals: ["Nezha Monitoring", "path traversal", "JWT forgery", "HS256", "路径遍历", "JWT伪造", "CVE-2026-53519", "HasPrefix bypass"]
+mcp_tools: ["kb_router", "http_probe", "workspace_write_text"]
+keywords: ["CVE-2026-53519", "哪吒监控", "路径遍历", "JWT伪造", "HS256密钥泄露", "管理员接管", "Go HasPrefix绕过", "CVSS 9.1"]
+difficulty: "intermediate"
+tags: ["cve", "path-traversal", "jwt", "authentication", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Nezha Monitoring：路径遍历 + JWT 伪造管理员接管（CVE-2026-53519）
 
 ## 1. 受影响版本

@@ -1,3 +1,22 @@
+---
+id: "ctf-website/09-cve/03-cpanel-caldav-traversal"
+title: "cPanel CalDAV 预认证路径穿越（CVE-2026-29205）"
+title_en: "cPanel CalDAV Pre-Auth Path Traversal (CVE-2026-29205)"
+summary: >
+  cPanel CalDAV三层漏洞链分析：第一层CalDAV附件读取路径预认证可达、第二层正则校验先于URL解码导致%2F绕过、第三层权限降级对象生命周期错误导致root权限读取文件。完整攻击链路通过SMTP投递邮件创建Maildir目录→cpdavd路径穿越→root读取/etc/shadow。
+summary_en: >
+  Three-layer cPanel CalDAV vulnerability chain analysis: layer 1 - CalDAV attachment read path reachable pre-auth, layer 2 - regex validation before URL decoding enables %2F bypass, layer 3 - privilege reduction object lifetime error enables root file reading. Full attack chain via SMTP mail delivery creating Maildir directories → cpdavd path traversal → root reads /etc/shadow.
+board: "ctf-website"
+category: "09-cve"
+signals: ["cPanel", "CalDAV", "path traversal", "pre-auth", "路径穿越", "URL编码绕过", "CVE-2026-29205", "root file read"]
+mcp_tools: ["kb_router", "http_probe", "workspace_write_text"]
+keywords: ["CVE-2026-29205", "cPanel", "CalDAV", "预认证路径穿越", "URL解码绕过", "root文件读取", "权限降级", "Maildir"]
+difficulty: "advanced"
+tags: ["cve", "path-traversal", "authentication-bypass", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # cPanel CalDAV 预认证路径穿越（CVE-2026-29205）
 
 ## 1. 受影响版本

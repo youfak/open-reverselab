@@ -1,3 +1,23 @@
+---
+id: "ctf-website/02-auth/jwt/06-claim-missing"
+title: "JWT Claim 验证缺失 & Token 混用"
+title_en: "JWT Claim Validation Missing and Token Confusion"
+summary: >
+  介绍 JWT Claim 验证缺失的两大攻击面：exp/nbf/iss/aud 等标准 Claim 未验证导致的 Token 永久有效和跨服务混用，以及 ID Token/Access Token/Refresh Token 类型混淆导致的权限绕过。包含逐 Claim 攻击探测脚本。
+summary_en: >
+  Two attack surfaces from missing JWT Claim validation: perpetual tokens and cross-service confusion from unchecked exp/nbf/iss/aud claims, and privilege bypass from ID Token / Access Token / Refresh Token type confusion. Includes per-claim probe scripts.
+board: "ctf-website"
+category: "02-auth"
+signals: ["Claim", "exp", "aud", "iss", "Token混用", "ID Token", "Access Token", "权限绕过"]
+mcp_tools: ["run_ctf_tool", "http_probe"]
+keywords: ["JWT claim", "过期Token", "aud验证", "iss验证", "Token混用", "ID Token", "Access Token", "jwt_tool"]
+difficulty: "intermediate"
+tags: ["authentication", "jwt", "claim-validation", "token-confusion", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # JWT Claim 验证缺失 & Token 混用
 
 ## 原理

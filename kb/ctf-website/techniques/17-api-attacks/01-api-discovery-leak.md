@@ -1,3 +1,23 @@
+---
+id: "ctf-website/17-api-attacks/01-api-discovery-leak"
+title: "API 发现与信息泄露 — Swagger、GraphQL、Source Map 与移动端提取"
+title_en: "API Discovery and Information Disclosure — Swagger, GraphQL, Source Maps, and Mobile Extraction"
+summary: >
+  系统化收集 Web 应用的 API 端点，涵盖 Swagger/OpenAPI 文档枚举、GraphQL Introspection 探测、JavaScript Source Map 反解、APK 逆向提取等多种发现渠道。适用于 API 攻击面测绘，通过发现隐藏端点建立攻击入口。
+summary_en: >
+  Systematically discover API endpoints through Swagger/OpenAPI document enumeration, GraphQL introspection probing, JavaScript Source Map reverse-engineering, and APK reverse-engineering. Applicable to API attack surface mapping by finding hidden endpoints as attack entry points.
+board: "ctf-website"
+category: "17-api-attacks"
+signals: ["API discovery", "Swagger", "OpenAPI", "GraphQL", "Source Map", "端点发现", "信息泄露", "APK"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file", "run_ctf_tool"]
+keywords: ["API发现", "端点枚举", "Swagger文档", "GraphQL内省", "Source Map反解", "APK逆向", "API discovery", "endpoint enumeration", "information disclosure"]
+difficulty: "intermediate"
+tags: ["api-security", "swagger", "graphql", "source-map", "mobile", "information-disclosure"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # API 发现与信息泄露 — Swagger、GraphQL、Source Map 与移动端提取
 
 ## 场景

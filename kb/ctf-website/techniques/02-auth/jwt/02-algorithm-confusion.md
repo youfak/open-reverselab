@@ -1,3 +1,23 @@
+---
+id: "ctf-website/02-auth/jwt/02-algorithm-confusion"
+title: "JWT 算法混淆 (Algorithm Confusion)"
+title_en: "JWT Algorithm Confusion Attack"
+summary: >
+  利用服务端信任客户端指定的算法且将非对称密钥用于对称验证的缺陷，实现 JWT 签名绕过。核心原理是将 RS256 公钥当作 HS256 的 HMAC 密钥使用，用公钥重新签名即可通过验证。涵盖从 JWKS 获取公钥到伪造 Token 的完整攻击脚本。
+summary_en: >
+  Exploiting the flaw where servers trust client-specified algorithms and reuse asymmetric keys for symmetric verification. The core technique uses the RS256 public key as an HMAC secret for HS256, re-signing with the known public key to bypass verification. Includes complete attack scripts from JWKS retrieval to token forging.
+board: "ctf-website"
+category: "02-auth"
+signals: ["算法混淆", "algorithm confusion", "RS256", "HS256", "公钥", "JWKS", "HMAC", "jwt_tool"]
+mcp_tools: ["run_ctf_tool", "http_probe"]
+keywords: ["JWT算法混淆", "RS256转HS256", "JWT bypass", "公钥泄露", "jwks.json", "algorithm confusion", "jwt_tool"]
+difficulty: "intermediate"
+tags: ["authentication", "jwt", "algorithm-confusion", "web-security", "crypto", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # JWT 算法混淆 (Algorithm Confusion)
 
 ## 原理

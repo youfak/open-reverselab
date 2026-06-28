@@ -1,3 +1,49 @@
+---
+id: "ctf-website/22-dos/10-api-abuse"
+title: "API 滥用拒绝服务"
+title_en: "API Abuse Denial of Service"
+summary: >
+  攻击者以合法身份调用合法API，但以破坏性方式使用：深度分页遍历触发数据库全表扫描、批量操作放大单请求乘数效应、搜索接口宽泛查询消耗后端资源、Webhook慢速回调耗尽outgoing连接池，以及文件上传端点磁盘/inode耗尽。
+summary_en: >
+  Legitimate API endpoints abused by authenticated users in destructive ways: deep pagination traversal triggering full table scans, bulk operation amplification, search API broad queries exhausting backend resources, Webhook slow callbacks draining outgoing connection pools, and file upload endpoints causing disk/inode exhaustion.
+board: "ctf-website"
+category: "22-dos"
+signals:
+  - "分页 page > 10000"
+  - "批量操作放大 bulk API"
+  - "搜索宽泛查询 q=*"
+  - "Webhook 回调慢速响应"
+  - "文件上传 inode 耗尽"
+  - "API rate limit 绕过"
+  - "X-Forwarded-For 轮换"
+  - "cursor 分页遍历"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "API 滥用"
+  - "分页攻击"
+  - "批量操作放大"
+  - "搜索 API DoS"
+  - "Webhook 耗尽"
+  - "rate limit bypass"
+  - "文件上传 DoS"
+  - "API rate limiting"
+  - "pagination abuse"
+  - "bulk operation DoS"
+difficulty: "intermediate"
+tags:
+  - "dos"
+  - "denial-of-service"
+  - "api"
+  - "rate-limiting"
+  - "webhook"
+  - "file-upload"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # API 滥用拒绝服务
 
 ## 场景

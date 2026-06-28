@@ -1,3 +1,22 @@
+---
+id: "ctf-website/10-cloud/kubernetes-container"
+title: "Kubernetes & 容器逃逸"
+title_en: "Kubernetes & Container Escape"
+summary: >
+  Kubernetes与容器逃逸技术完整指南，涵盖Pod内ServiceAccount Token窃取与RBAC权限枚举、创建privileged pod挂载hostPath实现宿主机逃逸、runc CVE-2024-21626 fd leak逃逸、kubelet API直接访问（10250端口执行任意命令）、etcd直接访问读取全部集群secrets，以及逃逸后cloud metadata利用实现云账户接管。
+summary_en: >
+  Complete Kubernetes and container escape guide covering in-pod ServiceAccount token theft with RBAC enumeration, privileged pod creation with hostPath mount for host escape, runc CVE-2024-21626 fd leak escape, direct kubelet API access (port 10250 for arbitrary command execution), direct etcd access to read all cluster secrets, and post-escape cloud metadata exploitation for cloud account takeover.
+board: "ctf-website"
+category: "10-cloud"
+signals: ["Kubernetes", "container escape", "SA token", "RBAC", "privileged pod", "runc", "kubelet", "etcd", "容器逃逸"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["Kubernetes安全", "容器逃逸", "ServiceAccount token", "RBAC提权", "privileged pod", "runc漏洞", "kubelet API", "etcd", "hostPath挂载", "CVE-2024-21626"]
+difficulty: "advanced"
+tags: ["cloud", "kubernetes", "container-escape", "privilege-escalation", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Kubernetes & 容器逃逸
 
 ## Service Account Token 劫持

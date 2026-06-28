@@ -1,3 +1,25 @@
+---
+id: "ctf-website/15-mass-assignment/01-mass-assignment"
+title: "批量赋值与属性注入深度利用手册"
+title_en: "Mass Assignment & Attribute Injection Deep Exploitation Handbook"
+summary: >
+  覆盖 Laravel（$fillable/$guarded 绕过）、Rails（strong_parameters 绕过）、Django（ModelForm/Serializer）、
+  Spring Boot（@ModelAttribute 绑定）、PHP 函数级漏洞（extract/parse_str/$$）和 GraphQL Mutation 字段注入的完整利用链。
+summary_en: >
+  Complete exploitation chains for mass assignment across frameworks: Laravel ($fillable/$guarded bypass),
+  Rails (strong_parameters bypass), Django (ModelForm/Serializer), Spring Boot (@ModelAttribute binding),
+  PHP function-level (extract/parse_str/$$), and GraphQL mutation field injection.
+board: "ctf-website"
+category: "15-mass-assignment"
+signals: ["mass assignment", "批量赋值", "属性注入", "$fillable", "strong_parameters", "extract", "parse_str", "Serializer", "CWE-915"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file", "run_ctf_tool"]
+keywords: ["mass assignment", "批量赋值", "属性注入", "Laravel安全", "Rails安全", "extract绕过", "GraphQL注入", "CWE-915"]
+difficulty: "intermediate"
+tags: ["mass-assignment", "framework", "laravel", "rails", "django", "spring-boot", "graphql", "web-security"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/15-mass-assignment/02-parameter-tampering", "ctf-website/12-payment/payment-bypass"]
+---
 # 批量赋值与属性注入深度利用手册
 
 ## 场景

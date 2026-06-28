@@ -1,3 +1,48 @@
+---
+id: "pe-reverse/03-static-analysis/04-reclass-reconstruction"
+title: "ReClass 结构体实时重建"
+title_en: "ReClass Real-Time Structure Reconstruction"
+summary: >
+  介绍使用 ReClass 工具在运行时交互式构建 C++ 结构体的工作流，涵盖字段类型速查、向量/指针/数组识别技巧、与 Cheat Engine 和 Ghidra 的配合方法，以及导出 C++ 代码的完整流程。
+summary_en: >
+  Workflow for interactively building C++ struct definitions at runtime using ReClass, covering field type quick reference, vector/pointer/array identification techniques, integration with Cheat Engine and Ghidra, and the complete process of exporting C++ struct code.
+board: "pe-reverse"
+category: "03-static-analysis"
+signals:
+  - "ReClass"
+  - "hex dump"
+  - "field type inference"
+  - "pointer chain"
+  - "Cheat Engine"
+  - "结构体重建"
+  - "实时分析"
+  - "类型推断"
+mcp_tools:
+  - ghidra_summary_functions
+  - ghidra_summary_function_detail
+keywords:
+  - "ReClass"
+  - "structure reconstruction"
+  - "Cheat Engine"
+  - "hex dump"
+  - "pointer chain"
+  - "field type"
+  - "memory analysis"
+  - "runtime analysis"
+  - "struct export"
+  - "game hacking"
+difficulty: "intermediate"
+tags:
+  - "ReClass"
+  - "struct-reconstruction"
+  - "Cheat-Engine"
+  - "runtime-analysis"
+  - "memory-analysis"
+  - "game-hacking"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # ReClass 结构体实时重建
 
 ## 场景

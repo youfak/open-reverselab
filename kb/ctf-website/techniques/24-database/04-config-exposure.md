@@ -1,3 +1,49 @@
+---
+id: "ctf-website/24-database/04-config-exposure"
+title: "Database Config Exposure — 数据库配置泄露"
+title_en: "Database Config Exposure — Configuration & Credential Leaks"
+summary: >
+  数据库凭证泄露的常见路径与利用方法：PHP/Java/Python/Node.js应用配置文件路径枚举（.env/config.php/application.properties）、备份文件暴露（.bak/.swp/.old）、Git/SVN版本控制泄露、phpinfo()信息泄露、Spring Boot Actuator环境变量暴露，以及各数据库默认凭证表。
+summary_en: >
+  Common paths and exploitation methods for database credential leaks: framework config file enumeration (.env, config.php, application.properties), backup file exposure (.bak, .swp, .old), Git/SVN version control leaks, phpinfo() information disclosure, Spring Boot Actuator env exposure, and default credential tables for major databases.
+board: "ctf-website"
+category: "24-database"
+signals:
+  - ".env 文件可读"
+  - "config.php backup .bak .swp"
+  - ".git/HEAD 目录泄露"
+  - "phpinfo() DOCUMENT_ROOT"
+  - "actuator/env Spring Boot"
+  - "web.config 暴露"
+  - "php://filter 源码读取"
+  - "默认密码 root:root sa:sa"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "数据库配置泄露"
+  - ".env 文件"
+  - "config.php"
+  - "备份文件"
+  - "Git 泄露"
+  - "phpinfo()"
+  - "默认密码"
+  - "Spring Boot actuator"
+  - "连接字符串"
+  - "源码泄露"
+difficulty: "beginner"
+tags:
+  - "database"
+  - "configuration"
+  - "credentials"
+  - "information-disclosure"
+  - "backup"
+  - "default-passwords"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Database Config Exposure — 数据库配置泄露
 
 > 配置文件、连接字符串、环境变量...数据库凭证泄露的常见路径与利用方法。

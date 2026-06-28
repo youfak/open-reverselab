@@ -1,3 +1,25 @@
+---
+id: "ctf-website/12-payment/payment-subscription"
+title: "Payment Subscription — 订阅/定期付款攻击深度手册"
+title_en: "Payment Subscription — Subscription & Recurring Payment Attack Handbook"
+summary: >
+  针对订阅系统的深度攻击手册：免费试用滥用、计划升降级按比例计费漏洞、自动续费金额操纵、
+  计量计费绕过、礼品卡算法攻击、Seat 管理绕过及 Stripe Webhook 事件伪造。
+summary_en: >
+  Deep attack handbook for subscription systems: trial abuse, proration exploits on plan switching,
+  renewal amount manipulation, metered billing bypass, gift card algorithm attacks, seat management
+  bypass, and Stripe webhook event forgery.
+board: "ctf-website"
+category: "12-payment"
+signals: ["subscription", "订阅攻击", "试用绕过", "trial abuse", "proration", "自动续费", "metered billing", "seat管理", "Stripe webhook"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["订阅攻击", "subscription bypass", "试用绕过", "trial abuse", "续费操纵", "礼品卡攻击", "Stripe安全", "seat bypass"]
+difficulty: "advanced"
+tags: ["payment", "subscription", "recurring", "trial-abuse", "webhook", "web-security"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/12-payment/payment-bypass", "ctf-website/12-payment/payment-digital-goods"]
+---
 # Payment Subscription — 订阅/定期付款攻击深度手册
 
 > 订阅系统 = 持续的信任边界。每次自动扣款、每次续期、每次升降级都是独立的攻击面。目标：免费永久订阅、跨计划权益、超额使用不计费、取消后仍保留权益。

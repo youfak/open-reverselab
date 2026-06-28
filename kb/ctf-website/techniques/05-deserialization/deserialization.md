@@ -1,3 +1,22 @@
+---
+id: "ctf-website/05-deserialization/deserialization"
+title: "Deserialization Vulnerabilities"
+title_en: "Deserialization Vulnerabilities"
+summary: >
+  多语言反序列化漏洞完整指南，涵盖PHP GC绕过与原生类利用（SoapClient SSRF、SimpleXMLElement XXE）、Python pickle Opcode手写绕过find_class、Node.js node-serialize IIFE代码注入、Java ysoserial体系与Hessian/Jackson gadget链、.NET ViewState利用、Ruby YAML反序列化，以及2024-2025年高级技法。
+summary_en: >
+  Comprehensive multi-language deserialization guide covering PHP GC bypass and native class abuse (SoapClient SSRF, SimpleXMLElement XXE), Python pickle hand-crafted opcode to bypass find_class, Node.js node-serialize IIFE code injection, Java ysoserial ecosystem with Hessian/Jackson gadget chains, .NET ViewState exploitation, Ruby YAML deserialization, and 2024-2025 advanced techniques.
+board: "ctf-website"
+category: "05-deserialization"
+signals: ["deserialization", "反序列化", "pickle", "PHP unserialize", "Java gadget chain", "ysoserial", "Hessian"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["反序列化", "deserialization", "PHP反序列化", "Java gadget", "pickle RCE", "ysoserial", "node-serialize", "YAML反序列化", ".NET ViewState"]
+difficulty: "advanced"
+tags: ["deserialization", "web-security", "rce", "ctf", "injection"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Deserialization Vulnerabilities
 
 反序列化漏洞是服务器端逻辑漏洞的核心，主要出现在信任了客户端传入的结构化状态数据时。本指南涵盖主流 Web 语言（PHP、Python、Node.js）的高级反序列化利用战术。

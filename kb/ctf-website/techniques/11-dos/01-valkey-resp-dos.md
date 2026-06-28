@@ -1,3 +1,22 @@
+---
+id: "ctf-website/11-dos/01-valkey-resp-dos"
+title: "Valkey RESP 协议：预认证断言失败 DoS（CVE-2026-27623）"
+title_en: "Valkey RESP Protocol Pre-Auth Assertion Failure DoS (CVE-2026-27623)"
+summary: >
+  Valkey 9.0.0-9.0.2 的 RESP 协议状态机存在 reqtype 残留缺陷。空 multibulk 请求后，reqtype 未清零，后续 PING 被误解析为 multibulk，触发断言失败导致进程 abort。预认证即可触发。
+summary_en: >
+  Valkey 9.0.0-9.0.2 contains a RESP protocol state machine flaw where reqtype is not cleared after consuming an empty multibulk request. Subsequent PING is misinterpreted as multibulk, triggering an assertion failure and process abort. Exploitable pre-authentication.
+board: "ctf-website"
+category: "11-dos"
+signals: ["Valkey", "RESP", "Redis", "预认证", "pre-auth", "DoS", "CVE-2026-27623", "断言失败", "assertion failure"]
+mcp_tools: ["http_probe", "run_ctf_tool", "kb_router"]
+keywords: ["Valkey DoS", "CVE-2026-27623", "RESP protocol", "pre-auth DoS", "Redis DoS", "assertion failure", "预认证拒绝服务"]
+difficulty: "intermediate"
+tags: ["dos", "CVE", "valkey", "redis", "protocol", "pre-auth", "infrastructure"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Valkey RESP 协议：预认证断言失败 DoS（CVE-2026-27623）
 
 ## 1. 受影响版本

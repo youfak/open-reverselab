@@ -1,3 +1,22 @@
+---
+id: "ctf-website/07-client/js-runtime"
+title: "JS Runtime / Browser Reversing"
+title_en: "JS Runtime / Browser Reversing"
+summary: >
+  Web前端JS逆向工程完整指南，涵盖动态运行时Hook抓取fetch/XHR网络请求和CryptoJS/WebCrypto密码参数、反调试绕过（定时器debugger过滤、toString特征伪造）、基于Babel的AST静态去混淆（字面量折叠、大数组还原、控制流平坦化恢复）、Proxy全对象劫持以及WebAssembly逆向分析。
+summary_en: >
+  Complete guide to front-end JS reverse engineering, covering dynamic runtime hooks for intercepting fetch/XHR network requests and CryptoJS/WebCrypto parameters, anti-debug bypass (timer debugger filtering, toString forgery), Babel-based AST static deobfuscation (literal folding, array recovery, control flow flattening), Proxy-based full object hijacking, and WebAssembly reverse engineering.
+board: "ctf-website"
+category: "07-client"
+signals: ["JS逆向", "AST去混淆", "WebAssembly", "runtime hook", "浏览器逆向", "Babel", "CryptoJS"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["JS运行时逆向", "Babel AST", "代码去混淆", "WebAssembly", "CryptoJS Hook", "前端逆向", "反调试绕过", "Proxy劫持"]
+difficulty: "advanced"
+tags: ["reverse-engineering", "javascript", "web-security", "crypto", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # JS Runtime / Browser Reversing
 
 在 Web CTF 以及前端对抗中，混淆的 JS 捆绑包（如 Webpack, Rollup 产物）和动态防分析手段是最常见的门槛。本指南聚焦于**如何通过动态运行时 Hook 捕获密钥**以及**利用 AST 技术静态净化混淆代码**。

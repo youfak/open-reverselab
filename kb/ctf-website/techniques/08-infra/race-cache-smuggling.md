@@ -1,3 +1,22 @@
+---
+id: "ctf-website/08-infra/race-cache-smuggling"
+title: "Race Condition / Cache Poisoning / Request Smuggling"
+title_en: "Race Condition / Cache Poisoning / Request Smuggling"
+summary: >
+  基础设施层三大高级攻击技术完整指南：条件竞争（Turbo Intruder并发模板、优惠码/转账/邀请码等十大竞态场景）、缓存投毒（Unkeyed Headers探测、X-Forwarded-Host毒化）、请求走私（CL.TE/TE.CL差异探测、TE.TE混淆、H2.CL降级攻击），以及更多竞态与缓存投毒进阶手法。
+summary_en: >
+  Complete guide to three advanced infrastructure-layer attack techniques: race conditions (Turbo Intruder concurrency templates, ten classic race scenarios including coupon/transfer/invite abuse), cache poisoning (unkeyed header detection, X-Forwarded-Host poisoning), request smuggling (CL.TE/TE.CL differential probes, TE.TE obfuscation, H2.CL downgrade), and advanced race/poisoning techniques.
+board: "ctf-website"
+category: "08-infra"
+signals: ["race condition", "cache poisoning", "request smuggling", "条件竞争", "缓存投毒", "CL.TE", "TE.CL", "H2.CL"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["条件竞争", "cache poisoning", "request smuggling", "CL.TE", "TE.CL", "Turbo Intruder", "并发攻击", "缓存投毒", "HTTP走私"]
+difficulty: "advanced"
+tags: ["caching", "web-security", "race-condition", "dos", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Race Condition / Cache Poisoning / Request Smuggling
 
 ## 1. Race Condition

@@ -1,3 +1,23 @@
+---
+id: "ctf-website/17-api-attacks/02-api-key-leak"
+title: "API 密钥泄露与利用 — GitHub Dorking、客户端密钥链、云服务滥用"
+title_en: "API Key Leakage and Exploitation — GitHub Dorking, Client-Side Key Chains, Cloud Service Abuse"
+summary: >
+  通过 GitHub 代码搜索、JS Source Map 反解、APK 逆向等渠道发现泄露的 API 密钥，区分公开密钥与秘密密钥，并自动化验证各平台密钥有效性。覆盖 Stripe、AWS、Firebase、GitHub、Slack 等主流服务的密钥滥用链。
+summary_en: >
+  Discover leaked API keys through GitHub code search, JS Source Map extraction, and APK reverse-engineering. Distinguish public vs secret keys and automate key validation across platforms. Covers abuse chains for Stripe, AWS, Firebase, GitHub, Slack, and other major services.
+board: "ctf-website"
+category: "17-api-attacks"
+signals: ["API key leak", "GitHub dorking", "Firebase", "Stripe", "AWS", "密钥泄露", "云服务滥用", "硬编码凭据"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file", "run_ctf_tool"]
+keywords: ["API密钥泄露", "GitHub搜索", "Firebase配置泄露", "Stripe密钥滥用", "AWS密钥验证", "API key leak", "hardcoded credentials", "cloud service abuse"]
+difficulty: "intermediate"
+tags: ["api-security", "api-keys", "github-dorking", "firebase", "stripe", "aws", "cloud-security"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # API 密钥泄露与利用 — GitHub Dorking、客户端密钥链、云服务滥用
 
 ## 场景

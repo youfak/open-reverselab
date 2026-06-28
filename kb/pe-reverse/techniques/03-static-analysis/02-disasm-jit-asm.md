@@ -1,3 +1,49 @@
+---
+id: "pe-reverse/03-static-analysis/02-disasm-jit-asm"
+title: "反汇编（Zydis）与 JIT 汇编（Xbyak）"
+title_en: "Disassembly (Zydis) and JIT Assembly (Xbyak)"
+summary: >
+  介绍 Zydis 反汇编引擎解码 x64 指令与 Xbyak 运行时生成机器码的核心用法，涵盖单条/范围反汇编、跳板代码生成、常见指令速查、手动字节构造及反汇编确定 Hook 安全边界的实战技巧。
+summary_en: >
+  Covers Zydis disassembly engine for x64 instruction decoding and Xbyak for runtime machine code generation, including single/range disassembly, trampoline code generation, common instruction quick reference, manual byte construction, and using disassembly to determine safe Hook boundaries.
+board: "pe-reverse"
+category: "03-static-analysis"
+signals:
+  - "Zydis"
+  - "Xbyak"
+  - "JIT assembly"
+  - "instruction decoding"
+  - "trampoline generation"
+  - "反汇编"
+  - "机器码生成"
+  - "Hook boundary"
+mcp_tools:
+  - rizin_assemble_bytes
+  - rizin_assemble_patch
+keywords:
+  - "Zydis"
+  - "Xbyak"
+  - "disassembly"
+  - "JIT assembly"
+  - "machine code"
+  - "trampoline"
+  - "instruction"
+  - "x64"
+  - "CodeGenerator"
+  - "hook"
+difficulty: "intermediate"
+tags:
+  - "disassembly"
+  - "assembly"
+  - "JIT"
+  - "hook"
+  - "Zydis"
+  - "Xbyak"
+  - "machine-code"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 反汇编（Zydis）与 JIT 汇编（Xbyak）
 
 ## 场景

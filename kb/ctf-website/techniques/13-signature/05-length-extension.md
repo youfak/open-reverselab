@@ -1,3 +1,25 @@
+---
+id: "ctf-website/13-signature/05-length-extension"
+title: "Hash Length Extension 攻击 — 深度技术手册"
+title_en: "Hash Length Extension Attacks — Deep Technical Manual"
+summary: >
+  利用 MD5/SHA1/SHA2 的 Merkle-Damgard 结构缺陷，在不知道密钥的情况下扩展合法签名。
+  覆盖支付回调签名扩展、API 签名扩展、Flask Session 伪造、文件完整性扩展，以及 hashpumpy/hlextend 实战。
+summary_en: >
+  Exploits the Merkle-Damgard structure flaw in MD5/SHA1/SHA2 to extend valid signatures without knowing
+  the secret key. Covers payment callback signature extension, API signature extension, Flask session forgery,
+  file integrity extension — with hashpumpy/hlextend practical usage.
+board: "ctf-website"
+category: "13-signature"
+signals: ["length extension", "长度扩展", "Merkle-Damgard", "hashpumpy", "H(secret||message)", "MD5扩展", "SHA256扩展", "HLE"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["长度扩展攻击", "hash length extension", "hashpumpy", "MD5扩展", "SHA256扩展", "Merkle-Damgard", "HLE", "Flask签名"]
+difficulty: "advanced"
+tags: ["signature", "crypto", "hash", "length-extension", "md5", "sha256", "web-security"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/13-signature/00-overview", "ctf-website/13-signature/02-implementation"]
+---
 # Hash Length Extension 攻击 — 深度技术手册
 
 > Hash Length Extension (HLE) 是 MD5/SHA1/SHA2 家族的一个结构缺陷：知道 `H(secret || message)` 后，你可以在**不知道 secret** 的情况下算出 `H(secret || message || padding || append)`。这对所有 `H(secret || message)` 构造的签名都是致命的。

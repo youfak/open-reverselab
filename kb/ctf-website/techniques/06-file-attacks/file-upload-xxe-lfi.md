@@ -1,3 +1,22 @@
+---
+id: "ctf-website/06-file-attacks/file-upload-xxe-lfi"
+title: "File Upload / XXE / LFI / Path Traversal"
+title_en: "File Upload / XXE / LFI / Path Traversal"
+summary: >
+  文件攻击四大类完整指南：文件上传绕过（扩展名双写、MIME伪造、图片马、Zip Slip路径穿越）、XXE漏洞利用（文件读取、内网SSRF、Blind XXE OOB外带、SVG/Office文件场景）、LFI路径穿越（编码绕过、PHP wrapper全集、Session Upload Progress竞态包含），以及PDF生成RCE和Node.js路径穿越特有手法。
+summary_en: >
+  Complete guide to four major file attack categories: file upload bypass (double extensions, MIME spoofing, polyglot images, Zip Slip), XXE exploitation (file read, internal SSRF, blind OOB exfiltration, SVG/Office scenarios), LFI path traversal (encoding bypass, PHP wrappers, session upload progress race condition), plus PDF generation RCE and Node.js path traversal techniques.
+board: "ctf-website"
+category: "06-file-attacks"
+signals: ["file upload", "XXE", "LFI", "path traversal", "文件上传", "路径穿越", "PHP wrapper", "盲XXE"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["文件上传绕过", "XXE", "LFI", "路径穿越", "PHP wrapper", "文件包含", "Zip Slip", "Blind XXE", "Session Upload Progress", "PDF生成RCE"]
+difficulty: "intermediate"
+tags: ["file-upload", "xxe", "lfi", "path-traversal", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # File Upload / XXE / LFI / Path Traversal
 
 ## 1. 文件上传绕过

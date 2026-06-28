@@ -1,3 +1,22 @@
+---
+id: "apk-reverse/07-packer/01-obfuscation-detection"
+title: "编译期混淆检测与识别"
+title_en: "Compile-Time Obfuscation Detection and Identification"
+summary: >
+  识别四种编译期混淆类型（oxorany XOR 常量加密、OLLVM 控制流平坦化、UPX 变种壳、字符串表加密），提供 DiE 检测、Ghidra 静态特征识别、Frida 脱壳 dump 模板及对应的逆向分析策略选择指南。
+summary_en: >
+  Identifying four compile-time obfuscation types (oxorany XOR constant encryption, OLLVM control flow flattening, UPX packer variants, string table encryption), with DiE detection, Ghidra static signature recognition, Frida unpacking dump templates, and reverse engineering strategy selection guide.
+board: "apk-reverse"
+category: "07-packer"
+signals: ["oxorany", "OLLVM", "UPX", "control flow flattening", "string encryption", "XOR", "DiE", "packer detection", ".init_array"]
+mcp_tools: ["die_scan", "android_crypto_unpack_recipe", "carve_payloads_from_dump", "ghidra_headless_analyze"]
+keywords: ["obfuscation", "OLLVM", "UPX", "oxorany", "混淆", "控制流平坦化", "壳", "DiE", "字符串加密"]
+difficulty: "intermediate"
+tags: ["obfuscation", "ollvm", "upx", "packer", "frida", "ghidra", "die", "deobfuscation"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 编译期混淆检测与识别
 
 ## 场景

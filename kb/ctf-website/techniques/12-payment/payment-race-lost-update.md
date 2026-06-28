@@ -1,3 +1,24 @@
+---
+id: "ctf-website/12-payment/payment-race-lost-update"
+title: "Payment Race / Lost Update — 余额扣减丢失更新"
+title_en: "Payment Race / Lost Update — Balance Deduction Loss via Race Conditions"
+summary: >
+  聚焦余额、quota 或积分系统中 read-modify-write 非原子操作导致的 lost update 竞态漏洞，
+  提供差分实验方法论、可运行探针脚本和白盒审计要点，不依赖盲目高并发。
+summary_en: >
+  Focuses on lost update race conditions caused by non-atomic read-modify-write in balance/quota/credits
+  systems, with differential experiment methodology, runnable probe scripts, and white-box audit guidance.
+board: "ctf-website"
+category: "12-payment"
+signals: ["lost update", "余额扣减", "竞态条件", "read-modify-write", "TOCTOU", "quota", "并发安全", "差分实验"]
+mcp_tools: ["kb_router", "http_probe"]
+keywords: ["lost update", "余额丢失", "竞态条件", "race condition", "TOCTOU", "并发安全", "余额扣减绕过", "quota bypass"]
+difficulty: "advanced"
+tags: ["payment", "race-condition", "database", "concurrency", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/12-payment/payment-bypass"]
+---
 # Payment Race / Lost Update — 余额扣减丢失更新
 
 > 适用信号：余额、quota、积分或库存采用“读取 → 计算 → 写回”，同时存在可更新同一用户/钱包记录的第二个 API。重点不是堆并发，而是用**同工作量差分实验**证明扣费写入被另一条合法写路径覆盖或静默丢弃。

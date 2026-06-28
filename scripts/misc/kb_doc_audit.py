@@ -50,22 +50,58 @@ def local_link_errors(path: Path, text: str) -> list[str]:
     return errors
 
 
+def _strip_frontmatter(text: str) -> str:
+    """剥离 YAML frontmatter，返回正文。"""
+    t = text.lstrip()
+    if t.startswith("---"):
+        end = t.find("---", 3)
+        if end != -1:
+            return t[end + 3:].lstrip()
+    return text
+
+
+def _has_frontmatter(text: str) -> bool:
+    """检查是否有 YAML frontmatter。"""
+    return text.lstrip().startswith("---")
+
+
+def _check_frontmatter(text: str) -> list[str]:
+    """检查 frontmatter 完整性（必填字段是否存在）。"""
+    REQUIRED = ["id:", "title:", "title_en:", "summary:", "summary_en:",
+                "board:", "category:", "signals:", "keywords:",
+                "difficulty:", "tags:", "language:", "last_updated:"]
+    t = text.lstrip()
+    end = t.find("---", 3)
+    if end == -1:
+        return ["malformed-frontmatter"]
+    fm = t[3:end]
+    missing = [f"fm-missing:{f[:-1]}" for f in REQUIRED if f not in fm]
+    return missing
+
+
 def audit(path: Path) -> list[str]:
     text = path.read_text(encoding="utf-8", errors="replace")
     failures: list[str] = []
-    if not text.lstrip().startswith("# "):
+
+    # Frontmatter 检查（如果存在）
+    if _has_frontmatter(text):
+        failures.extend(_check_frontmatter(text))
+
+    # 正文检查（剥离 frontmatter 后再做）
+    body = _strip_frontmatter(text)
+    if not body.startswith("# "):
         failures.append("missing-h1")
-    if len(text.strip()) < 800:
+    if len(body.strip()) < 800:
         failures.append("too-short")
-    if "```" not in text:
+    if "```" not in body:
         failures.append("missing-runnable-example")
-    if not FLOW_RE.search(text):
+    if not FLOW_RE.search(body):
         failures.append("missing-workflow")
-    if not EVIDENCE_RE.search(text):
+    if not EVIDENCE_RE.search(body):
         failures.append("missing-evidence")
-    if not MCP_RE.search(text):
+    if not MCP_RE.search(body):
         failures.append("missing-mcp-map")
-    failures.extend(local_link_errors(path, text))
+    failures.extend(local_link_errors(path, body))
     return failures
 
 

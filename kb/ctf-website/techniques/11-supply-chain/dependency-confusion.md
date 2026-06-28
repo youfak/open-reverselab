@@ -1,3 +1,24 @@
+---
+id: "ctf-website/11-supply-chain/dependency-confusion"
+title: "Dependency Confusion & 供应链攻击"
+title_en: "Dependency Confusion & Supply Chain Attacks"
+summary: >
+  介绍如何通过内部包名枚举、npm/PyPI 注册表投毒、Manifest 与 Tarball 不一致、及 Typosquatting 实施依赖混淆攻击，
+  从而在 CI/CD 流水线中执行恶意代码并窃取敏感凭证。
+summary_en: >
+  Covers internal package name enumeration, npm/PyPI registry poisoning, manifest-tarball mismatch,
+  and typosquatting to execute malicious code in CI/CD pipelines and exfiltrate credentials.
+board: "ctf-website"
+category: "11-supply-chain"
+signals: ["dependency confusion", "内部包名枚举", "npm publish", "CI build", "preinstall script", "typosquatting", "PyPI registry", "manifest tarball"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["dependency confusion", "供应链攻击", "npm投毒", "PyPI攻击", "CI/CD安全", "typosquatting", "包管理安全", "supply chain"]
+difficulty: "advanced"
+tags: ["supply-chain", "dependency-confusion", "npm", "pypi", "ci-cd", "package-manager"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Dependency Confusion & 供应链攻击
 
 ## 内部包名枚举

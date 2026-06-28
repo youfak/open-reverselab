@@ -1,3 +1,23 @@
+---
+id: "ctf-website/02-auth/jwt/05-jku-x5u-abuse"
+title: "JWT `jku` / `x5u` 密钥源劫持"
+title_en: "JWT jku / x5u Key Source Hijacking"
+summary: >
+  介绍利用 JWT Header 中 jku 和 x5u 字段劫持密钥来源的攻击方法。攻击者生成自己的密钥对，将 jku/x5u 指向自己控制的 JWKS 或证书服务器，用对应私钥签名即可通过服务端验证。涵盖 URL 白名单绕过、开放重定向利用及 SSRF 链。
+summary_en: >
+  Exploiting JWT Header jku and x5u fields to hijack key sources. Attackers generate their own keypair, point jku/x5u to a controlled JWKS or certificate server, and sign with the corresponding private key to pass verification. Covers URL whitelist bypass, open redirect exploitation, and SSRF chaining.
+board: "ctf-website"
+category: "02-auth"
+signals: ["jku", "x5u", "JWK Set URL", "X.509", "密钥劫持", "RSA", "JWKS", "jwt_tool"]
+mcp_tools: ["run_ctf_tool", "http_probe"]
+keywords: ["jku劫持", "x5u攻击", "JWKS", "JWT密钥劫持", "jwt_tool", "jku injection", "RSA密钥对", "JWK Set"]
+difficulty: "advanced"
+tags: ["authentication", "jwt", "key-hijacking", "web-security", "ssrf", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # JWT `jku` / `x5u` 密钥源劫持
 
 ## 原理

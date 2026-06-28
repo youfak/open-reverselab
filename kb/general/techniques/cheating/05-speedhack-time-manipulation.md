@@ -1,3 +1,49 @@
+---
+id: "general/cheating/05-speedhack-time-manipulation"
+title: "加速/时间操控"
+title_en: "Speedhack / Time Manipulation"
+summary: >
+  覆盖多时间源 Hook 实现游戏加速：GetTickCount/QueryPerformanceCounter/RDTSC/timeGetTime 协同插值、Unity Time.timeScale 修改、Unreal TimeDilation 劫持及服务器端多源交叉校验绕过与 Tick 操纵回滚攻击。
+summary_en: >
+  Multi-clock-source hooking for game speed manipulation: coordinated GetTickCount/QPC/RDTSC/timeGetTime interpolation, Unity Time.timeScale modification, Unreal TimeDilation hijacking, server-side cross-validation bypass, and tick manipulation rollback attacks.
+board: "general"
+category: "cheating"
+signals:
+  - "GetTickCount hook"
+  - "QueryPerformanceCounter"
+  - "RDTSC hook"
+  - "Time.timeScale"
+  - "server-side validation"
+  - "clock interpolation"
+  - "tick manipulation"
+mcp_tools:
+  - "ghidra_summary_call_focus"
+  - "rizin_imports"
+  - "search_pattern"
+  - "ghidra_summary_function_detail"
+  - "rizin_assemble_bytes"
+  - "patch_bytes"
+keywords:
+  - "speedhack"
+  - "GetTickCount hook"
+  - "time manipulation"
+  - "deltaTime"
+  - "Time.timeScale"
+  - "clock interpolation"
+  - "RDTSC"
+  - "QueryPerformanceCounter"
+  - "tick rollback"
+difficulty: "intermediate"
+tags:
+  - "game-hacking"
+  - "time-manipulation"
+  - "speedhack"
+  - "clock-hook"
+  - "Unity"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 加速/时间操控
 
 ## 场景

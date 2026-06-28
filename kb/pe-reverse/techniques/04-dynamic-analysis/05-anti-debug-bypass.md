@@ -1,3 +1,49 @@
+---
+id: "pe-reverse/04-dynamic-analysis/05-anti-debug-bypass"
+title: "反调试检测与绕过"
+title_en: "Anti-Debug Detection and Bypass"
+summary: >
+  系统梳理 6 种常见反调试技术（PEB.BeingDebugged、IsDebuggerPresent、NtGlobalFlag、NtQueryInformationProcess、时间差检测、硬件断点检测）及其绕过方法，附 Frida 通用反调试脚本和 Patch 模式汇总。
+summary_en: >
+  Systematic coverage of 6 common anti-debug techniques (PEB.BeingDebugged, IsDebuggerPresent, NtGlobalFlag, NtQueryInformationProcess, timing checks, hardware breakpoint detection) and their bypass methods, with a universal Frida anti-debug script and NOP patch pattern summary.
+board: "pe-reverse"
+category: "04-dynamic-analysis"
+signals:
+  - "PEB.BeingDebugged"
+  - "NtGlobalFlag"
+  - "NtQueryInformationProcess"
+  - "Frida bypass"
+  - "NOP patch"
+  - "反调试"
+  - "绕过"
+  - "PEB"
+mcp_tools:
+  - ghidra_summary_call_focus
+  - make_x64dbg_breakpoint_script
+  - make_pe_crypto_unpack_plan
+keywords:
+  - "anti-debug"
+  - "IsDebuggerPresent"
+  - "PEB"
+  - "NtGlobalFlag"
+  - "NtQueryInformationProcess"
+  - "Frida"
+  - "bypass"
+  - "hardware breakpoint"
+  - "rdtsc"
+  - "debugger detection"
+difficulty: "intermediate"
+tags:
+  - "anti-debug"
+  - "bypass"
+  - "Frida"
+  - "PEB"
+  - "debugger"
+  - "dynamic-analysis"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 反调试检测与绕过
 
 ## 场景

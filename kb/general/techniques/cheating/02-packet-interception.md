@@ -1,3 +1,50 @@
+---
+id: "general/cheating/02-packet-interception"
+title: "封包拦截与修改"
+title_en: "Packet Interception and Modification"
+summary: >
+  覆盖 Windows/Linux 多层次的封包劫持方案：IAT/VMT Hook send/recv、LD_PRELOAD、NFQUEUE 中间人、SSL 证书固定绕过、协议结构推断、校验和逆向与 Scapy 重放攻击，含服务器端检测规避策略。
+summary_en: >
+  Multi-level packet interception across Windows/Linux: IAT/VMT Winsock hooks, LD_PRELOAD, NFQUEUE MITM, SSL certificate pinning bypass, protocol structure inference, checksum reverse-engineering, and Scapy replay attacks with server-side evasion.
+board: "general"
+category: "cheating"
+signals:
+  - "Winsock hook"
+  - "SSL unpinning"
+  - "protocol reverse"
+  - "checksum bypass"
+  - "packet replay"
+  - "NFQUEUE"
+  - "LD_PRELOAD"
+mcp_tools:
+  - "kb_router"
+  - "search_pattern"
+  - "rizin_imports"
+  - "rizin_assemble_bytes"
+  - "patch_bytes"
+  - "pe_address_to_offset"
+  - "python_re_tool_install"
+keywords:
+  - "packet interception"
+  - "Winsock hook"
+  - "SSL bypass"
+  - "protocol reverse engineering"
+  - "Man-in-the-Middle"
+  - "checksum"
+  - "SChannel"
+  - "Scapy replay"
+  - "NFQUEUE"
+difficulty: "intermediate"
+tags:
+  - "game-hacking"
+  - "network-hooking"
+  - "SSL-bypass"
+  - "protocol-analysis"
+  - "MITM"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 封包拦截与修改
 
 ## 场景

@@ -1,3 +1,49 @@
+---
+id: "ctf-website/23-paywall-bypass/03-network-rule-blocking"
+title: "Network 规则拦截 — 阻止 Paywall 脚本加载"
+title_en: "Network Rule Blocking — Preventing Paywall Script Loading"
+summary: >
+  通过Manifest V3的declarativeNetRequest在浏览器网络层阻止paywall SDK（Piano/Poool/Sophi/Zephr）加载，使付费墙逻辑永远不执行而正文完整可见。涵盖block规则、CSP注入解除内联脚本限制、AMP页面unhide和URL重定向规则。
+summary_en: >
+  Uses Manifest V3 declarativeNetRequest to block paywall SDKs (Piano, Poool, Sophi, Zephr) at the browser network layer, so paywall logic never executes and full article text remains visible. Covers block rules, CSP injection to bypass inline script restrictions, AMP page unhiding, and URL redirect rules.
+board: "ctf-website"
+category: "23-paywall-bypass"
+signals:
+  - "script[src*=\"tinypass.com\"]"
+  - "script[src*=\"piano.io\"]"
+  - "script[src*=\"poool.fr\"]"
+  - "declarativeNetRequest block"
+  - "regexFilter paywall SDK"
+  - "CSP injection script-src"
+  - "amp-access-hide"
+  - "block_regex_general"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "declarativeNetRequest"
+  - "脚本阻止"
+  - "Piano SDK 阻止"
+  - "Poool 阻止"
+  - "CSP 注入"
+  - "AMP unhide"
+  - "paywall script blocking"
+  - "Manifest V3 block"
+  - "request blocking"
+  - "网络层拦截"
+difficulty: "intermediate"
+tags:
+  - "paywall"
+  - "bypass"
+  - "network-blocking"
+  - "declarative-net-request"
+  - "browser-extension"
+  - "csp"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Network 规则拦截 — 阻止 Paywall 脚本加载
 
 ## 场景

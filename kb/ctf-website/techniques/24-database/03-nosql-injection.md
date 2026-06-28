@@ -1,3 +1,51 @@
+---
+id: "ctf-website/24-database/03-nosql-injection"
+title: "NoSQL Injection — NoSQL 注入攻击"
+title_en: "NoSQL Injection Attacks"
+summary: >
+  MongoDB、Redis、Elasticsearch、CouchDB等NoSQL数据库的注入与利用技术：MongoDB $ne/$gt/$regex操作符认证绕过和$where JavaScript代码执行、Redis未授权访问写Webshell/SSH Key/Crontab、Elasticsearch Groovy脚本注入和CouchDB RCE（CVE-2017-12635）。
+summary_en: >
+  Injection and exploitation techniques for NoSQL databases: MongoDB $ne/$gt/$regex operator authentication bypass and $where JavaScript code execution, Redis unauthorized access for writing webshell/SSH key/crontab, Elasticsearch Groovy script injection, and CouchDB RCE (CVE-2017-12635).
+board: "ctf-website"
+category: "24-database"
+signals:
+  - "MongoDB $ne $gt $regex"
+  - "Redis PING 未授权 CONFIG SET"
+  - "Elasticsearch Groovy 脚本"
+  - "CouchDB _all_dbs"
+  - "$where JavaScript 注入"
+  - "RESP 协议 Redis"
+  - "CVE-2017-12635 CouchDB"
+  - "BSON 注入"
+mcp_tools:
+  - "http_probe"
+  - "run_ctf_tool"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "NoSQL 注入"
+  - "MongoDB 注入"
+  - "Redis 未授权"
+  - "Elasticsearch 注入"
+  - "CouchDB RCE"
+  - "$where 代码执行"
+  - "Memcached 攻击"
+  - "主从复制 RCE"
+  - "Groovy 脚本注入"
+  - "$ne 绕过"
+difficulty: "intermediate"
+tags:
+  - "database"
+  - "nosql"
+  - "mongodb"
+  - "redis"
+  - "elasticsearch"
+  - "couchdb"
+  - "injection"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # NoSQL Injection — NoSQL 注入攻击
 
 > MongoDB、Redis、Elasticsearch、CouchDB 等 NoSQL 数据库的注入与利用技术。

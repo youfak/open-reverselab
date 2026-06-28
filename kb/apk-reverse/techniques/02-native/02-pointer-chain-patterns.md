@@ -1,3 +1,22 @@
+---
+id: "apk-reverse/02-native/02-pointer-chain-patterns"
+title: "指针链遍历模式"
+title_en: "Pointer Chain Traversal Patterns"
+summary: >
+  讲解游戏逆向中多级对象引用指针链的递归遍历模式（Manager→Container→Entity→Field），覆盖用户态 process_vm_readv 和内核驱动 ioctl 两种内存读取路径，以及在 Unity/UE4/Cocos 引擎中的实战偏移规律与遍历技巧。
+summary_en: >
+  Recursive traversal patterns for multi-level pointer chains (Manager→Container→Entity→Field) in game reverse engineering, covering user-mode process_vm_readv and kernel driver ioctl memory read paths, with practical offset patterns and traversal techniques for Unity/UE4/Cocos engines.
+board: "apk-reverse"
+category: "02-native"
+signals: ["pointer chain", "process_vm_readv", "ioctl driver", "getZZ macro", "array traversal", "memory read", "offset patterns"]
+mcp_tools: ["android_frida_run_script", "ghidra_summary_functions"]
+keywords: ["pointer chain", "memory read", "process_vm_readv", "ioctl", "指针链", "内存读取", "getZZ", "偏移遍历", "kernel driver"]
+difficulty: "advanced"
+tags: ["pointer-chain", "memory-read", "kernel-driver", "game-hacking", "native-reverse"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 指针链遍历模式
 
 ## 场景

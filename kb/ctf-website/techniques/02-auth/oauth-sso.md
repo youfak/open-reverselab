@@ -1,3 +1,23 @@
+---
+id: "ctf-website/02-auth/oauth-sso"
+title: "OAuth 2.0 / OIDC 攻击实战"
+title_en: "OAuth 2.0 / OIDC Attack Techniques"
+summary: >
+  全面覆盖 OAuth 2.0 和 OpenID Connect 流程中的九大攻击面：redirect_uri 开放重定向、state/nonce CSRF、code 复用、邮箱关联账户劫持、PKCE 缺失、ID Token 混淆、Implicit Flow 攻击、Client Secret 提取及 Device Code Flow 滥用。
+summary_en: >
+  A comprehensive guide to nine OAuth 2.0 / OIDC attack surfaces: redirect_uri open redirect, state/nonce CSRF, authorization code reuse, email-based account hijacking, missing PKCE, ID Token confusion, Implicit Flow attacks, Client Secret extraction, and Device Code Flow abuse.
+board: "ctf-website"
+category: "02-auth"
+signals: ["OAuth", "OIDC", "redirect_uri", "state", "PKCE", "code reuse", "ID Token", "client_secret", "SSO"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file"]
+keywords: ["OAuth攻击", "OIDC", "SSO", "redirect_uri绕过", "PKCE", "code复用", "client secret", "CSRF", "token混淆"]
+difficulty: "advanced"
+tags: ["authentication", "oauth", "oidc", "sso", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # OAuth 2.0 / OIDC 攻击实战
 
 ## 攻击面

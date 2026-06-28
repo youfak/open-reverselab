@@ -1,3 +1,25 @@
+---
+id: "ctf-website/13-signature/01-algorithm"
+title: "Signature Algorithm Attacks — 签名算法降级/混淆/None 攻击深度手册"
+title_en: "Signature Algorithm Attacks — Algorithm Downgrade, Confusion & None Attack Deep Manual"
+summary: >
+  深度覆盖签名算法降级（sign_type 切换）、None 算法攻击（alg:none 及通用 none 变体）、
+  算法混淆（RS256→HS256 公钥混淆、MD5/HMAC-MD5 混淆）、多算法回退和签名编码攻击。
+summary_en: >
+  Deep coverage of signature algorithm downgrade (sign_type switching), None algorithm attacks (alg:none
+  and generic variants), algorithm confusion (RS256→HS256, MD5/HMAC-MD5), multi-algorithm fallback,
+  and signature encoding attacks — with full automated attack suite.
+board: "ctf-website"
+category: "13-signature"
+signals: ["algorithm downgrade", "算法降级", "alg none", "sign_type", "RS256 HS256", "JWT confusion", "MD5签名", "签名编码"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["签名算法攻击", "algorithm downgrade", "alg none", "JWT算法混淆", "sign_type绕过", "编码攻击", "HMAC混淆"]
+difficulty: "advanced"
+tags: ["signature", "algorithm", "downgrade", "jwt", "crypto", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/13-signature/00-overview", "ctf-website/13-signature/02-implementation"]
+---
 # Signature Algorithm Attacks — 签名算法降级/混淆/None 攻击深度手册
 
 > 目标：篡改签名算法字段、强迫服务器使用弱算法或跳过验证、混淆对称/非对称密钥角色、利用编码和长度缺陷绕过签名校验。每个漏洞必须有服务器端签名验证失败的证据。

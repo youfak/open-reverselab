@@ -1,3 +1,61 @@
+---
+id: "general/methodology/02-toolchain-decision-tree"
+title: "按信号选工具决策树"
+title_en: "Signal-Based Tool Selection Decision Tree"
+summary: >
+  基于输入信号的完整工具链路由决策树：文件类型路由、壳/混淆分类决策、加密通信路线选择、反调试绕过策略及 MCP 工具集成全景图，含快速/未知/加密 Stub 三套标准分析路径模板。
+summary_en: >
+  Complete signal-based toolchain routing decision tree: file type routing, packer/obfuscation classification decisions, encryption/communication path selection, anti-debug bypass strategy, and full MCP tool integration map with three standard analysis path templates.
+board: "general"
+category: "methodology"
+signals:
+  - "tool selection"
+  - "decision tree"
+  - "file type routing"
+  - "obfuscation handling"
+  - "encryption analysis"
+  - "anti-debug bypass"
+  - "MCP tool mapping"
+mcp_tools:
+  - "triage_pe"
+  - "die_scan"
+  - "hash_file"
+  - "rizin_sections"
+  - "rizin_imports"
+  - "rizin_strings"
+  - "ghidra_headless_analyze"
+  - "ghidra_summary_functions"
+  - "ghidra_summary_imports"
+  - "ghidra_summary_strings"
+  - "kb_router"
+  - "kb_read_file"
+  - "kb_catalog"
+  - "search_pattern"
+  - "pe_address_to_offset"
+  - "patch_bytes"
+  - "rizin_assemble_bytes"
+  - "python_re_tool_install"
+keywords:
+  - "tool selection"
+  - "reverse engineering workflow"
+  - "decision tree"
+  - "signal routing"
+  - "MCP tools"
+  - "analysis pipeline"
+  - "file type detection"
+  - "packer classification"
+  - "toolchain"
+difficulty: "beginner"
+tags:
+  - "methodology"
+  - "workflow"
+  - "decision-tree"
+  - "toolchain"
+  - "MCP-integration"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 按信号选工具决策树
 
 ## 场景

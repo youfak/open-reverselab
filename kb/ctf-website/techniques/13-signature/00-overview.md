@@ -1,3 +1,25 @@
+---
+id: "ctf-website/13-signature/00-overview"
+title: "Signature Forgery — 签名伪造与验证绕过全景手册"
+title_en: "Signature Forgery — Complete Panoramic Handbook for Signature Forgery & Verification Bypass"
+summary: >
+  签名攻击全景概览与决策树手册，覆盖支付回调、JWT、API 签名、文件完整性、Cookie 签名等十类场景的
+  算法降级、实现缺陷、密钥攻击、规范化绕过、长度扩展和重放攻击等六大攻击维度。
+summary_en: >
+  Complete panoramic overview and decision-tree handbook for signature attacks, covering ten scenarios
+  including payment callbacks, JWT, API signatures, and file integrity, across six attack dimensions:
+  algorithm downgrade, implementation flaws, key attacks, canonicalization, length extension, and replay.
+board: "ctf-website"
+category: "13-signature"
+signals: ["signature forgery", "签名伪造", "算法降级", "alg none", "magic hash", "签名绕过", "sign_type", "HMAC", "JWT"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["签名伪造", "signature bypass", "算法降级", "magic hash", "JWT绕过", "签名验证", "HMAC攻击", "支付签名"]
+difficulty: "intermediate"
+tags: ["signature", "authentication", "web-security", "ctf", "crypto", "jwt"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/13-signature/01-algorithm", "ctf-website/13-signature/02-implementation", "ctf-website/13-signature/03-key-attacks"]
+---
 # Signature Forgery — 签名伪造与验证绕过全景手册
 
 > 签名是"信任的数学表达"。本手册覆盖 Web 中所有签名场景：支付回调、API 鉴权、JWT、OAuth、SAML、文件完整性、下载链接、CSRF token、Webhook payload。目标是**伪造任意上下文中的签名，以绕过认证、提权、零元购或冒充第三方**。

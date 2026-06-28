@@ -1,3 +1,22 @@
+---
+id: "apk-reverse/05-network/01-game-protocol-hook"
+title: "游戏协议 Hook 与封包分析"
+title_en: "Game Protocol Hooking and Packet Analysis"
+summary: >
+  Hook 游戏网络栈抓取请求/响应明文，覆盖 Java 层 OkHttp/Retrofit Hook 和 Native 层 sendto/recvfrom Hook，结合 Protobuf 协议逆向、Wireshark 流量分析和 redsocks 流量重定向，实现完整封包审计链路。
+summary_en: >
+  Hooking game network stacks to capture plaintext requests/responses, covering Java-layer OkHttp/Retrofit hooks and native-layer sendto/recvfrom hooks, combined with Protobuf protocol reversing, Wireshark traffic analysis, and redsocks traffic redirection for complete packet auditing.
+board: "apk-reverse"
+category: "05-network"
+signals: ["OkHttp", "Retrofit", "Socket", "sendto", "recvfrom", "Protobuf", "traffic redirection", "packet capture"]
+mcp_tools: ["android_http_observation_recipe", "android_crypto_unpack_recipe"]
+keywords: ["OkHttp", "Protobuf", "socket", "封包", "协议分析", "sendto", "recvfrom", "Frida", "网络Hook"]
+difficulty: "intermediate"
+tags: ["network", "protocol-hook", "okhttp", "socket", "protobuf", "packet-capture", "frida"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 游戏协议 Hook 与封包分析
 
 ## 场景

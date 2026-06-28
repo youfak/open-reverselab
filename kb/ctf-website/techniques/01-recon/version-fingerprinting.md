@@ -1,3 +1,23 @@
+---
+id: "ctf-website/01-recon/version-fingerprinting"
+title: "版本指纹识别"
+title_en: "Version Fingerprinting"
+summary: >
+  介绍从 HTTP Header、HTML Meta、JS Bundle、静态文件 Hash、错误页面到锁文件的多层次版本指纹识别方法。包含 Wappalyzer 级指纹数据库和 fingerprint-to-CVE 联动工作流，用于精确识别目标技术栈及已知漏洞版本。
+summary_en: >
+  A multi-layered approach to version fingerprinting covering HTTP headers, HTML meta tags, JS bundle analysis, static file hashes, error pages, and lock files. Includes a Wappalyzer-style fingerprint database and fingerprint-to-CVE correlation workflow for precise technology stack identification.
+board: "ctf-website"
+category: "01-recon"
+signals: ["fingerprint", "版本识别", "Server header", "favicon hash", "JS framework", "Wappalyzer", "CVE lookup", "technology stack"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file"]
+keywords: ["版本指纹", "fingerprinting", "技术栈识别", "favicon hash", "CVE", "nuclei", "whatweb", "wappalyzer", "JS框架"]
+difficulty: "beginner"
+tags: ["recon", "fingerprinting", "cve", "web-security", "technology-stack", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # 版本指纹识别
 
 ## 一句话原则

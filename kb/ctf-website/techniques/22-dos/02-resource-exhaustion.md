@@ -1,3 +1,51 @@
+---
+id: "ctf-website/22-dos/02-resource-exhaustion"
+title: "Resource Exhaustion & Algorithm Complexity Attacks"
+title_en: "Resource Exhaustion & Algorithm Complexity Attacks"
+summary: >
+  利用数据结构、算法或系统资源的已知弱点，以合法请求触发服务器CPU满载、内存OOM或文件描述符耗尽。涵盖HashDoS碰撞攻击、XML Bomb实体展开、Zip Bomb递归解压、文件描述符耗尽、数据库连接池攻击、线程池饥饿和JSON解析器炸弹。
+summary_en: >
+  Exploits known weaknesses in data structures, algorithms, and system resource management to trigger CPU exhaustion, memory OOM, or file descriptor depletion using legitimate-looking requests. Covers HashDoS collision attacks, XML Bomb entity expansion, Zip Bomb decompression, FD exhaustion, connection pool starvation, and thread pool starvation.
+board: "ctf-website"
+category: "22-dos"
+signals:
+  - "Hash 碰撞 CPU 100%"
+  - "HashDoS CVE-2011-4885"
+  - "XML Entity Expansion Billion Laughs"
+  - "Zip Bomb 42.zip"
+  - "文件描述符耗尽 fd exhaustion"
+  - "连接池满 max_connections"
+  - "线程池饥饿 Thread Pool Starvation"
+  - "JSON 深度嵌套解析器崩溃"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+  - "run_ctf_tool"
+keywords:
+  - "HashDoS"
+  - "hash collision DoS"
+  - "XML Bomb"
+  - "Billion Laughs"
+  - "Zip Bomb"
+  - "文件描述符耗尽"
+  - "连接池耗尽"
+  - "线程池饥饿"
+  - "JSON 解析器炸弹"
+  - "algorithm complexity attack"
+difficulty: "advanced"
+tags:
+  - "dos"
+  - "denial-of-service"
+  - "resource-exhaustion"
+  - "hash-collision"
+  - "xml-bomb"
+  - "zip-bomb"
+  - "algorithm-complexity"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Resource Exhaustion & Algorithm Complexity Attacks
 
 ## 场景

@@ -1,3 +1,22 @@
+---
+id: "apk-reverse/08-patch-repack/01-so-injection-repack"
+title: "Native SO 注入与 APK 重打包"
+title_en: "Native SO Injection and APK Repacking"
+summary: >
+  完整的 APK native 库注入与重打包工作流，包括 apktool 解包、多架构 SO 放置、smali 层 System.loadLibrary 注入、JNI_OnLoad 入口实现与 constructor 自动执行、重打包签名及完整性校验绕过方案。
+summary_en: >
+  Complete APK native library injection and repacking workflow, including apktool unpacking, multi-architecture SO placement, smali-layer System.loadLibrary injection, JNI_OnLoad entry implementation with automatic constructor execution, repacking signing, and integrity check bypass strategies.
+board: "apk-reverse"
+category: "08-patch-repack"
+signals: ["native SO injection", "APK repack", "loadLibrary", "JNI_OnLoad", "constructor", "apktool", "uber-apk-signer", "integrity bypass"]
+mcp_tools: ["android_app_baseline", "copy_sample_to_patches", "patch_bytes", "patch_pattern", "android_install_apk"]
+keywords: ["SO injection", "repack", "apktool", "JNI_OnLoad", "注入", "重打包", "loadLibrary", "签名", "native"]
+difficulty: "intermediate"
+tags: ["so-injection", "repack", "apktool", "jni", "native", "integrity-bypass", "signing"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Native SO 注入与 APK 重打包
 
 ## 场景

@@ -1,3 +1,50 @@
+---
+id: "general/protocol/01-unknown-protocol-reverse"
+title: "未知协议逆向方法论"
+title_en: "Unknown Protocol Reverse Engineering Methodology"
+summary: >
+  四阶段协议逆向方法论：基于熵定界的消息切分、字段类型统计推断与 CRC 逆向工程、请求-回复语义依赖映射、状态机转换图推断及结构感知模糊测试，从原始字节流到完整协议规范。
+summary_en: >
+  Four-phase protocol reverse engineering: entropy-based message delimiting, statistical field type inference and CRC reverse engineering, request-response semantic dependency mapping, state machine transition inference, and structure-aware fuzzing from raw byte streams to protocol specs.
+board: "general"
+category: "protocol"
+signals:
+  - "entropy delimit"
+  - "CRC reverse"
+  - "field classification"
+  - "state machine inference"
+  - "differential analysis"
+  - "magic prefix detection"
+  - "length field detection"
+mcp_tools:
+  - "kb_router"
+  - "kb_read_file"
+  - "triage_pe"
+  - "die_scan"
+  - "ghidra_headless_analyze"
+  - "ghidra_summary_call_focus"
+  - "python_re_tool_install"
+keywords:
+  - "protocol reverse engineering"
+  - "CRC reverse"
+  - "entropy analysis"
+  - "state machine"
+  - "field mapping"
+  - "Wireshark"
+  - "checksum"
+  - "differential analysis"
+  - "message delimiting"
+difficulty: "intermediate"
+tags:
+  - "protocol-analysis"
+  - "reverse-engineering"
+  - "CRC"
+  - "state-machine"
+  - "fuzzing"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 未知协议逆向方法论
 
 > 面对一个没有文档的自定义 TCP/UDP/串行协议，如何从零开始解构其格式、字段、状态机和校验和？本文提供系统性的方法论，覆盖熵分析定界、CRC 逆向工程、字段依赖映射、状态机推断和差分分析。

@@ -1,3 +1,52 @@
+---
+id: "ctf-website/22-dos/03-amplification-drdos"
+title: "Amplification / DRDoS Attacks"
+title_en: "Amplification / DRDoS Attacks"
+summary: >
+  利用UDP无连接特性伪造源IP地址，向公共服务（DNS、NTP、Memcached、CLDAP）发送小请求，使放大后的响应发送到受害目标。放大系数可达50,000x（Memcached），单台反射器可产生数十Gbps流量。
+summary_en: >
+  Exploits UDP's connectionless nature to spoof source IP addresses, sending small queries to public services (DNS, NTP, Memcached, CLDAP) that reflect amplified responses to the victim. Amplification factors reach up to 50,000x via Memcached, with a single reflector generating tens of Gbps.
+board: "ctf-website"
+category: "22-dos"
+signals:
+  - "UDP 流量洪泛 伪造源IP"
+  - "DNS amplification ANY 查询"
+  - "NTP monlist 放大 556x"
+  - "Memcached UDP 50,000x 放大"
+  - "CLDAP rootDSE 反射"
+  - "DRDoS Distributed Reflection DoS"
+  - "IP spoofing 原始套接字"
+  - "SSDP WS-Discovery 放大"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+  - "run_ctf_tool"
+keywords:
+  - "DRDoS"
+  - "DNS 放大攻击"
+  - "Memcached 放大"
+  - "NTP monlist"
+  - "CLDAP 反射"
+  - "IP 伪造"
+  - "反射放大"
+  - "amplification attack"
+  - "UDP reflection"
+  - "BCP38"
+difficulty: "advanced"
+tags:
+  - "dos"
+  - "denial-of-service"
+  - "drdos"
+  - "amplification"
+  - "udp"
+  - "dns"
+  - "memcached"
+  - "reflection"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Amplification / DRDoS Attacks
 
 ## 场景

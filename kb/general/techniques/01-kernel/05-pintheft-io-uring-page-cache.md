@@ -1,3 +1,44 @@
+---
+id: "general/01-kernel/05-pintheft-io-uring-page-cache"
+title: "RDS zcopy double-free + io_uring dangling struct page*：PinTheft 内核 LPE"
+title_en: "RDS zcopy Double-Free + io_uring Dangling struct page: PinTheft Kernel LPE"
+summary: >
+  组合 RDS zerocopy 错误路径多释放与 io_uring 的 dangling struct page*，通过偷取 FOLL_PIN 1024 引用、释放页面并让 SUID binary 重占，实现页缓存污染写入 SHELL_ELF 提权。
+summary_en: >
+  Chains RDS zerocopy error-path double-free with io_uring dangling struct page* to steal FOLL_PIN refcount, free and reclaim pages for a SUID binary, then poison page cache with SHELL_ELF for kernel LPE.
+board: "general"
+category: "01-kernel"
+signals:
+  - "RDS zerocopy"
+  - "io_uring"
+  - "page cache poisoning"
+  - "double-free"
+  - "FOLL_PIN"
+  - "dangling pointer"
+  - "privilege escalation"
+mcp_tools:
+  - "kb_router"
+  - "workspace_write_text"
+keywords:
+  - "QVD-2026-27616"
+  - "RDS zerocopy"
+  - "io_uring"
+  - "page cache"
+  - "dangling pointer"
+  - "kernel LPE"
+  - "IORING_OP_READ_FIXED"
+  - "struct page"
+difficulty: "advanced"
+tags:
+  - "kernel-exploitation"
+  - "io_uring"
+  - "page-cache"
+  - "LPE"
+  - "RDS"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # RDS zcopy double-free + io_uring dangling struct page*：PinTheft 内核 LPE（QVD-2026-27616）
 
 ## 1. 前置条件

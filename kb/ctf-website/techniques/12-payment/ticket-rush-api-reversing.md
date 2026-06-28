@@ -1,3 +1,25 @@
+---
+id: "ctf-website/12-payment/ticket-rush-api-reversing"
+title: "Ticket Rush API Reversing — 票务抢购状态机、Token 与风控参数"
+title_en: "Ticket Rush API Reversing — State Machine, Token & Risk Control Parameters"
+summary: >
+  以 bilibili 票务系统为案例，逆向分析 detail → prepare → create → pay 的完整状态机，
+  解析 order token 的二进制编码结构和 ctoken 风控字段，提供 JSHook 定位和只读枚举方法。
+summary_en: >
+  Using bilibili's ticketing system as a case study, reverse-engineers the complete detail → prepare →
+  create → pay state machine, decodes the order token binary structure and ctoken risk control fields,
+  and provides JSHook-based runtime tracing and read-only enumeration methods.
+board: "ctf-website"
+category: "12-payment"
+signals: ["ticket rush", "抢票", "状态机", "token逆向", "ctoken", "prepare create", "风控参数", "JSHook"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["票务逆向", "抢票API", "token结构", "ctoken", "状态机分析", "bilibili", "API逆向", "风控绕过"]
+difficulty: "advanced"
+tags: ["reversing", "api", "ticketing", "state-machine", "token-analysis", "web-security"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/12-payment/payment-logic"]
+---
 # Ticket Rush API Reversing — 票务抢购状态机、Token 与风控参数
 
 > 白盒知识源：`mikumifa/biliTickerBuy`。本篇用于 CTF/授权票务系统逆向，重点是从公开前端与参考实现恢复 `detail → prepare → create → pay` 状态机，而不是把 UI 的“未开售”当作安全边界。

@@ -1,3 +1,55 @@
+---
+id: "general/methodology/01-reverse-checklist-first-30-min"
+title: "拿到样本的前30分钟清单"
+title_en: "First 30 Minutes Sample Triage Checklist"
+summary: >
+  分钟级结构化样本初筛清单：哈希与文件类型确认、壳/混淆检测、节区与导入表分析、入口点与 Main 函数定位、加密/网络/反调试关键函数识别，最终产出动态分析断点计划与完整初筛笔记。
+summary_en: >
+  Minute-by-minute structured sample triage: hash and file type confirmation, packer/obfuscation detection, section and import analysis, entry/Main function location, crypto/network/anti-debug key function identification, with dynamic breakpoint plan output.
+board: "general"
+category: "methodology"
+signals:
+  - "sample triage"
+  - "packer detection"
+  - "import analysis"
+  - "strings extraction"
+  - "entry point analysis"
+  - "anti-debug detection"
+  - "dynamic planning"
+mcp_tools:
+  - "hash_file"
+  - "die_scan"
+  - "rizin_bin_info"
+  - "rizin_sections"
+  - "rizin_imports"
+  - "rizin_strings"
+  - "ghidra_headless_analyze"
+  - "ghidra_summary_call_focus"
+  - "ghidra_summary_function_detail"
+  - "ghidra_summary_functions"
+  - "kb_router"
+  - "python_re_tool_install"
+keywords:
+  - "sample triage"
+  - "reverse engineering workflow"
+  - "packer detection"
+  - "static analysis"
+  - "dynamic analysis"
+  - "PE analysis"
+  - "first 30 minutes"
+  - "triage checklist"
+  - "anti-debug"
+difficulty: "beginner"
+tags:
+  - "methodology"
+  - "triage"
+  - "workflow"
+  - "checklist"
+  - "sample-analysis"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 拿到样本的前30分钟清单
 
 ## 场景

@@ -1,3 +1,48 @@
+---
+id: "general/crypto/03-prng-randomness-cracking"
+title: "伪随机数生成器(PRNG)破解 — 从输出恢复内部状态与种子"
+title_en: "PRNG Cracking: Recovering Internal State and Seed from Output"
+summary: >
+  覆盖 LCG 参数恢复、MT19937 624 输出状态克隆、V8 XorShift128+ 破解、Java Random 种子爆破、PHP mt_rand 种子恢复及 ECDSA nonce 重用私钥泄露攻击，含完整 Python 实现与标准库参数速查。
+summary_en: >
+  Covers LCG parameter recovery, MT19937 624-output state cloning, V8 XorShift128+ cracking, Java Random seed brute-force, PHP mt_rand seed recovery, and ECDSA nonce reuse private key extraction with complete Python implementations.
+board: "general"
+category: "crypto"
+signals:
+  - "LCG parameter recovery"
+  - "MT19937 state cloning"
+  - "XorShift128+ cracking"
+  - "ECDSA nonce reuse"
+  - "V8 Math.random()"
+  - "Java Random cracking"
+  - "PHP mt_rand seed recovery"
+mcp_tools:
+  - "kb_router"
+  - "kb_read_file"
+  - "hash_file"
+  - "python_re_tool_install"
+  - "triage_pe"
+keywords:
+  - "LCG"
+  - "Mersenne Twister"
+  - "XorShift128+"
+  - "ECDSA nonce reuse"
+  - "V8 Math.random"
+  - "PRNG state recovery"
+  - "Java Random"
+  - "PHP mt_rand"
+  - "seed cracking"
+difficulty: "advanced"
+tags:
+  - "cryptography"
+  - "PRNG"
+  - "randomness"
+  - "state-recovery"
+  - "ECDSA"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 伪随机数生成器(PRNG)破解 — 从输出恢复内部状态与种子
 
 > PRNG 不安全是 CTF、游戏外挂和密码学的经典主题。一旦攻击者获得了几个连续的输出，很多 PRNG 可以完全恢复内部状态，从而预测所有过去和未来的输出。本文覆盖 LCG、MT19937、XorShift、V8 Math.random()、PHP mt_rand()、Java Random 以及 ECDSA nonce 重用导致的私钥泄露。

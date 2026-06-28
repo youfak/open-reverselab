@@ -1,3 +1,22 @@
+---
+id: "apk-reverse/02-native/01-il2cpp-offset-discovery"
+title: "Unity IL2CPP 静态逆向与偏移发现"
+title_en: "Unity IL2CPP Static Reverse Engineering and Offset Discovery"
+summary: >
+  针对 Unity IL2CPP 游戏的静态逆向方法，讲解 global-metadata.dat 结构解析、模块基址获取、指针链偏移追踪、Ghidra/Frida 交叉验证以及版本差异处理，帮助不依赖运行时 dump 定位关键数据结构和函数地址。
+summary_en: >
+  Static reverse engineering methods for Unity IL2CPP games, covering global-metadata.dat structure parsing, module base address acquisition, pointer chain offset tracing, Ghidra/Frida cross-validation, and version difference handling to locate key data structures without runtime dumps.
+board: "apk-reverse"
+category: "02-native"
+signals: ["IL2CPP", "global-metadata.dat", "pointer chain", "libil2cpp.so", "module base", "offset discovery", "Frida verification", "Ghidra 静态分析"]
+mcp_tools: ["ghidra_headless_analyze", "ghidra_summary_call_focus", "android_frida_run_script", "triage_pe"]
+keywords: ["IL2CPP", "Unity", "global-metadata", "offset", "Ghidra", "Frida", "libil2cpp", "偏移", "指针链", "静态逆向"]
+difficulty: "advanced"
+tags: ["il2cpp", "unity", "offset-discovery", "native-reverse", "ghidra", "frida"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Unity IL2CPP 静态逆向与偏移发现
 
 ## 场景

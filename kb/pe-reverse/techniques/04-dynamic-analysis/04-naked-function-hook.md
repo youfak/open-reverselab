@@ -1,3 +1,49 @@
+---
+id: "pe-reverse/04-dynamic-analysis/04-naked-function-hook"
+title: "Naked 函数 Hook（内联汇编）"
+title_en: "Naked Function Hook (Inline Assembly)"
+summary: >
+  介绍使用 __declspec(naked) 实现最小开销的函数 Hook，涵盖 x86/x64 Naked 函数声明、Gateway 分配模式、寄存器保存/恢复、Detour32 安装、热键驱动开关及与 Trampoline Hook 的对比分析。
+summary_en: >
+  Minimal-overhead function hooking via __declspec(naked), covering x86/x64 Naked function declaration, Gateway allocation pattern, register save/restore, Detour32 installation, hotkey-driven toggle, and comparison with Trampoline-based hooks.
+board: "pe-reverse"
+category: "04-dynamic-analysis"
+signals:
+  - "naked function"
+  - "inline assembly"
+  - "pushad/popad"
+  - "gateway"
+  - "hotkey toggle"
+  - "内联汇编"
+  - "寄存器保存"
+  - "最小开销"
+mcp_tools:
+  - ghidra_headless_analyze
+  - ghidra_summary_function_detail
+  - rizin_assemble_bytes
+keywords:
+  - "naked function"
+  - "inline assembly"
+  - "__declspec(naked)"
+  - "detour"
+  - "pushad"
+  - "popad"
+  - "gateway"
+  - "hook"
+  - "MASM"
+  - "hotkey"
+difficulty: "advanced"
+tags:
+  - "hook"
+  - "inline-assembly"
+  - "naked-function"
+  - "x86"
+  - "x64"
+  - "dynamic-analysis"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Naked 函数 Hook（内联汇编）
 
 ## 场景

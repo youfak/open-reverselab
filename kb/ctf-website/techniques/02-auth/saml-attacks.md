@@ -1,3 +1,23 @@
+---
+id: "ctf-website/02-auth/saml-attacks"
+title: "SAML 2.0 攻击"
+title_en: "SAML 2.0 Attacks"
+summary: >
+  介绍 SAML 2.0 单点登录协议的攻击技术，包括 XML Signature Wrapping (XSW) 签名绕过、Void Canonicalization 完全绕过签名、Round-Trip 解析器差异攻击及 SAML Response 重放。覆盖从拦截修改到伪造断言的完整攻击链。
+summary_en: >
+  A guide to SAML 2.0 SSO attacks including XML Signature Wrapping (XSW) for signature bypass, Void Canonicalization for complete signature circumvention, Round-Trip parser differential attacks, and SAML Response replay. Covers the full chain from interception to forged assertions.
+board: "ctf-website"
+category: "02-auth"
+signals: ["SAML", "XML Signature Wrapping", "XSW", "canonicalization", "SSO", "Assertion", "NameID", "XML"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["SAML攻击", "XML签名绕过", "XSW", "SAML注入", "SSO安全", "XML Signature Wrapping", "canonicalization", "断言伪造"]
+difficulty: "advanced"
+tags: ["authentication", "saml", "xml", "sso", "web-security", "signature-bypass", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # SAML 2.0 攻击
 
 ## XML Signature Wrapping (XSW)

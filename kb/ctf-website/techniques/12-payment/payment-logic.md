@@ -1,3 +1,25 @@
+---
+id: "ctf-website/12-payment/payment-logic"
+title: "Payment Logic Attacks — 支付类 Web CTF 技术手册"
+title_en: "Payment Logic Attacks — Web CTF Payment Technique Handbook"
+summary: >
+  支付类 CTF 题目的入门到进阶技术手册，涵盖路由与参数发现、金额篡改、状态机绕过、回调签名伪造、
+  幂等并发、订单 IDOR、优惠券组合及 SSRF 等完整攻击链。
+summary_en: >
+  A beginner-to-advanced handbook for payment-related CTF challenges, covering route discovery,
+  parameter tampering, state machine bypass, callback forgery, idempotency races, order IDOR,
+  coupon chaining, and SSRF — with complete attack chains.
+board: "ctf-website"
+category: "12-payment"
+signals: ["Payment Logic", "支付逻辑", "路由发现", "金额篡改", "状态机", "回调签名", "幂等", "并发", "订单IDOR"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["支付逻辑漏洞", "payment logic", "CTF支付题", "订单状态机", "支付回调", "并发攻击", "web CTF"]
+difficulty: "beginner"
+tags: ["payment", "ctf", "web-security", "logic-flaw", "state-machine", "idor"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/12-payment/payment-bypass", "ctf-website/12-payment/payment-callback-async"]
+---
 # Payment Logic Attacks — 支付类 Web CTF 技术手册
 
 > 适用：商品/套餐/充值/订阅/成品账号/AI 额度/积分兑换/虚拟权益类题目。目标不是”猜页面文案”，而是证明订单、金额、状态、回调、签名、幂等、权益发放的信任边界。

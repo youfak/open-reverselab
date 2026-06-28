@@ -1,3 +1,23 @@
+---
+id: "ctf-website/03-injection/grpc-protobuf"
+title: "gRPC / Protobuf 攻击"
+title_en: "gRPC and Protobuf Attacks"
+summary: >
+  介绍 gRPC 和 Protobuf 协议的专属攻击技术，包括 Protobuf 字段注入绕过 WAF、gRPC 服务/方法盲枚举利用 gRPC 错误码、gRPC-Web Payload 解码修改及 Protoscope 工具集成。适用于现代微服务架构的渗透测试。
+summary_en: >
+  Attack techniques specific to gRPC and Protobuf protocols including Protobuf field injection for WAF bypass, gRPC service/method blind enumeration using error codes, gRPC-Web payload decoding and modification, and Protoscope tool integration. Designed for modern microservice penetration testing.
+board: "ctf-website"
+category: "03-injection"
+signals: ["gRPC", "Protobuf", "field injection", "wire type", "varint", "reflection", "gRPC-Web", "Protoscope"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["gRPC攻击", "Protobuf", "protobuf注入", "gRPC枚举", "grpc-web", "protoscope", "field injection"]
+difficulty: "advanced"
+tags: ["injection", "grpc", "protobuf", "microservices", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # gRPC / Protobuf 攻击
 
 ## Protobuf 字段注入

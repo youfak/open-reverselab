@@ -1,3 +1,49 @@
+---
+id: "ctf-website/24-database/05-backup-log-leak"
+title: "Database Backup & Log Leak — 数据库备份与日志泄露"
+title_en: "Database Backup & Log Leak — Backup Files & Log Exposure"
+summary: >
+  运维疏忽导致的数据库直接暴露：SQL备份文件（.sql/.dump/.tar.gz）路径枚举与时间戳猜测、MySQL慢查询/通用查询日志泄露完整SQL语句、安装文件残留（install.sql默认管理员密码哈希）、phpMyAdmin/Adminer未授权访问，以及.git源码泄露恢复数据库凭证。
+summary_en: >
+  Direct database exposure from operational negligence: SQL backup file (.sql, .dump, .tar.gz) path enumeration and timestamp guessing, MySQL slow/general query log leaks containing full SQL statements, installation file remnants (install.sql with default admin password hashes), phpMyAdmin/Adminer unauthorized access, and .git source code recovery for database credentials.
+board: "ctf-website"
+category: "24-database"
+signals:
+  - ".sql .dump 备份文件"
+  - "backup_20250101.sql"
+  - "slow.log general.log MySQL"
+  - "install/install.sql"
+  - "phpMyAdmin /phpmyadmin/"
+  - "Adminer /adminer.php"
+  - ".git/HEAD git-dumper"
+  - "install.lock"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "数据库备份泄露"
+  - ".sql 文件"
+  - "备份路径枚举"
+  - "日志泄露"
+  - "phpMyAdmin"
+  - "Adminer"
+  - "install.sql"
+  - "Git 泄露"
+  - "慢查询日志"
+  - "源码恢复"
+difficulty: "beginner"
+tags:
+  - "database"
+  - "backup"
+  - "logs"
+  - "information-disclosure"
+  - "phmyadmin"
+  - "git-leak"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Database Backup & Log Leak — 数据库备份与日志泄露
 
 > SQL 备份文件、日志文件、安装残留——运维疏忽导致的数据库直接暴露。

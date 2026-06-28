@@ -1,3 +1,23 @@
+---
+id: "ctf-website/02-auth/host-header"
+title: "Host Header 攻击"
+title_en: "Host Header Attacks"
+summary: >
+  介绍 Host 头注入的攻击面与利用方法，包括密码重置劫持、Host 头注入变体、Host-to-SSRF 链、鉴权绕过及 Cache Poisoning 链。覆盖多种 Host override header 的 fuzzing payload 和完整攻击链。
+summary_en: >
+  A practical guide to Host header injection attacks covering password reset hijacking, injection variants, Host-to-SSRF chaining, authentication bypass, and cache poisoning. Includes fuzzing payloads for multiple Host override headers and complete attack chains.
+board: "ctf-website"
+category: "02-auth"
+signals: ["Host header", "密码重置劫持", "Host注入", "SSRF", "Cache Poisoning", "X-Forwarded-Host", "vhost"]
+mcp_tools: ["http_probe"]
+keywords: ["host header attack", "密码重置劫持", "SSRF", "Host注入", "X-Forwarded-Host", "缓存投毒", "vhost绕过"]
+difficulty: "intermediate"
+tags: ["authentication", "host-header", "ssrf", "web-security", "injection", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # Host Header 攻击
 
 ## 攻击面

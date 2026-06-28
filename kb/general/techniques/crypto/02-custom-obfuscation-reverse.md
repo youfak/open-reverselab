@@ -1,3 +1,51 @@
+---
+id: "general/crypto/02-custom-obfuscation-reverse"
+title: "自定义混淆/加密还原方法论"
+title_en: "Custom Obfuscation and Encryption Reverse Engineering Methodology"
+summary: >
+  覆盖黑盒到白盒四层方法论：XOR 模式自动探测、Frida 动态插桩拦截、白盒 AES 查找表检测、angr 符号执行约束求解及 Z3 密钥恢复，适用于魔法改加密、游戏保护与 DRM 白盒密码分析。
+summary_en: >
+  Four-layer methodology from black-box to white-box: XOR pattern auto-detection, Frida dynamic hooking, white-box AES lookup table detection, angr symbolic execution, and Z3 key recovery for custom crypto, game protection, and DRM white-box analysis.
+board: "general"
+category: "crypto"
+signals:
+  - "XOR key recovery"
+  - "Frida crypto hooking"
+  - "white-box AES"
+  - "angr symbolic execution"
+  - "Z3 constraint solving"
+  - "Berlekamp-Massey"
+  - "Feistel detection"
+mcp_tools:
+  - "kb_router"
+  - "kb_read_file"
+  - "android_crypto_unpack_recipe"
+  - "ghidra_headless_analyze"
+  - "ghidra_summary_call_focus"
+  - "die_scan"
+  - "python_re_tool_install"
+keywords:
+  - "custom encryption"
+  - "XOR recovery"
+  - "white-box cryptography"
+  - "Frida crypto tracing"
+  - "angr"
+  - "Berlekamp-Massey"
+  - "Z3 solver"
+  - "LFSR"
+  - "Feistel network"
+difficulty: "advanced"
+tags:
+  - "cryptography"
+  - "reverse-engineering"
+  - "obfuscation"
+  - "Frida"
+  - "symbolic-execution"
+  - "white-box"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 自定义混淆/加密还原方法论
 
 > 现实逆向中很少遇到教科书式的标准 AES。更多是魔改的 XOR、自制的 S-box、白盒混淆的密码原语、或者从 native 层用算法拼接起来的"自定义加密"。本文提供一套系统性的从黑盒到白盒的还原方法论。

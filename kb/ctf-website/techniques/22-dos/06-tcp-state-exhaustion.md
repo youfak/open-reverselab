@@ -1,3 +1,49 @@
+---
+id: "ctf-website/22-dos/06-tcp-state-exhaustion"
+title: "TCP 协议栈状态耗尽"
+title_en: "TCP Protocol Stack State Exhaustion"
+summary: >
+  利用TCP状态机特性，以极小代价消耗内核socket buffer、连接跟踪表和TIME_WAIT槽位，使服务器无法接受新连接。涵盖SYN Flood变种、Sockstress零窗口攻击、TIME_WAIT耗尽、conntrack表洪泛和Socket Buffer内存压力攻击。
+summary_en: >
+  Exploits TCP state machine characteristics to exhaust kernel socket buffers, connection tracking tables, and TIME_WAIT slots at minimal cost, preventing new connections. Covers SYN Flood variants, Sockstress zero-window attacks, TIME_WAIT exhaustion, conntrack table flooding, and socket buffer memory pressure.
+board: "ctf-website"
+category: "22-dos"
+signals:
+  - "SYN_RECV 半连接队列溢出"
+  - "TIME_WAIT 条目 > 50000"
+  - "conntrack table full"
+  - "TCP window 0 Sockstress"
+  - "nf_conntrack_max 耗尽"
+  - "TCP Fast Open 滥用"
+  - "socket buffer 内存压力"
+  - "netstat SYN flooding"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "SYN Flood"
+  - "Sockstress"
+  - "TIME_WAIT 耗尽"
+  - "conntrack 表满"
+  - "TCP Fast Open"
+  - "TCP 状态耗尽"
+  - "半连接队列"
+  - "nf_conntrack"
+  - "tcp_syncookies"
+  - "window zero attack"
+difficulty: "advanced"
+tags:
+  - "dos"
+  - "denial-of-service"
+  - "tcp"
+  - "syn-flood"
+  - "conntrack"
+  - "network-stack"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # TCP 协议栈状态耗尽
 
 ## 场景

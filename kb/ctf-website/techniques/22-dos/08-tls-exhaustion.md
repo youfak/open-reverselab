@@ -1,3 +1,50 @@
+---
+id: "ctf-website/22-dos/08-tls-exhaustion"
+title: "TLS/SSL 握手耗尽"
+title_en: "TLS/SSL Handshake Exhaustion"
+summary: >
+  利用TLS握手计算不对称性（客户端RSA公钥加密 vs 服务端RSA私钥解密，成本差异5-50倍），迫使服务器持续执行昂贵操作。涵盖TLS Handshake Flood、Renegotiation DoS（CVE-2011-1473）、大ClientHello洪泛、证书链验证放大和Session Ticket内存耗尽。
+summary_en: >
+  Exploits TLS handshake computational asymmetry (client RSA encryption vs server RSA decryption, 5-50x cost difference) to force servers into expensive operations. Covers TLS Handshake Flood, Renegotiation DoS (CVE-2011-1473), large ClientHello flooding, certificate chain verification amplification, and Session Ticket memory exhaustion.
+board: "ctf-website"
+category: "22-dos"
+signals:
+  - "TLS 握手不对称 RSA 2048"
+  - "大量 ClientHello 无后续"
+  - "Renegotiation 重协商循环"
+  - "SSL_accept 超时"
+  - "Session Ticket cache churn"
+  - "CVE-2011-1473 OpenSSL"
+  - "SSL 结构体内存 ~70KB/连接"
+  - "证书链验证 CPU 高"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "TLS 握手洪水"
+  - "TLS renegotiation DoS"
+  - "CVE-2011-1473"
+  - "SSL 耗尽"
+  - "ClientHello 洪泛"
+  - "Session Ticket 攻击"
+  - "RSA 私钥解密不对称"
+  - "TLS handshake exhaustion"
+  - "THC-SSL-DOS"
+  - "TLS 1.3 PSK 攻击"
+difficulty: "advanced"
+tags:
+  - "dos"
+  - "denial-of-service"
+  - "tls"
+  - "ssl"
+  - "handshake"
+  - "renegotiation"
+  - "cryptography"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # TLS/SSL 握手耗尽
 
 ## 场景

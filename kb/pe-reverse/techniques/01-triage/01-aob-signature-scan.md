@@ -1,3 +1,50 @@
+---
+id: "pe-reverse/01-triage/01-aob-signature-scan"
+title: "AOB 特征码扫描"
+title_en: "AOB Signature Scanning"
+summary: >
+  针对 ASLR 导致硬编码地址失效的场景，介绍通过特征码（Array of Bytes）在运行时跨版本定位代码/数据的方法，涵盖特征码提取原则、全模块扫描实现、偏移定位、按节区扫描优化及 Python 辅助生成特征码。
+summary_en: >
+  Covers runtime code/data location via AOB signature scanning to defeat ASLR, including pattern extraction principles, full-module scan implementation, offset-based resolution, section-scoped scanning optimization, and Python-assisted pattern generation.
+board: "pe-reverse"
+category: "01-triage"
+signals:
+  - "ASLR bypass"
+  - "pattern scanning"
+  - "signature extraction"
+  - "rel32 exclusion"
+  - "section filtering"
+  - "ASLR 绕过"
+  - "特征码扫描"
+  - "模式匹配"
+mcp_tools:
+  - triage_pe
+  - ghidra_headless_analyze
+  - ghidra_summary_call_focus
+  - ghidra_summary_functions
+keywords:
+  - "AOB"
+  - "signature scan"
+  - "FindPattern"
+  - "ASLR"
+  - "特征码"
+  - "IDA pattern"
+  - "memory scanning"
+  - "rel32"
+  - "module base"
+  - "wildcard"
+difficulty: "intermediate"
+tags:
+  - "triage"
+  - "memory-scanning"
+  - "ASLR"
+  - "pattern-matching"
+  - "runtime"
+  - "PE"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # AOB 特征码扫描
 
 ## 场景

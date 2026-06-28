@@ -1,3 +1,50 @@
+---
+id: "ctf-website/22-dos/05-http2-continuation"
+title: "HTTP/2 CONTINUATION Flood & H2/H3 高级攻击"
+title_en: "HTTP/2 CONTINUATION Flood & Advanced H2/H3 Attacks"
+summary: >
+  利用HTTP/2帧协议和HPACK头部压缩机制的底层漏洞进行拒绝服务攻击。CONTINUATION Flood（CVE-2024-27316）通过永不结束的HEADERS帧使服务器内存持续增长至OOM，HPACK Bomb利用动态表引用解压放大，Stream Priority饥饿使合法请求带宽几乎归零。
+summary_en: >
+  Exploits low-level vulnerabilities in HTTP/2 frame protocol and HPACK header compression for DoS. CONTINUATION Flood (CVE-2024-27316) causes server OOM via never-ending HEADERS frames, HPACK Bomb amplifies memory through dynamic table references, and Stream Priority starvation starves legitimate requests of bandwidth.
+board: "ctf-website"
+category: "22-dos"
+signals:
+  - "CONTINUATION 帧无 END_HEADERS"
+  - "HPACK 动态表引用"
+  - "Stream 优先级 starvation"
+  - "HTTP/2 连接内存 OOM"
+  - "CVE-2024-27316"
+  - "QUIC CID 耗尽"
+  - "HTTP/3 0-RTT 重放"
+  - "SETTINGS_HEADER_TABLE_SIZE"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "CONTINUATION Flood"
+  - "CVE-2024-27316"
+  - "HPACK Bomb"
+  - "HTTP/2 DoS"
+  - "QUIC 攻击"
+  - "HTTP/3 拒绝服务"
+  - "h2 continuation"
+  - "stream multiplexing"
+  - "header compression attack"
+  - "HTTP/2 Rapid Reset"
+difficulty: "advanced"
+tags:
+  - "dos"
+  - "denial-of-service"
+  - "http2"
+  - "http3"
+  - "quic"
+  - "hpack"
+  - "continuation-flood"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # HTTP/2 CONTINUATION Flood & H2/H3 高级攻击
 
 ## 场景

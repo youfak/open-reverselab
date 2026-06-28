@@ -1,3 +1,50 @@
+---
+id: "ctf-website/23-paywall-bypass/04-content-extraction"
+title: "内容提取 — JSON-LD / Next.js / archive.is"
+title_en: "Content Extraction — JSON-LD / Next.js / archive.is"
+summary: >
+  从SEO结构化数据中提取被paywall隐藏的完整文章内容。JSON-LD的articleBody字段、Next.js的__NEXT_DATA__内嵌数据、内联script变量和archive.is外部存档均包含完整正文。涵盖Chrome Extension contentScript实现和Python爬虫版两种方案。
+summary_en: >
+  Extracts full article content hidden behind paywalls from SEO structured data. JSON-LD articleBody fields, Next.js __NEXT_DATA__ embedded data, inline script variables, and archive.is external snapshots all contain complete text. Covers Chrome Extension contentScript and Python crawler implementations.
+board: "ctf-website"
+category: "23-paywall-bypass"
+signals:
+  - "script type=\"application/ld+json\""
+  - "script id=\"__NEXT_DATA__\""
+  - "articleBody JSON-LD"
+  - "archive.is TEXT-BLOCK"
+  - "DOMPurify sanitize"
+  - "findKeyJson 递归搜索"
+  - "view-source 完整正文"
+  - "Google webcache"
+mcp_tools:
+  - "http_probe"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "JSON-LD 提取"
+  - "Next.js __NEXT_DATA__"
+  - "archive.is 代理"
+  - "结构化数据提取"
+  - "articleBody"
+  - "content extraction"
+  - "SEO 内容泄露"
+  - "paywall 内容抓取"
+  - "Google Cache"
+  - "DOMPurify"
+difficulty: "beginner"
+tags:
+  - "paywall"
+  - "bypass"
+  - "content-extraction"
+  - "json-ld"
+  - "nextjs"
+  - "seo"
+  - "archive.is"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 内容提取 — JSON-LD / Next.js / archive.is
 
 ## 场景

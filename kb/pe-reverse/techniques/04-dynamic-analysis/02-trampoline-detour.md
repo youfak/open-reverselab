@@ -1,3 +1,49 @@
+---
+id: "pe-reverse/04-dynamic-analysis/02-trampoline-detour"
+title: "Trampoline Hook（函数劫持）"
+title_en: "Trampoline Hook (Function Hijacking)"
+summary: >
+  详解 Trampoline Hook 的实现原理与完整代码，涵盖跳板内存分配、寄存器保存/恢复、JMP 偏移计算、原始字节保存与恢复、x86/x64 差异对比及 NOP 填充模式，实现在不破坏原始功能前提下的函数劫持。
+summary_en: >
+  Detailed implementation of Trampoline Hook including gateway memory allocation, register save/restore, JMP offset calculation, original byte preservation and restoration, x86 vs x64 differences, and NOP sled patterns for function hijacking without breaking original functionality.
+board: "pe-reverse"
+category: "04-dynamic-analysis"
+signals:
+  - "trampoline"
+  - "detour"
+  - "JMP hook"
+  - "register context"
+  - "gateway"
+  - "函数劫持"
+  - "跳板"
+  - "inline hook"
+mcp_tools:
+  - ghidra_headless_analyze
+  - ghidra_summary_call_focus
+  - rizin_assemble_patch
+keywords:
+  - "trampoline"
+  - "detour"
+  - "hook"
+  - "JMP"
+  - "gateway"
+  - "VirtualAlloc"
+  - "function hijack"
+  - "rel32"
+  - "NOP"
+  - "inline hook"
+difficulty: "advanced"
+tags:
+  - "hook"
+  - "trampoline"
+  - "detour"
+  - "inline-hook"
+  - "function-hijack"
+  - "dynamic-analysis"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Trampoline Hook（函数劫持）
 
 ## 场景

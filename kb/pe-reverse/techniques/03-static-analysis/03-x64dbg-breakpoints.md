@@ -1,3 +1,49 @@
+---
+id: "pe-reverse/03-static-analysis/03-x64dbg-breakpoints"
+title: "x64dbg 断点策略"
+title_en: "x64dbg Breakpoint Strategies"
+summary: >
+  系统梳理 x64dbg 断点类型（软件/硬件/内存/条件/日志），提供关键 API 断点集（反调试、内存分配、进程操作、模块加载）、条件断点表达式、日志断点脚本、壳行为追踪及调试目标修改的完整策略。
+summary_en: >
+  A systematic guide to x64dbg breakpoint types (software/hardware/memory/conditional/log), providing key API breakpoint sets (anti-debug, memory allocation, process operations, module loading), conditional expressions, logging scripts, packer behavior tracing, and debug target modification strategies.
+board: "pe-reverse"
+category: "03-static-analysis"
+signals:
+  - "software breakpoint"
+  - "hardware breakpoint"
+  - "conditional breakpoint"
+  - "API hooking"
+  - "trace logging"
+  - "断点策略"
+  - "日志断点"
+  - "调试器"
+mcp_tools:
+  - make_x64dbg_breakpoint_script
+  - toolbox_launch
+  - ghidra_summary_call_focus
+keywords:
+  - "x64dbg"
+  - "breakpoint"
+  - "INT3"
+  - "hardware breakpoint"
+  - "conditional breakpoint"
+  - "logging"
+  - "debugger"
+  - "anti-debug"
+  - "Scylla"
+  - "trace"
+difficulty: "intermediate"
+tags:
+  - "x64dbg"
+  - "debugging"
+  - "breakpoints"
+  - "anti-debug"
+  - "dynamic-analysis"
+  - "tracing"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # x64dbg 断点策略
 
 ## 场景

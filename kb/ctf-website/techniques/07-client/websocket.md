@@ -1,3 +1,22 @@
+---
+id: "ctf-website/07-client/websocket"
+title: "WebSocket 攻击实战"
+title_en: "WebSocket Attack Practical Guide"
+summary: >
+  WebSocket协议攻击完整指南，涵盖消息捕获与字段篡改重放、CSWSH跨域WebSocket劫持、并发竞态攻击、消息注入（SQLi/NoSQLi/prototype pollution/SSTI）、Socket.IO房间越权与事件重放、MQTT物联网协议主题越权，以及wsrepl/websocat/wscat等工具链。
+summary_en: >
+  Complete WebSocket attack guide covering message capture and field tampering replay, CSWSH cross-site WebSocket hijacking, concurrent race condition attacks, message injection (SQLi/NoSQLi/prototype pollution/SSTI), Socket.IO room privilege escalation and event replay, MQTT IoT topic hijacking, and the wsrepl/websocat/wscat toolchain.
+board: "ctf-website"
+category: "07-client"
+signals: ["WebSocket", "CSWSH", "Socket.IO", "MQTT", "消息注入", "race condition", "跨域WebSocket"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["WebSocket攻击", "CSWSH", "Socket.IO越权", "MQTT", "消息重放", "跨域WebSocket", "竞态攻击", "WebSocket注入"]
+difficulty: "intermediate"
+tags: ["websocket", "client-side", "web-security", "injection", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # WebSocket 攻击实战
 
 ## 抓取与重放

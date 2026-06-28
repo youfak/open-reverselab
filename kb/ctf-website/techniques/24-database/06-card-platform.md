@@ -1,3 +1,51 @@
+---
+id: "ctf-website/24-database/06-card-platform"
+title: "Card-Selling Platform Exploitation — 自动发卡平台攻击手册"
+title_en: "Card-Selling Platform Exploitation — Auto CDK Platform Attack Handbook"
+summary: >
+  针对PHP自动发卡/卡密电商平台的完整攻击链：PHP die()/exit()缺失导致全量库存泄露、IDOR无认证订单枚举获取CDK明文和skey、DOM XSS（kminfo/desc字段innerHTML无转义）、支付回调签名缺失可篡改，以及act=getcount无认证信息泄露。
+summary_en: >
+  Complete attack chain against PHP auto card-selling/CDK e-commerce platforms: PHP die()/exit() omission enabling full inventory disclosure, IDOR unauthenticated order enumeration exposing CDK plaintext and skey, DOM XSS via unescaped kminfo/desc innerHTML, payment callback signature bypass, and act=getcount unauthenticated information disclosure.
+board: "ctf-website"
+category: "24-database"
+signals:
+  - "die() exit() 缺失"
+  - "act=query IDOR"
+  - "act=order skey"
+  - "kminfo innerHTML XSS"
+  - "ajax.php CSRF Referer"
+  - "支付回调签名缺失"
+  - "act=getcount 无认证"
+  - "CDK 明文泄露"
+mcp_tools:
+  - "http_probe"
+  - "run_ctf_tool"
+  - "kb_router"
+  - "kb_read_file"
+keywords:
+  - "发卡平台"
+  - "CDK 泄露"
+  - "IDOR"
+  - "PHP die 缺失"
+  - "卡密"
+  - "DOM XSS"
+  - "支付回调"
+  - "ajax.php"
+  - "自动发卡"
+  - "库存泄露"
+difficulty: "intermediate"
+tags:
+  - "database"
+  - "web"
+  - "idor"
+  - "xss"
+  - "php"
+  - "card-platform"
+  - "cdk"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Card-Selling Platform Exploitation — 自动发卡平台攻击手册
 
 > 针对 PHP 自动发卡/卡密电商平台的完整攻击链，覆盖库存泄露、IDOR、XSS 等常见漏洞模式。

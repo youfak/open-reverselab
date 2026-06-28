@@ -1,3 +1,22 @@
+---
+id: "apk-reverse/06-dynamic/02-overlay-rendering-hook"
+title: "Overlay 渲染与 ImGui 检测"
+title_en: "Overlay Rendering and ImGui Detection"
+summary: >
+  检测和分析 APK 中悬浮窗/覆盖层的完整渲染管线，覆盖 ANativeWindow 窗口创建、OpenGL ES/Vulkan 图形后端选择、ImGui 注入帧循环、Frida Hook eglSwapBuffers/vkQueuePresentKHR 以及 dumpsys SurfaceFlinger 层分析。
+summary_en: >
+  Detecting and analyzing the complete overlay rendering pipeline in APKs, covering ANativeWindow creation, OpenGL ES/Vulkan graphics backend selection, ImGui injection frame loops, Frida hooks for eglSwapBuffers/vkQueuePresentKHR, and dumpsys SurfaceFlinger layer analysis.
+board: "apk-reverse"
+category: "06-dynamic"
+signals: ["Overlay", "ANativeWindow", "ImGui", "OpenGL ES", "Vulkan", "eglSwapBuffers", "vkQueuePresentKHR", "SurfaceFlinger"]
+mcp_tools: ["android_frida_run_script", "android_capture_screenshot"]
+keywords: ["Overlay", "ImGui", "ANativeWindow", "OpenGL ES", "Vulkan", "悬浮窗", "渲染", "eglSwapBuffers"]
+difficulty: "advanced"
+tags: ["overlay", "imgui", "rendering", "opengles", "vulkan", "frida", "anativewindow"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Overlay 渲染与 ImGui 检测
 
 ## 场景

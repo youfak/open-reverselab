@@ -1,3 +1,23 @@
+---
+id: "ctf-website/01-recon/captcha-bypass"
+title: "验证码绕过技术与自动化"
+title_en: "CAPTCHA Bypass Techniques and Automation"
+summary: >
+  系统讲解各类验证码（滑块、点选、图形、短信、无感）的识别方法与绕过策略，涵盖 OCR 识别、打码平台 API 集成、Token 重用、Playwright 自动化及客户端逻辑绕过等七大方法，用于渗透测试中突破人机验证防护。
+summary_en: >
+  A comprehensive guide to bypassing CAPTCHA protections including slider, click, image, SMS, and invisible challenges. Covers OCR recognition, captcha-solving API integration, token reuse, Playwright automation with stealth plugins, and client-side logic bypass techniques.
+board: "ctf-website"
+category: "01-recon"
+signals: ["CAPTCHA", "验证码", "reCAPTCHA", "滑块验证", "OCR", "ddddocr", "Playwright", "打码平台"]
+mcp_tools: ["http_probe", "kb_router", "toolbox_launch"]
+keywords: ["captcha bypass", "验证码绕过", "recaptcha", "ddddocr", "2captcha", "playwright stealth", "滑块验证", "短信验证码绕过", "token重用"]
+difficulty: "intermediate"
+tags: ["captcha", "automation", "web-security", "recon", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # 验证码绕过技术与自动化
 
 ## 场景

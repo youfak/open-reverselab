@@ -1,3 +1,26 @@
+---
+id: "ctf-website/16-rate-limit/02-brute-force-tactics"
+title: "高级暴力破解 — 凭证喷洒、MFA 疲劳、Hash 策略"
+title_en: "Advanced Brute Force — Credential Spraying, MFA Fatigue & Hash Strategies"
+summary: >
+  现代暴力破解方法论：凭证喷洒（1密码×N用户）、MFA 疲劳攻击（Push Bombing）、
+  时间侧信道用户名枚举、凭证复用（Credential Stuffing）和 Windows Hash 攻击链（PtH/Kerberoasting/AS-REP Roasting），
+  含 Uber/MGM 真实入侵案例分析。
+summary_en: >
+  Modern brute force methodology: credential spraying (1 password × N users), MFA fatigue (push bombing),
+  timing-based username enumeration, credential stuffing with breach databases, and Windows hash attack
+  chains (PtH, Kerberoasting, AS-REP Roasting) — with real-world Uber and MGM breach case studies.
+board: "ctf-website"
+category: "16-rate-limit"
+signals: ["credential spraying", "凭证喷洒", "MFA fatigue", "push bombing", "credential stuffing", "Pass-the-Hash", "Kerberoasting", "用户枚举"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file", "run_ctf_tool"]
+keywords: ["凭证喷洒", "credential spraying", "MFA绕过", "push bombing", "Pass-the-Hash", "Kerberoasting", "用户枚举", "hashcat"]
+difficulty: "advanced"
+tags: ["brute-force", "authentication", "mfa", "credential-stuffing", "active-directory", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/16-rate-limit/01-rate-limit-bypass"]
+---
 # 高级暴力破解 — 凭证喷洒、MFA 疲劳、Hash 策略
 
 ## 场景

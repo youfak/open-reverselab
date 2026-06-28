@@ -1,3 +1,46 @@
+---
+id: "pe-reverse/04-dynamic-analysis/03-external-memory-rw"
+title: "外部进程内存读写"
+title_en: "External Process Memory Read/Write"
+summary: >
+  介绍从独立进程通过 Windows API（ReadProcessMemory/WriteProcessMemory）跨进程读写目标内存的完整链路，涵盖多级指针链解析（FindDMAAddy）、ExternalMemory 封装类、内部 vs 外部对比及可执行内存分配。
+summary_en: >
+  Complete chain for cross-process memory read/write via Windows APIs (ReadProcessMemory/WriteProcessMemory) from an external process, covering multi-level pointer chain resolution (FindDMAAddy), ExternalMemory wrapper class, internal vs external comparison, and executable memory allocation.
+board: "pe-reverse"
+category: "04-dynamic-analysis"
+signals:
+  - "ReadProcessMemory"
+  - "WriteProcessMemory"
+  - "pointer chain"
+  - "OpenProcess"
+  - "external trainer"
+  - "内存读写"
+  - "指针链"
+  - "跨进程"
+mcp_tools:
+  - toolbox_launch
+keywords:
+  - "ReadProcessMemory"
+  - "WriteProcessMemory"
+  - "external memory"
+  - "pointer chain"
+  - "DMA"
+  - "OpenProcess"
+  - "trainer"
+  - "VirtualAlloc"
+  - "cross-process"
+  - "memory RW"
+difficulty: "beginner"
+tags:
+  - "memory-RW"
+  - "external-process"
+  - "pointer-chain"
+  - "Windows-API"
+  - "trainer"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 外部进程内存读写
 
 ## 场景

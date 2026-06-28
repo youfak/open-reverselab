@@ -1,3 +1,47 @@
+---
+id: "general/01-kernel/01-page-cache-write-family"
+title: "Linux 内核 Page-Cache 写入家族：Copy Fail / Dirty Frag / Fragnesia"
+title_en: "Linux Kernel Page-Cache Write Family: Copy Fail / Dirty Frag / Fragnesia"
+summary: >
+  深度分析 4 个基于 splice/vmsplice 零拷贝的 Linux 内核提权漏洞：Copy Fail、Dirty Frag (ESP/RxRPC) 和 Fragnesia，覆盖根因、利用链与受影响发行版对比。
+summary_en: >
+  In-depth analysis of 4 Linux kernel LPE vulnerabilities leveraging splice/vmsplice zero-copy page-cache write primitives: Copy Fail, Dirty Frag (ESP/RxRPC), and Fragnesia, covering root causes, exploitation chains, and distro impact comparison.
+board: "general"
+category: "01-kernel"
+signals:
+  - "page cache poisoning"
+  - "splice zero-copy"
+  - "in-place decrypt"
+  - "kernel privilege escalation"
+  - "CVE-2026-31431"
+  - "CVE-2026-43284"
+  - "CVE-2026-43500"
+  - "CVE-2026-46300"
+mcp_tools:
+  - "kb_router"
+  - "workspace_write_text"
+keywords:
+  - "page cache"
+  - "splice"
+  - "CVE-2026-31431"
+  - "Copy Fail"
+  - "Dirty Frag"
+  - "Fragnesia"
+  - "Linux kernel"
+  - "privilege escalation"
+  - "AF_ALG"
+  - "ESP-in-TCP"
+difficulty: "advanced"
+tags:
+  - "kernel-exploitation"
+  - "page-cache"
+  - "LPE"
+  - "splice-attack"
+  - "zero-copy"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Linux 内核 Page-Cache 写入家族：Copy Fail / Dirty Frag / Fragnesia
 
 ## 1. 家族成员

@@ -1,3 +1,49 @@
+---
+id: "pe-reverse/06-ioc-extraction/01-ioc-extraction"
+title: "IOC 提取技巧"
+title_en: "IOC Extraction Techniques"
+summary: >
+  系统讲解从 PE 中提取五类 IOC（网络、文件路径、注册表、互斥体/管道、User-Agent）的方法，涵盖 strings 正则提取、Ghidra 脚本自动化、三层置信度标注（confirmed/probable/possible）及 MISP 格式输出。
+summary_en: >
+  Systematic extraction of five IOC types (network, file paths, registry, mutex/pipes, User-Agent) from PE files, covering strings regex extraction, Ghidra script automation, three-tier confidence labeling (confirmed/probable/possible), and MISP format output.
+board: "pe-reverse"
+category: "06-ioc-extraction"
+signals:
+  - "IOC extraction"
+  - "C2 address"
+  - "registry key"
+  - "mutex name"
+  - "confidence labeling"
+  - "IOC 提取"
+  - "威胁情报"
+  - "MISP"
+mcp_tools:
+  - extract_iocs_from_summary
+  - refine_ioc_sources
+  - ghidra_summary_strings
+keywords:
+  - "IOC"
+  - "indicators of compromise"
+  - "C2"
+  - "threat intelligence"
+  - "MISP"
+  - "strings extraction"
+  - "Ghidra"
+  - "confidence"
+  - "xref"
+  - "malware analysis"
+difficulty: "beginner"
+tags:
+  - "IOC"
+  - "threat-intelligence"
+  - "malware-analysis"
+  - "strings"
+  - "MISP"
+  - "Ghidra"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # IOC 提取技巧
 
 ## 场景

@@ -1,3 +1,47 @@
+---
+id: "pe-reverse/04-dynamic-analysis/07-direct-syscall"
+title: "Direct Syscall：绕过用户态 Hook"
+title_en: "Direct Syscall: Bypassing User-Mode Hooks"
+summary: >
+  当 ntdll.dll 被安全软件 Hook 时，通过直接执行 syscall 指令绕过用户态拦截。涵盖 syscall 号动态提取、完整 stub 实现、Hell's Gate/Halos Gate 技术及运行时生成 syscall stub 的代码方案。
+summary_en: >
+  Bypass user-mode hooks on ntdll.dll by executing syscall instructions directly, covering dynamic syscall number extraction, complete stub implementation, Hell's Gate/Halos Gate techniques, and runtime syscall stub generation.
+board: "pe-reverse"
+category: "04-dynamic-analysis"
+signals:
+  - "syscall"
+  - "ntdll hook"
+  - "syscall number"
+  - "Hell's Gate"
+  - "user-mode bypass"
+  - "系统调用"
+  - "绕过 Hook"
+  - "ntdll"
+mcp_tools:
+  - rizin_assemble_bytes
+keywords:
+  - "direct syscall"
+  - "syscall"
+  - "ntdll"
+  - "Hell's Gate"
+  - "Halos Gate"
+  - "user-mode hook"
+  - "bypass"
+  - "EDR evasion"
+  - "syscall number"
+  - "stub"
+difficulty: "advanced"
+tags:
+  - "syscall"
+  - "EDR-bypass"
+  - "ntdll"
+  - "Hell's-Gate"
+  - "hook-bypass"
+  - "dynamic-analysis"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Direct Syscall：绕过用户态 Hook
 
 ## 场景

@@ -1,3 +1,24 @@
+---
+id: "ctf-website/12-payment/payment-email-bounce-idor"
+title: "退信滥用 + 订单号授权绕过窃取卡密"
+title_en: "Bounce Email Abuse + Order ID Authorization Bypass to Steal Card Keys"
+summary: >
+  利用退信（NDR/Bounce）逻辑中的信息泄露和授权绕过漏洞，通过构造不存在邮箱触发退信，
+  结合订单号 IDOR 批量提取数据库中的卡密和优惠券码。
+summary_en: >
+  Exploits information disclosure and authorization bypass in bounce email (NDR) logic — triggering bounces
+  with non-existent email addresses, combined with order ID IDOR, to extract card keys and voucher codes in bulk.
+board: "ctf-website"
+category: "12-payment"
+signals: ["退信", "NDR", "bounce", "IDOR", "订单号", "卡密泄露", "order leak", "CWE-639", "CWE-862"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file"]
+keywords: ["退信攻击", "bounce email", "IDOR", "订单越权", "卡密泄露", "CWE-639", "NDR利用", "邮件安全"]
+difficulty: "intermediate"
+tags: ["idor", "email-security", "information-disclosure", "payment", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/14-idor/01-idor-enumeration"]
+---
 # 退信滥用 + 订单号授权绕过窃取卡密
 
 ## 场景

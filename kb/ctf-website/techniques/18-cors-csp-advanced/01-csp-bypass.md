@@ -1,3 +1,23 @@
+---
+id: "ctf-website/18-cors-csp-advanced/01-csp-bypass"
+title: "CSP 绕过全技术栈"
+title_en: "CSP Bypass Complete Techniques"
+summary: >
+  全面覆盖 Content-Security-Policy 绕过技术，包括 JSONP 端点滥用、CDN 白名单绕过与脚本小工具狩猎、框架特定绕过、DOM Clobbering、Base 标签注入、CSS 注入外带、strict-dynamic 绕过、Nonce/Hash 特定绕过等。每种绕过均附可执行 PoC。
+summary_en: >
+  Comprehensive coverage of CSP bypass techniques including JSONP endpoint abuse, CDN allowlist gadget hunting, framework-specific bypass, DOM Clobbering, Base tag injection, CSS injection exfiltration, strict-dynamic bypass, and nonce/hash-specific attacks. Each technique includes executable PoC code.
+board: "ctf-website"
+category: "18-cors-csp-advanced"
+signals: ["CSP bypass", "JSONP", "CDN gadget", "DOM Clobbering", "strict-dynamic", "nonce", "CSS injection", "CSP绕过"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file", "run_ctf_tool"]
+keywords: ["CSP绕过", "JSONP端点", "CDN白名单", "DOM Clobbering", "strict-dynamic", "CSS注入", "Content-Security-Policy", "CSP bypass"]
+difficulty: "advanced"
+tags: ["csp", "xss", "jsonp", "cdn", "dom-clobbering", "strict-dynamic", "css-injection"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # CSP 绕过全技术栈
 
 ## 场景

@@ -1,3 +1,23 @@
+---
+id: "ctf-website/20-oauth-deep/01-oauth-attack-chains"
+title: "OAuth 2.0 攻击全链"
+title_en: "OAuth 2.0 Attack Chains"
+summary: >
+  全面覆盖 OAuth 2.0 协议实现中的安全漏洞，包括 PKCE 绕过与降级攻击、State 参数 CSRF、redirect_uri 白名单绕过、response_type 切换、Scope 权限提升、Authorization Code 拦截和 Token 窃取等。附完整 OAuth 安全测试框架。
+summary_en: >
+  Comprehensive coverage of OAuth 2.0 implementation vulnerabilities including PKCE bypass and downgrade, State parameter CSRF, redirect_uri whitelist bypass, response_type switching, Scope escalation, Authorization Code interception, and Token theft. Includes a complete OAuth security testing harness.
+board: "ctf-website"
+category: "20-oauth-deep"
+signals: ["OAuth", "PKCE", "CSRF", "redirect_uri", "scope escalation", "token theft", "授权码拦截", "SSO"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file", "run_ctf_tool"]
+keywords: ["OAuth攻击", "PKCE绕过", "redirect_uri绕过", "OAuth CSRF", "Scope提升", "Token窃取", "授权码拦截", "OAuth security", "SSO"]
+difficulty: "advanced"
+tags: ["oauth", "pkce", "csrf", "redirect-uri", "token", "authorization", "sso", "scope-escalation"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # OAuth 2.0 攻击全链
 
 ## 场景

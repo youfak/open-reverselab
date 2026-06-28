@@ -1,3 +1,23 @@
+---
+id: "ctf-website/03-injection/hpp-crlf"
+title: "HPP / CRLF Injection / Header Injection"
+title_en: "HPP, CRLF Injection, and Header Injection"
+summary: >
+  介绍 HTTP 参数污染 (HPP)、CRLF 注入和 Header 注入三种攻击技术。HPP 利用不同框架对同参数取值的差异实现 WAF 绕过和逻辑篡改；CRLF 注入通过在 Header 中注入换行符实现 HTTP 响应拆分、SSRF 链和邮件头注入。
+summary_en: >
+  Three attack techniques: HTTP Parameter Pollution (HPP) exploiting framework differences in handling duplicate parameters for WAF bypass and logic manipulation; CRLF injection achieving HTTP response splitting, SSRF chaining, and email header injection via newline injection in headers.
+board: "ctf-website"
+category: "03-injection"
+signals: ["HPP", "参数污染", "CRLF", "换行注入", "响应拆分", "WAF bypass", "Header注入", "email注入"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["HPP", "参数污染", "CRLF注入", "HTTP响应拆分", "换行注入", "WAF绕过", "header injection"]
+difficulty: "intermediate"
+tags: ["injection", "hpp", "crlf", "waf-bypass", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # HPP / CRLF Injection / Header Injection
 
 ## 1. HTTP Parameter Pollution (HPP)

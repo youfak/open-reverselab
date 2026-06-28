@@ -1,3 +1,23 @@
+---
+id: "ctf-website/02-auth/jwt/03-weak-key-bruteforce"
+title: "JWT 弱 HMAC 密钥爆破"
+title_en: "JWT Weak HMAC Key Bruteforce"
+summary: >
+  介绍对 HS256/HS384/HS512 JWT 进行离线密钥爆破的攻击方法。当 HMAC 密钥强度不足时，攻击者可拿到一个合法 Token 后通过 hashcat、john 或自定义脚本离线暴力破解出密钥，之后无限伪造任意 Token。
+summary_en: >
+  A guide to offline brute-forcing HS256/HS384/HS512 JWT HMAC secrets. When the secret is weak, attackers can crack it from a single valid token using hashcat, john, or custom scripts, then forge unlimited tokens with the recovered key.
+board: "ctf-website"
+category: "02-auth"
+signals: ["HMAC", "弱密钥", "爆破", "hashcat", "HS256", "JWT cracker", "wordlist", "secret"]
+mcp_tools: ["run_ctf_tool", "http_probe"]
+keywords: ["JWT爆破", "HMAC密钥", "hashcat jwt", "弱密钥", "jwt-cracker", "jwt_tool", "密钥破解", "HS256"]
+difficulty: "beginner"
+tags: ["authentication", "jwt", "bruteforce", "web-security", "crypto", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # JWT 弱 HMAC 密钥爆破
 
 ## 原理

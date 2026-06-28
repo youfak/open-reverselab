@@ -1,3 +1,23 @@
+---
+id: "ctf-website/02-auth/jwt/04-kid-injection"
+title: "JWT `kid` 参数注入"
+title_en: "JWT kid Parameter Injection"
+summary: >
+  介绍利用 JWT Header 中 kid 参数进行注入攻击的三种路径：路径穿越读取任意文件作为密钥、SQL 注入控制返回的密钥值以及命令注入执行系统命令。当服务端将 kid 未净化地用于文件路径、SQL 查询或系统命令时即可利用。
+summary_en: >
+  Three injection paths via JWT Header kid parameter: path traversal to read arbitrary files as signing keys, SQL injection to control the returned key value, and command injection for system command execution. Exploitable when the server unsafely uses kid in file paths, SQL queries, or shell commands.
+board: "ctf-website"
+category: "02-auth"
+signals: ["kid", "Key ID", "路径穿越", "SQL注入", "命令注入", "kid injection", "jwt_tool", "JWT"]
+mcp_tools: ["run_ctf_tool", "kb_router"]
+keywords: ["kid注入", "JWT kid", "路径穿越", "SQL注入", "命令注入", "jwt_tool", "kid injection"]
+difficulty: "advanced"
+tags: ["authentication", "jwt", "injection", "web-security", "path-traversal", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # JWT `kid` 参数注入
 
 ## 原理

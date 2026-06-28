@@ -1,3 +1,22 @@
+---
+id: "ctf-website/09-cve/05-litellm-privesc"
+title: "LiteLLM：API Key 生成绕过角色限制 + 自提权（CVE-2026-47101）"
+title_en: "LiteLLM: API Key Generation Bypass Role Restrictions + Self-Privilege Escalation (CVE-2026-47101)"
+summary: >
+  LiteLLM三层授权防线失效分析：第一层/key/generate未验证allowed_routes与角色匹配导致低权限用户生成通配符key、第二层路由授权回退到API key的allowed_routes匹配、第三层/user/update允许自修改角色。internal_user通过通配符key自提权为proxy_admin实现完全管理接口接管。
+summary_en: >
+  Three-layer authorization bypass analysis for LiteLLM: layer 1 - /key/generate does not verify allowed_routes match user role, enabling low-privilege users to generate wildcard keys; layer 2 - route authorization falls back to API key allowed_routes matching; layer 3 - /user/update allows self role modification. Internal users escalate to proxy_admin via wildcard keys for full admin takeover.
+board: "ctf-website"
+category: "09-cve"
+signals: ["LiteLLM", "privilege escalation", "API key bypass", "权限提升", "internal_user to proxy_admin", "CVE-2026-47101", "allowed_routes"]
+mcp_tools: ["kb_router", "http_probe", "workspace_write_text"]
+keywords: ["CVE-2026-47101", "LiteLLM", "权限提升", "API key生成绕过", "allowed_routes", "proxy_admin", "internal_user", "LLM网关安全"]
+difficulty: "intermediate"
+tags: ["cve", "privilege-escalation", "api-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # LiteLLM：API Key 生成绕过角色限制 + 自提权（CVE-2026-47101）
 
 ## 1. 受影响版本

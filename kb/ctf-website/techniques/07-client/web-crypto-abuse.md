@@ -1,3 +1,22 @@
+---
+id: "ctf-website/07-client/web-crypto-abuse"
+title: "Web Crypto API 滥用"
+title_en: "Web Crypto API Abuse"
+summary: >
+  Web前端加密API滥用攻击指南，涵盖Math.random() PRNG破解（V8 XorShift128+状态恢复与Z3求解）、弱RSA密钥分解（FactorDB查询与私钥恢复）、extractable:false绕过（wrapKey+decrypt组合导出raw key）、CryptoJS ECB模式降级攻击与加密模式探测。
+summary_en: >
+  Guide to Web Crypto API abuse attacks, covering Math.random() PRNG cracking via V8 XorShift128+ state recovery with Z3 solver, weak RSA key factorization through FactorDB and private key recovery, extractable:false bypass using wrapKey plus decrypt to export raw keys, and CryptoJS ECB mode downgrade with encryption mode detection.
+board: "ctf-website"
+category: "07-client"
+signals: ["Web Crypto API", "Math.random", "PRNG", "RSA", "CryptoJS", "extractable bypass", "V8 XorShift128"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["Web Crypto API", "Math.random破解", "RSA密钥分解", "CryptoJS", "PRNG预测", "extractable绕过", "ECB降级", "V8 PRNG"]
+difficulty: "advanced"
+tags: ["crypto", "web-security", "javascript", "ctf", "reverse-engineering"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Web Crypto API 滥用
 
 ## Math.random() PRNG 破解 (V8 XorShift128+)

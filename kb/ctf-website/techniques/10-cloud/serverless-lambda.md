@@ -1,3 +1,22 @@
+---
+id: "ctf-website/10-cloud/serverless-lambda"
+title: "Serverless / Lambda 攻击"
+title_en: "Serverless / Lambda Attacks"
+summary: >
+  AWS Serverless/Lambda安全攻击指南，涵盖Lambda Runtime API（端口9001）窃取IAM凭证与环境变量、Runtime API劫持轮询后续调用窃取事件数据、Event Injection触发器源投毒（S3/SQS/API Gateway事件参数污染）、IAM权限枚举与提权，以及冷启动/tmp共享竞态攻击。
+summary_en: >
+  AWS Serverless/Lambda security attack guide covering Lambda Runtime API (port 9001) IAM credential and environment variable theft, Runtime API hijacking to poll subsequent invocations for event data theft, Event Injection trigger source poisoning (S3/SQS/API Gateway event parameter pollution), IAM permission enumeration and privilege escalation, and cold start /tmp shared state race attacks.
+board: "ctf-website"
+category: "10-cloud"
+signals: ["Serverless", "Lambda", "IAM credential", "Runtime API", "event injection", "无服务器", "AWS", "冷启动"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["Serverless安全", "Lambda攻击", "IAM凭证窃取", "Runtime API劫持", "Event Injection", "冷启动竞态", "IMDSv2", "SSRF to metadata"]
+difficulty: "intermediate"
+tags: ["cloud", "serverless", "aws", "privilege-escalation", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Serverless / Lambda 攻击
 
 ## Lambda Runtime API (端口 9001)

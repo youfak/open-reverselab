@@ -1,3 +1,25 @@
+---
+id: "ctf-website/13-signature/06-replay-nonce"
+title: "Replay / Nonce / Timestamp — 重放攻击深度技术手册"
+title_en: "Replay / Nonce / Timestamp — Replay Attack Deep Technical Manual"
+summary: >
+  全面覆盖重放攻击技术：纯重放、跨用户/跨上下文重放、Nonce 预测（递增/时间戳/弱随机）、
+  Nonce 绕过（缺失/null/数组/耗尽）、时间戳操纵（epoch/负数/时区偏移）及并发窗口竞态。
+summary_en: >
+  Comprehensive replay attack coverage: plain replay, cross-user/cross-context replay, nonce prediction
+  (sequential/timestamp/weak random), nonce bypass (missing/null/array/exhaustion), timestamp manipulation
+  (epoch/negative/timezone offset), and concurrent window race conditions.
+board: "ctf-website"
+category: "13-signature"
+signals: ["replay attack", "重放攻击", "nonce绕过", "nonce预测", "timestamp操纵", "重放窗口", "nonce耗尽", "跨用户重放"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["重放攻击", "replay attack", "nonce绕过", "timestamp绕过", "nonce预测", "并发重放", "窗口攻击", "replay protection"]
+difficulty: "advanced"
+tags: ["signature", "replay", "nonce", "race-condition", "time-based", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: ["ctf-website/13-signature/00-overview", "ctf-website/13-signature/01-algorithm"]
+---
 # Replay / Nonce / Timestamp — 重放攻击深度技术手册
 
 > 一个合法的签名，如果可以被重复使用，就不再是签名。重放攻击的核心是：**信任上下文已经变更，但验证逻辑没有检查变更**。

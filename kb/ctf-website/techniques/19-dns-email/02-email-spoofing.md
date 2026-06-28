@@ -1,3 +1,23 @@
+---
+id: "ctf-website/19-dns-email/02-email-spoofing"
+title: "邮件伪造与 SPF / DKIM / DMARC"
+title_en: "Email Spoofing and SPF / DKIM / DMARC"
+summary: >
+  当目标域名缺乏正确的邮件认证配置时，攻击者可伪造来源邮件。深入剖析 SPF 配置缺陷、DKIM 弱密钥与 l= 标签滥用、DMARC 策略漏洞、显示名伪造、Reply-To 注入、SMTP 头注入等完整攻击面。附综合邮件认证评分器。
+summary_en: >
+  When a target domain lacks proper email authentication, attackers can forge emails from that domain. Deep analysis of SPF configuration flaws, DKIM weak keys and l= tag abuse, DMARC policy vulnerabilities, display name spoofing, Reply-To injection, and SMTP header injection. Includes a comprehensive email authentication scoring system.
+board: "ctf-website"
+category: "19-dns-email"
+signals: ["email spoofing", "SPF", "DKIM", "DMARC", "邮件伪造", "显示名伪造", "SMTP injection", "邮件认证"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file", "run_ctf_tool"]
+keywords: ["邮件伪造", "SPF配置", "DKIM密钥", "DMARC策略", "显示名伪造", "SMTP头注入", "email spoofing", "email security", "phishing"]
+difficulty: "intermediate"
+tags: ["email", "spoofing", "spf", "dkim", "dmarc", "phishing", "smtp"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # 邮件伪造与 SPF / DKIM / DMARC
 
 ## 场景

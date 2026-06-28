@@ -1,3 +1,55 @@
+---
+id: "pe-reverse/09-av-evasion/01-ai-powered-evasion"
+title: "AI 驱动免杀：Shellcode 处理 + Loader 编写"
+title_en: "AI-Driven Antivirus Evasion: Shellcode Processing + Loader Development"
+summary: >
+  全链路免杀方案：从 shellcode 同义指令替换和花指令注入（Patch）、多层加密（XOR/RC4/S-Box）、UUID/IPv4/MAC 混淆伪装，到反沙箱/VEH/Syscall Loader 模板编写，附编译命令参考和验证闭环标准。
+summary_en: >
+  End-to-end AV evasion pipeline: from shellcode synonym replacement and junk injection (Patch), multi-layer encryption (XOR/RC4/S-Box), UUID/IPv4/MAC obfuscation camouflage, to anti-sandbox/VEH/syscall Loader template development, with compilation reference and verification criteria.
+board: "pe-reverse"
+category: "09-av-evasion"
+signals:
+  - "shellcode encryption"
+  - "obfuscation"
+  - "anti-sandbox"
+  - "VEH"
+  - "direct syscall"
+  - "免杀"
+  - "Loader"
+  - "花指令"
+mcp_tools:
+  - run_ctf_tool
+  - triage_pe
+  - patch_pe_bytes
+  - ghidra_headless_analyze
+  - extract_iocs_from_summary
+  - hash_file
+  - make_yara_stub
+keywords:
+  - "AV evasion"
+  - "shellcode"
+  - "encryption"
+  - "obfuscation"
+  - "loader"
+  - "anti-sandbox"
+  - "syscall"
+  - "VEH"
+  - "XOR"
+  - "UUID"
+difficulty: "advanced"
+tags:
+  - "AV-evasion"
+  - "shellcode"
+  - "loader"
+  - "obfuscation"
+  - "anti-sandbox"
+  - "syscall"
+  - "encryption"
+  - "red-team"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # AI 驱动免杀：Shellcode 处理 + Loader 编写
 
 ## 场景

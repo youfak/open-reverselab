@@ -1,3 +1,22 @@
+---
+id: "apk-reverse/02-native/05-virt-phys-memory"
+title: "虚拟地址 → 物理地址转换"
+title_en: "Virtual-to-Physical Address Translation"
+summary: >
+  详解通过 /proc/pid/pagemap 完成虚拟地址到物理页帧号（PFN）转换的原理与实战代码，包括 64-bit 页表项解析、bit 63 页面存在位检查、PFN 提取与物理地址计算、批量进程内存读取及 KPTI/KASLR/大页兼容处理。
+summary_en: >
+  Detailed explanation of virtual-to-physical address translation via /proc/pid/pagemap, including 64-bit page table entry parsing, bit 63 page present check, PFN extraction and physical address computation, batch process memory reading, and KPTI/KASLR/HugePage compatibility.
+board: "apk-reverse"
+category: "02-native"
+signals: ["pagemap", "PFN", "page table", "virt_to_phys", "KPTI", "KASLR", "HugePage", "/dev/mem"]
+mcp_tools: ["android_frida_run_script"]
+keywords: ["pagemap", "PFN", "物理地址", "页表", "virt_to_phys", "KPTI", "虚拟地址", "内存转换"]
+difficulty: "advanced"
+tags: ["pagemap", "physical-memory", "page-table", "kernel", "memory-read", "va-to-pa"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 虚拟地址 → 物理地址转换
 
 ## 场景

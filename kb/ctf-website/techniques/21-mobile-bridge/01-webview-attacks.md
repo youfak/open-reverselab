@@ -1,3 +1,23 @@
+---
+id: "ctf-website/21-mobile-bridge/01-webview-attacks"
+title: "WebView 攻击全技术"
+title_en: "WebView Attacks Complete Techniques"
+summary: >
+  移动应用中 WebView 特有的安全漏洞全技术覆盖：Android addJavascriptInterface RCE、iOS WKScriptMessageHandler 桥接滥用、自定义 URL Scheme 劫持与 Deeplink 注入、file:// 协议文件读取、SSL Pinning 绕过、CookieManager 注入及 WebView Bridge 自动化 Fuzzer。
+summary_en: >
+  Complete coverage of mobile WebView-specific vulnerabilities: Android addJavascriptInterface RCE, iOS WKScriptMessageHandler bridge abuse, custom URL scheme hijacking and Deeplink injection, file:// protocol file reading, SSL pinning bypass, CookieManager injection, and automated WebView Bridge fuzzing.
+board: "ctf-website"
+category: "21-mobile-bridge"
+signals: ["WebView", "addJavascriptInterface", "WKWebView", "JavaScriptInterface", "deeplink", "URL scheme", "桥接攻击", "file://"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file", "run_ctf_tool"]
+keywords: ["WebView攻击", "addJavascriptInterface", "JavaScriptInterface", "WKWebView", "Deeplink注入", "SSL Pinning绕过", "file协议", "mobile security", "bridge exploit"]
+difficulty: "advanced"
+tags: ["mobile", "webview", "android", "ios", "javascriptinterface", "bridge", "deeplink"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # WebView 攻击全技术
 
 ## 场景

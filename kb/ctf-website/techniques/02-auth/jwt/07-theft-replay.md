@@ -1,3 +1,23 @@
+---
+id: "ctf-website/02-auth/jwt/07-theft-replay"
+title: "JWT 窃取、重放与持久化"
+title_en: "JWT Theft, Replay, and Persistence"
+summary: >
+  全面分析 JWT Token 的泄露途径与攻击方法，包括 XSS 窃取 Token、URL Token 泄露、明文传输截获、Token 重放及登出后无法撤销等问题。覆盖客户端存储安全、Referer 泄露、Cookie 安全属性和重放检测等防御要点。
+summary_en: >
+  A comprehensive analysis of JWT token leakage pathways and attacks including XSS token theft, URL token leakage, plaintext transmission interception, token replay, and lack of revocation after logout. Covers client-side storage security, Referer leakage, cookie security attributes, and replay detection.
+board: "ctf-website"
+category: "02-auth"
+signals: ["token窃取", "XSS", "重放", "Bearer Token", "HttpOnly", "Referer泄露", "HSTS", "Cookie安全"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["JWT窃取", "token重放", "XSS", "HttpOnly", "Referer", "HSTS", "Cookie安全", "token泄露"]
+difficulty: "intermediate"
+tags: ["authentication", "jwt", "token-theft", "xss", "web-security", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # JWT 窃取、重放与持久化
 
 ## 原理

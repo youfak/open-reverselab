@@ -1,3 +1,23 @@
+---
+id: "ctf-website/20-oauth-deep/02-session-fixation-attacks"
+title: "Session 固定与 SSO 劫持"
+title_en: "Session Fixation and SSO Hijacking"
+summary: >
+  当目标会话管理存在漏洞时，攻击者可通过预置 Session ID、预测 Remember-me Token、利用 JWT 无状态特性绕过注销等方式劫持用户会话。深入覆盖 SSO 环境下的跨应用会话传播、Redis Session 未授权访问、Session Puzzling 提权及 SameSite Cookie 绕过等攻击链。
+summary_en: >
+  When session management is flawed, attackers can hijack user sessions through pre-set Session IDs, predictable Remember-me Tokens, and JWT stateless logout bypass. Covers cross-app session propagation in SSO environments, Redis session unauthorized access, Session Puzzling privilege escalation, and SameSite cookie bypass chains.
+board: "ctf-website"
+category: "20-oauth-deep"
+signals: ["session fixation", "SSO hijacking", "JWT bypass", "Redis session", "remember-me", "会话固定", "SameSite", "session puzzling"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file", "run_ctf_tool"]
+keywords: ["Session固定", "会话劫持", "SSO劫持", "JWT绕过", "Redis未授权", "remember-me", "SameSite绕过", "session fixation", "session hijacking"]
+difficulty: "intermediate"
+tags: ["session", "fixation", "sso", "jwt", "redis", "cookie", "samesite"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
+
 # Session 固定与 SSO 劫持
 
 ## 场景

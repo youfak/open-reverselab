@@ -1,3 +1,22 @@
+---
+id: "ctf-website/04-ssrf/open-redirect"
+title: "Open Redirect & Redirect Chain Attacks"
+title_en: "Open Redirect & Redirect Chain Attacks"
+summary: >
+  开放重定向漏洞的完整攻击指南，涵盖重定向参数字典探测、WAF/过滤器绕过手法（Unicode同形字、@符号混淆、302链等）、OAuth授权码窃取、Redirect到XSS和SSRF的升级链，以及多重定向链跳过白名单的高级战术。
+summary_en: >
+  A complete guide to open redirect attacks, covering redirect parameter discovery, WAF/filter bypass techniques (Unicode homographs, @ confusion, 302 chaining), OAuth authorization code theft, escalation from redirect to XSS and SSRF, and advanced chaining to bypass whitelists.
+board: "ctf-website"
+category: "04-ssrf"
+signals: ["open redirect", "开放重定向", "redirect chain", "OAuth redirect", "URL redirection bypass", "WAF bypass"]
+mcp_tools: ["http_probe", "kb_router"]
+keywords: ["开放重定向", "open redirect", "OAuth code窃取", "redirect bypass", "URL过滤器绕过", "302重定向链", "Unicode同形字", "CRLF头注入"]
+difficulty: "intermediate"
+tags: ["ssrf", "web-security", "authentication", "oauth", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Open Redirect & Redirect Chain Attacks
 
 ## 1. 重定向参数字典

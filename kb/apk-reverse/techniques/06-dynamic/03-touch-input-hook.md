@@ -1,3 +1,22 @@
+---
+id: "apk-reverse/06-dynamic/03-touch-input-hook"
+title: "触摸输入 Hook 与注入分析"
+title_en: "Touch Input Hooking and Injection Analysis"
+summary: >
+  检测和分析触摸输入注入行为，覆盖 Android 触摸体系三层（/dev/input 事件注入、InputManager.injectInputEvent、AccessibilityService 手势分发），提供自瞄 AI 行为离线判断算法和 Frida Hook 模板。
+summary_en: >
+  Detecting and analyzing touch input injection across three Android touch system layers (/dev/input event injection, InputManager.injectInputEvent, AccessibilityService gesture dispatch), with an offline aimbot AI behavior detection algorithm and Frida hook templates.
+board: "apk-reverse"
+category: "06-dynamic"
+signals: ["touch injection", "/dev/input", "InputManager", "MotionEvent", "AccessibilityService", "aimbot detection", "input_event", "getevent"]
+mcp_tools: ["android_frida_run_script"]
+keywords: ["touch", "injection", "InputManager", "MotionEvent", "触摸注入", "自瞄", "AccessibilityService", "/dev/input"]
+difficulty: "intermediate"
+tags: ["touch-input", "injection", "aimbot", "inputmanager", "frida", "accessibility"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 触摸输入 Hook 与注入分析
 
 ## 场景

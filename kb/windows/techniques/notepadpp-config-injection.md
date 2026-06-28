@@ -1,3 +1,49 @@
+---
+id: "windows/notepadpp-config-injection"
+title: "Notepad++ config.xml 命令注入（CVE-2026-48778）"
+title_en: "Notepad++ config.xml Command Injection (CVE-2026-48778)"
+summary: >
+  Notepad++ v8.9.6及之前版本的config.xml中commandLineInterpreter字段未做白名单校验，攻击者可通过直接写入、恶意.lnk、云同步投毒或社工打包等方式污染配置文件，在受害者执行菜单操作时实现任意程序执行。
+summary_en: >
+  In Notepad++ ≤v8.9.6, the commandLineInterpreter field in config.xml lacks whitelist validation. Attackers can poison the config via direct write, malicious .lnk, cloud sync poisoning, or social-engineering bundles, achieving arbitrary program execution when the victim triggers a menu action.
+board: "windows"
+category: "techniques"
+signals:
+  - "Notepad++"
+  - "config.xml"
+  - "命令注入"
+  - "command injection"
+  - "CVE-2026-48778"
+  - "配置污染"
+  - "configuration poisoning"
+  - "ShellExecute"
+mcp_tools:
+  - "kb_router"
+  - "workspace_write_text"
+keywords:
+  - "Notepad++"
+  - "CVE-2026-48778"
+  - "config.xml"
+  - "command injection"
+  - "RCE"
+  - "configuration poisoning"
+  - "ShellExecute"
+  - "GHSA-7hm3-wp5q-ccv9"
+  - "社工"
+  - "供应链攻击"
+difficulty: "beginner"
+tags:
+  - "CVE"
+  - "RCE"
+  - "configuration"
+  - "Notepad++"
+  - "command-injection"
+  - "GHSA"
+  - "config-poisoning"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Notepad++ config.xml 命令注入（CVE-2026-48778）
 
 ## 1. 受影响版本

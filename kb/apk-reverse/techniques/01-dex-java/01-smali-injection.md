@@ -1,3 +1,22 @@
+---
+id: "apk-reverse/01-dex-java/01-smali-injection"
+title: "Smali 代码注入与 DEX 修改"
+title_en: "Smali Code Injection and DEX Modification"
+summary: >
+  介绍如何通过修改 smali 字节码向目标 APK 注入 Java 层代码（加载 native 库、修改逻辑、插桩日志），涵盖注入点选择（Application/Activity/static 块）、smali 语法速查、寄存器冲突处理、重打包签名及验证闭环等完整流程。
+summary_en: >
+  Tutorial on injecting Java-layer code into Android APKs by modifying smali bytecode, covering injection point selection (Application/Activity/static blocks), smali syntax quick reference, register conflict handling, repacking, signing, and verification workflows.
+board: "apk-reverse"
+category: "01-dex-java"
+signals: ["smali injection", "DEX 修改", "APK repack", "loadLibrary hook", "Application.attachBaseContext", "register conflict", "apksigner 签名"]
+mcp_tools: ["android_app_baseline", "copy_sample_to_patches", "patch_bytes", "patch_pattern", "android_install_apk", "workspace_read_text", "workspace_write_text"]
+keywords: ["smali", "dex", "apktool", "injection", "repack", "loadLibrary", "字节码注入", "APK修改", "重打包", "签名"]
+difficulty: "intermediate"
+tags: ["smali", "dex", "injection", "repack", "android-reverse", "java-layer"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Smali 代码注入与 DEX 修改
 
 ## 场景

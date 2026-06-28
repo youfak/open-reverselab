@@ -1,3 +1,46 @@
+---
+id: "pe-reverse/04-dynamic-analysis/01-dll-injection"
+title: "DLL 注入三模式"
+title_en: "DLL Injection: Three Patterns"
+summary: >
+  介绍三种 DLL 注入模式：经典的 CreateRemoteThread + LoadLibrary、进程快照枚举定位 PID、注入 DLL 的自我弹出与 DllMain 线程委派模式，附完整代码实现和注入检查清单。
+summary_en: >
+  Covers three DLL injection patterns: classic CreateRemoteThread + LoadLibrary, process snapshot enumeration for PID lookup, and self-ejection with DllMain thread delegation, with complete code implementations and an injection checklist.
+board: "pe-reverse"
+category: "04-dynamic-analysis"
+signals:
+  - "CreateRemoteThread"
+  - "LoadLibrary"
+  - "VirtualAllocEx"
+  - "WriteProcessMemory"
+  - "DllMain"
+  - "DLL 注入"
+  - "远程线程"
+  - "进程枚举"
+mcp_tools:
+  - toolbox_launch
+keywords:
+  - "DLL injection"
+  - "CreateRemoteThread"
+  - "LoadLibrary"
+  - "VirtualAllocEx"
+  - "WriteProcessMemory"
+  - "process injection"
+  - "DllMain"
+  - "remote thread"
+  - "eject"
+  - "snapshot"
+difficulty: "intermediate"
+tags:
+  - "DLL-injection"
+  - "process-injection"
+  - "Windows-API"
+  - "remote-thread"
+  - "dynamic-analysis"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # DLL 注入三模式
 
 ## 场景

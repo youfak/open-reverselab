@@ -1,3 +1,22 @@
+---
+id: "apk-reverse/05-network/02-license-verification-bypass"
+title: "在线验证系统分析与绕过"
+title_en: "Online License Verification Analysis and Bypass"
+summary: >
+  分析三种常见的 APK 在线验证模式（API 签名验证/微验、Telegram 频道验证、网络连通性验证），提供 Frida 通用绕过模板（hook httppost/access/system），包括自建验证服务器和二进制 patch 方案。
+summary_en: >
+  Analyzing three common APK online verification patterns (API signature verification/WeChat verification, Telegram channel verification, network connectivity check), with Frida universal bypass templates (hook httppost/access/system), including self-hosted server and binary patching solutions.
+board: "apk-reverse"
+category: "05-network"
+signals: ["license verification", "API signature", "RC4 encryption", "Telegram channel", "httppost", "curl_easy_perform", "access hook", "bypass"]
+mcp_tools: ["android_crypto_unpack_recipe", "ghidra_headless_analyze", "android_http_observation_recipe"]
+keywords: ["license", "verification", "bypass", "验证绕过", "RC4", "httppost", "Telegram", "在线验证", "Frida"]
+difficulty: "intermediate"
+tags: ["license", "verification-bypass", "api-signature", "frida", "telegram", "online-auth"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # 在线验证系统分析与绕过
 
 ## 场景

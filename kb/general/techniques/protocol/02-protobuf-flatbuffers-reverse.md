@@ -1,3 +1,49 @@
+---
+id: "general/protocol/02-protobuf-flatbuffers-reverse"
+title: "Protobuf / FlatBuffers 无 Schema 逆向"
+title_en: "Protobuf / FlatBuffers Schema-less Reverse Engineering"
+summary: >
+  从 Protobuf wire type 位级解码到 FlatBuffers vtable 结构扫描，覆盖 varint/ZigZag/Fixed 类型推断、.proto 骨架生成、gRPC 反射服务发现及 blackboxprotobuf 自动化工具链，实现零 schema 条件下的完整协议还原。
+summary_en: >
+  From Protobuf wire-type bit-level decoding to FlatBuffers vtable structure scanning, covering varint/ZigZag/Fixed type inference, .proto skeleton generation, gRPC reflection service discovery, and blackboxprotobuf automation for complete zero-schema protocol recovery.
+board: "general"
+category: "protocol"
+signals:
+  - "wire type decoding"
+  - "varint"
+  - "field type inference"
+  - "gRPC reflection"
+  - "vtable scanning"
+  - "FlatBuffers offset"
+  - ".proto skeleton"
+mcp_tools:
+  - "kb_router"
+  - "kb_read_file"
+  - "triage_pe"
+  - "ghidra_headless_analyze"
+  - "ghidra_summary_call_focus"
+  - "python_re_tool_install"
+keywords:
+  - "Protobuf"
+  - "FlatBuffers"
+  - "schema inference"
+  - "wire type"
+  - "gRPC"
+  - "blackboxprotobuf"
+  - "protoscope"
+  - "varint"
+  - "vtable"
+difficulty: "intermediate"
+tags:
+  - "protocol-analysis"
+  - "Protobuf"
+  - "FlatBuffers"
+  - "schema-recovery"
+  - "gRPC"
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # Protobuf / FlatBuffers 无 Schema 逆向
 
 > 面对一段未知的 Protobuf 或 FlatBuffers 数据且无法获取 `.proto` 或 `.fbs` 文件时，如何从原始字节解码、推断字段类型和结构层次？本文提供从原始字节到完整 schema 推断的完整方法论。

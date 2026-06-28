@@ -1,3 +1,22 @@
+---
+id: "ctf-website/04-ssrf/ssrf"
+title: "SSRF (Server-Side Request Forgery)"
+title_en: "SSRF (Server-Side Request Forgery)"
+summary: >
+  服务端请求伪造（SSRF）完整攻击指南，聚焦Gopher协议接管内网Redis/MySQL/Memcached等组件、DNS重绑定绕过IP白名单、URL解析器不一致性绕过、云Metadata端点利用，以及2024-2025年高级绕过技术（IMDSv2、IPv6嵌入、0.0.0.0/8绕过）。
+summary_en: >
+  Comprehensive SSRF attack guide focused on Gopher protocol for internal service takeover (Redis, MySQL, Memcached), DNS rebinding to bypass IP whitelists, URL parser differential attacks, cloud metadata endpoint exploitation, and 2024-2025 advanced bypass techniques including IMDSv2 proxy chains, IPv6 embedding, and 0.0.0.0/8 bypass.
+board: "ctf-website"
+category: "04-ssrf"
+signals: ["SSRF", "server-side request forgery", "Gopher协议", "DNS rebinding", "内网穿透", "cloud metadata", "IMDSv2 bypass"]
+mcp_tools: ["http_probe", "kb_router", "kb_read_file"]
+keywords: ["SSRF", "Gopher协议", "Redis攻击", "DNS重绑定", "云metadata", "内网渗透", "URL解析器绕过", "IMDSv2"]
+difficulty: "intermediate"
+tags: ["ssrf", "web-security", "cloud", "injection", "ctf"]
+language: "zh-CN"
+last_updated: "2026-06-25"
+related_articles: []
+---
 # SSRF (Server-Side Request Forgery)
 
 服务器端请求伪造（SSRF）通常被用作击穿内外网隔离的突破口。本指南聚焦于**如何通过 Gopher 协议接管内网组件**，以及**DNS 重绑定、多解析器差异等 Bypass 高级绕过技术**。
